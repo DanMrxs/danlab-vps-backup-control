@@ -1,0 +1,14 @@
+databases/pgvector_pg_dumpall.ok	3
+databases/pgvector_pg_dumpall.sql.gz	21472
+databases/postgres_pg_dumpall.ok	3
+databases/postgres_pg_dumpall.sql.gz	55783873
+databases/redis_dump.ok	3
+databases/redis_dump.rdb.gz	546942
+inventory/containers.jsonl	21039
+inventory/listening-ports.txt	1136
+inventory/networks.jsonl	1525
+inventory/remote-files.tsv	0
+inventory/services.jsonl	3494
+inventory/stacks.jsonl	656
+inventory/system.txt	563
+inventory/volumes.txt	1371

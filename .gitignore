@@ -1,0 +1,26 @@
+# Real backup artifacts stay in C:\Backups\danlab-vps, not git.
+backups/
+*.dump
+*.sql
+*.sql.gz
+*.rdb
+*.rdb.gz
+*.tar
+*.tgz
+*.gz
+*.zip
+*.enc
+
+# Never commit local secrets or generated temp files.
+.env
+*.key
+*.pem
+*.pfx
+secrets/
+tmp/
+
+# Keep manifests and sanitized inventories.
+!manifests/*.json
+!inventory/**/*.txt
+!inventory/**/*.json
+!inventory/**/*.jsonl

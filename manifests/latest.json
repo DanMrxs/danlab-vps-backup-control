@@ -1,0 +1,99 @@
+﻿{
+    "version":  1,
+    "backupId":  "20260505-225929",
+    "createdAtUtc":  "2026-05-05T20:59:29.5065371Z",
+    "source":  {
+                   "sshHost":  "danlab-vps",
+                   "remoteDir":  null
+               },
+    "local":  {
+                  "backupSet":  "C:\\Backups\\danlab-vps\\20260505-225929",
+                  "payload":  "C:\\Backups\\danlab-vps\\20260505-225929\\payload",
+                  "keyPath":  "C:\\Users\\danie\\.danlab-backup\\backup-key.dpapi"
+              },
+    "includes":  {
+                     "inventory":  true,
+                     "databases":  true,
+                     "volumes":  false,
+                     "volumeNames":  [
+                                         "baserow_data",
+                                         "chatwoot_data",
+                                         "contentos-tools_searxng-config",
+                                         "evolutionv2_instances",
+                                         "minio_data",
+                                         "portainer_data",
+                                         "volume_swarm_certificates"
+                                     ]
+                 },
+    "artifacts":  [
+                      {
+                          "source":  "databases\\pgvector_pg_dumpall.sql.gz",
+                          "encrypted":  "databases\\pgvector_pg_dumpall.sql.gz.enc",
+                          "plaintextSha256":  "e3a125d9dbcd423063845cb41442c8231f3192daea86de7fbe798f6d5bff5faa",
+                          "plaintextBytes":  21472,
+                          "encryptedSha256":  "94789b21b0ba0b09db0c362a53c17f39d25feeee9b719aad2cceaf3827c99abc",
+                          "encryptedBytes":  21511
+                      },
+                      {
+                          "source":  "databases\\postgres_pg_dumpall.sql.gz",
+                          "encrypted":  "databases\\postgres_pg_dumpall.sql.gz.enc",
+                          "plaintextSha256":  "f44744347a7e6fec02388cc076891a0b13d60643f8ae21373ab0b642e2280825",
+                          "plaintextBytes":  55783873,
+                          "encryptedSha256":  "49224d2cabea51d1ccd6299db069c37e89b36c6f0c810eaaeee9b06a4be22604",
+                          "encryptedBytes":  55783911
+                      },
+                      {
+                          "source":  "databases\\redis_dump.rdb.gz",
+                          "encrypted":  "databases\\redis_dump.rdb.gz.enc",
+                          "plaintextSha256":  "86892bb3627e02ae3226107ba6f8aea9e1d9e9e07177b4e39adddca20b608b70",
+                          "plaintextBytes":  546942,
+                          "encryptedSha256":  "3cb3f8dbea5f3a6f9fb3ff68e53f7092a55edfb3c103cb5cdd2343da6fad0bc1",
+                          "encryptedBytes":  546967
+                      }
+                  ],
+    "inventory":  [
+                      {
+                          "path":  "inventory\\containers.jsonl",
+                          "bytes":  21039,
+                          "sha256":  "ce416627df2ba68220c00616a209439e130586f5e0344d0af5a35d3a5bc43032"
+                      },
+                      {
+                          "path":  "inventory\\listening-ports.txt",
+                          "bytes":  1136,
+                          "sha256":  "170ada82e77d4087ac60f496c7be719bd697e03271f9aadd085c8b27cc95bf90"
+                      },
+                      {
+                          "path":  "inventory\\networks.jsonl",
+                          "bytes":  1525,
+                          "sha256":  "9db0a843cb2c27b1ff1ac349d3ab2b70cd3b2c77ea5ea4ec32facfb0b23f8296"
+                      },
+                      {
+                          "path":  "inventory\\remote-files.tsv",
+                          "bytes":  456,
+                          "sha256":  "dd90f4cd605264ab4ca4679682abe37b3fbcc1c09effe842340e74f16d9e712f"
+                      },
+                      {
+                          "path":  "inventory\\services.jsonl",
+                          "bytes":  3494,
+                          "sha256":  "8f07a4679d79fd1edfed08f45d941ede57a22e40a967506db74113677242d7d2"
+                      },
+                      {
+                          "path":  "inventory\\stacks.jsonl",
+                          "bytes":  656,
+                          "sha256":  "543ffee993a7fa1f57b93faeef04e275f2146a374169acd8ae699ed62b41de28"
+                      },
+                      {
+                          "path":  "inventory\\system.txt",
+                          "bytes":  563,
+                          "sha256":  "34b1aa6d67cacafd9a8a6134aacfdb54c52198311e89ecc4beda740c1f0f3e30"
+                      },
+                      {
+                          "path":  "inventory\\volumes.txt",
+                          "bytes":  1371,
+                          "sha256":  "618668139e6dbddf26978528877a3caebc12954cd5da41f58a23bb4748808345"
+                      }
+                  ],
+    "remoteErrors":  [
+
+                     ]
+}

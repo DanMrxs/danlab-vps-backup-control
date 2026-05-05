@@ -1,0 +1,15 @@
+generated_at_utc=2026-05-05T20:59:29.5065371Z
+hostname=danlab
+whoami=root
+ 20:59:38 up 13 days, 16:39,  0 user,  load average: 0.12, 0.14, 0.16
+--- docker info ---
+docker=27.5.1 swarm=active
+--- docker nodes ---
+danlab Ready Active Leader
+--- disk ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda1        75G   51G   22G  70% /
+--- memory ---
+               total        used        free      shared  buff/cache   available
+Mem:           7.6Gi       3.2Gi       2.0Gi       154Mi       2.8Gi       4.4Gi
+Swap:          2.0Gi       383Mi       1.6Gi

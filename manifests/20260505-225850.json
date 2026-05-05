@@ -1,0 +1,76 @@
+﻿{
+    "version":  1,
+    "backupId":  "20260505-225850",
+    "createdAtUtc":  "2026-05-05T20:58:50.2066095Z",
+    "source":  {
+                   "sshHost":  "danlab-vps",
+                   "remoteDir":  null
+               },
+    "local":  {
+                  "backupSet":  "C:\\Backups\\danlab-vps\\20260505-225850",
+                  "payload":  "C:\\Backups\\danlab-vps\\20260505-225850\\payload",
+                  "keyPath":  "C:\\Users\\danie\\.danlab-backup\\backup-key.dpapi"
+              },
+    "includes":  {
+                     "inventory":  true,
+                     "databases":  false,
+                     "volumes":  false,
+                     "volumeNames":  [
+                                         "baserow_data",
+                                         "chatwoot_data",
+                                         "contentos-tools_searxng-config",
+                                         "evolutionv2_instances",
+                                         "minio_data",
+                                         "portainer_data",
+                                         "volume_swarm_certificates"
+                                     ]
+                 },
+    "artifacts":  [
+
+                  ],
+    "inventory":  [
+                      {
+                          "path":  "inventory\\containers.jsonl",
+                          "bytes":  21038,
+                          "sha256":  "6de2a83600b65ca8baa4e8a9d512be5cb8af58aa29da8920be8260cc96c0c093"
+                      },
+                      {
+                          "path":  "inventory\\listening-ports.txt",
+                          "bytes":  1136,
+                          "sha256":  "170ada82e77d4087ac60f496c7be719bd697e03271f9aadd085c8b27cc95bf90"
+                      },
+                      {
+                          "path":  "inventory\\networks.jsonl",
+                          "bytes":  1525,
+                          "sha256":  "9db0a843cb2c27b1ff1ac349d3ab2b70cd3b2c77ea5ea4ec32facfb0b23f8296"
+                      },
+                      {
+                          "path":  "inventory\\remote-files.tsv",
+                          "bytes":  236,
+                          "sha256":  "c6e9b354a033417f9911462aeb9ab668e4e232eb4ec931c9ded6400f9dc65dab"
+                      },
+                      {
+                          "path":  "inventory\\services.jsonl",
+                          "bytes":  3494,
+                          "sha256":  "8f07a4679d79fd1edfed08f45d941ede57a22e40a967506db74113677242d7d2"
+                      },
+                      {
+                          "path":  "inventory\\stacks.jsonl",
+                          "bytes":  656,
+                          "sha256":  "543ffee993a7fa1f57b93faeef04e275f2146a374169acd8ae699ed62b41de28"
+                      },
+                      {
+                          "path":  "inventory\\system.txt",
+                          "bytes":  563,
+                          "sha256":  "cd8c5e3818c7e3274e44396a62205c7d3eee00de0fe371df00e54971d3a22d1a"
+                      },
+                      {
+                          "path":  "inventory\\volumes.txt",
+                          "bytes":  1371,
+                          "sha256":  "618668139e6dbddf26978528877a3caebc12954cd5da41f58a23bb4748808345"
+                      }
+                  ],
+    "remoteErrors":  [
+
+                     ]
+}
