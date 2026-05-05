@@ -53,6 +53,34 @@ git push
 
 Never commit `C:\Backups\danlab-vps` artifacts.
 
+## Automatic Schedule
+
+Install or refresh scheduled tasks:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\Install-ScheduledTasks.ps1
+```
+
+Installed tasks:
+
+- `\Danlab\Danlab VPS Database Backup`: daily at 03:15.
+- `\Danlab\Danlab VPS Weekly Full Backup`: Sunday at 04:15, includes selected volumes and a local Postgres restore smoke test.
+
+Logs are written to:
+
+```text
+C:\Backups\danlab-vps\logs
+```
+
+The scheduled runner:
+
+- Prevents overlapping runs with `C:\Backups\danlab-vps\.backup.lock`.
+- Creates local encrypted artifacts under `C:\Backups\danlab-vps`.
+- Updates and pushes GitHub-safe manifests/inventory.
+- Does not delete old backup sets automatically.
+
+Windows Task Scheduler is configured for the current interactive user. If the machine is off or the user is not logged in, the task runs when available after login/wake.
+
 ## Operational Rules
 
 - Run inventory first if the VPS changed recently.

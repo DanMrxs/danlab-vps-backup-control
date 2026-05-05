@@ -42,6 +42,18 @@ Run a local restore smoke test for the main Postgres dump:
 powershell -ExecutionPolicy Bypass -File .\scripts\Restore-Smoke-Test.ps1 -BackupSet C:\Backups\danlab-vps\<backup-id>
 ```
 
+Install automatic Windows scheduled tasks:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\Install-ScheduledTasks.ps1
+```
+
+Default schedule:
+
+- Daily database/Redis/inventory backup at 03:15.
+- Weekly full selected-volume backup plus restore smoke test on Sunday at 04:15.
+- Tasks run when the Windows user is logged on and start when available if a scheduled run is missed.
+
 ## Git Safety
 
 Commit only scripts, docs, sanitized inventory, and manifests. Do not commit:
