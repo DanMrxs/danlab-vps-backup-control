@@ -77,6 +77,8 @@ The scheduled runner:
 - Prevents overlapping runs with `C:\Backups\danlab-vps\.backup.lock`.
 - Creates local encrypted artifacts under `C:\Backups\danlab-vps`.
 - Updates and pushes GitHub-safe manifests/inventory.
+- Regenerates the Obsidian RAG note `wiki/entities/danlab-VPS-Backup-State.md`.
+- Rebuilds Graphify scopes `obsidian-wiki` and `danlab-vps-backup-control`.
 - Does not delete old backup sets automatically.
 
 Windows Task Scheduler is configured for the current interactive user. If the machine is off or the user is not logged in, the task runs when available after login/wake.

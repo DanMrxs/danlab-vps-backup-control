@@ -43,6 +43,7 @@ try {
     $backupScript = Join-Path $PSScriptRoot "Backup-Vps.ps1"
     $inventoryScript = Join-Path $PSScriptRoot "Inventory-Vps.ps1"
     $restoreScript = Join-Path $PSScriptRoot "Restore-Smoke-Test.ps1"
+    $syncScript = Join-Path $PSScriptRoot "Sync-KnowledgeState.ps1"
 
     switch ($Mode) {
         "Inventory" {
@@ -62,6 +63,10 @@ try {
         if ($latest.local.backupSet) {
             Invoke-BackupScript -Script $restoreScript -Arguments @("-BackupSet", $latest.local.backupSet)
         }
+    }
+
+    if (Test-Path -LiteralPath $syncScript) {
+        Invoke-BackupScript -Script $syncScript -Arguments @()
     }
 
     if (Test-Path -LiteralPath (Join-Path $controlRoot ".git")) {

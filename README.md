@@ -54,6 +54,12 @@ Default schedule:
 - Weekly full selected-volume backup plus restore smoke test on Sunday at 04:15.
 - Tasks run when the Windows user is logged on and start when available if a scheduled run is missed.
 
+Each scheduled run also refreshes the local LLM/RAG state:
+
+- Regenerates `C:\Users\danie\Documents\Obsidian\2ndBrain\wiki\entities\danlab-VPS-Backup-State.md`
+- Rebuilds Graphify scopes `obsidian-wiki` and `danlab-vps-backup-control`
+- Pushes GitHub-safe manifests and inventory to the private control repo
+
 ## Git Safety
 
 Commit only scripts, docs, sanitized inventory, and manifests. Do not commit:
