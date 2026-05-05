@@ -1,0 +1,142 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schemas/vps-control-manifest.v2.schema.json",
+  "title": "AI-First VPS Control Layer Manifest v2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "backup_id",
+    "server_id",
+    "started_at",
+    "completed_at",
+    "status",
+    "job",
+    "restic",
+    "retention_policy",
+    "services",
+    "scaled_to_zero",
+    "ports_listening",
+    "volumes_considered",
+    "volumes_backed_up",
+    "restore_tests",
+    "healthchecks",
+    "errors",
+    "warnings",
+    "manifest_sha256",
+    "inventory_sha256"
+  ],
+  "properties": {
+    "version": { "const": 2 },
+    "backup_id": { "type": "string", "pattern": "^[0-9]{8}T[0-9]{6}Z$" },
+    "server_id": { "type": "string", "minLength": 1 },
+    "started_at": { "type": "string", "format": "date-time" },
+    "completed_at": { "type": "string", "format": "date-time" },
+    "status": { "type": "string", "enum": ["pass", "fail", "partial"] },
+    "job": { "type": "string", "enum": ["daily", "weekly", "monthly-restore"] },
+    "restic": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["repository_alias", "snapshot_id", "tags", "stats"],
+      "properties": {
+        "repository_alias": { "type": "string", "minLength": 1 },
+        "snapshot_id": { "type": "string" },
+        "tags": { "type": "array", "items": { "type": "string" } },
+        "stats": {
+          "type": "object",
+          "additionalProperties": true,
+          "required": ["total_bytes"],
+          "properties": {
+            "total_bytes": { "type": "integer", "minimum": 0 },
+            "files_new": { "type": "integer", "minimum": 0 },
+            "files_changed": { "type": "integer", "minimum": 0 },
+            "files_unmodified": { "type": "integer", "minimum": 0 }
+          }
+        }
+      }
+    },
+    "retention_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["keep_daily", "keep_weekly", "keep_monthly", "last_forget_status"],
+      "properties": {
+        "keep_daily": { "type": "integer", "minimum": 1 },
+        "keep_weekly": { "type": "integer", "minimum": 1 },
+        "keep_monthly": { "type": "integer", "minimum": 1 },
+        "last_forget_status": { "type": "string", "enum": ["not-run", "pass", "fail"] }
+      }
+    },
+    "services": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "image", "replicas"],
+        "properties": {
+          "name": { "type": "string" },
+          "image": { "type": "string" },
+          "replicas": { "type": "string" }
+        }
+      }
+    },
+    "scaled_to_zero": { "$ref": "#/properties/services" },
+    "ports_listening": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["protocol", "address", "port"],
+        "properties": {
+          "protocol": { "type": "string" },
+          "address": { "type": "string" },
+          "port": { "type": "integer", "minimum": 1, "maximum": 65535 }
+        }
+      }
+    },
+    "volumes_considered": { "type": "array", "items": { "type": "string" } },
+    "volumes_backed_up": { "type": "array", "items": { "type": "string" } },
+    "restore_tests": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["weekly_postgres", "monthly_cross_machine"],
+      "properties": {
+        "weekly_postgres": { "$ref": "#/$defs/restore_test" },
+        "monthly_cross_machine": { "$ref": "#/$defs/restore_test" }
+      }
+    },
+    "healthchecks": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["daily", "weekly", "monthly"],
+      "properties": {
+        "daily": { "$ref": "#/$defs/healthcheck_ref" },
+        "weekly": { "$ref": "#/$defs/healthcheck_ref" },
+        "monthly": { "$ref": "#/$defs/healthcheck_ref" }
+      }
+    },
+    "errors": { "type": "array", "items": { "type": "string" } },
+    "warnings": { "type": "array", "items": { "type": "string" } },
+    "manifest_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "inventory_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+  },
+  "$defs": {
+    "restore_test": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["last_run", "status", "details"],
+      "properties": {
+        "last_run": { "type": ["string", "null"], "format": "date-time" },
+        "status": { "type": "string", "enum": ["pass", "fail", "not-run"] },
+        "details": { "type": "string" }
+      }
+    },
+    "healthcheck_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["slug"],
+      "properties": {
+        "slug": { "type": "string" }
+      }
+    }
+  }
+}

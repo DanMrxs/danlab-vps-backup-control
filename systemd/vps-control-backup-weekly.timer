@@ -1,0 +1,11 @@
+[Unit]
+Description=Run AI-First VPS Control Layer Weekly Backup
+
+[Timer]
+OnCalendar=Sun *-*-* 04:15:00
+Timezone=UTC
+Persistent=true
+RandomizedDelaySec=300
+
+[Install]
+WantedBy=timers.target

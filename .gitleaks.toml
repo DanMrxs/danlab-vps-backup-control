@@ -1,0 +1,19 @@
+title = "danlab-vps-backup-control secret scanning"
+
+[[rules]]
+id = "healthchecks-ping-url"
+description = "Healthchecks ping URLs are secrets"
+regex = '''https://hc-ping\.com/[A-Za-z0-9/_-]+'''
+keywords = ["hc-ping.com"]
+
+[[rules]]
+id = "restic-password"
+description = "Inline restic passphrase must not be committed"
+regex = '''(?i)RESTIC_PASSWORD\s*=\s*['"]?[A-Za-z0-9+/=_!@#$%^&*().,;: -]{12,}'''
+keywords = ["RESTIC_PASSWORD"]
+
+[[rules]]
+id = "backblaze-application-key"
+description = "Backblaze B2 application key"
+regex = '''(?i)(B2_ACCOUNT_KEY|BACKBLAZE.*KEY)\s*=\s*['"]?[A-Za-z0-9+/=_-]{20,}'''
+keywords = ["B2_ACCOUNT_KEY", "BACKBLAZE"]

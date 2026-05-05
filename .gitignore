@@ -13,14 +13,22 @@ backups/
 
 # Never commit local secrets or generated temp files.
 .env
+*.env
+!*.env.example
 *.key
 *.pem
 *.pfx
 secrets/
 tmp/
+.restic-cache/
+*.log
+__pycache__/
+*.pyc
 
 # Keep manifests and sanitized inventories.
 !manifests/*.json
 !inventory/**/*.txt
 !inventory/**/*.json
 !inventory/**/*.jsonl
+!manifest.json
+!restore-drills/**/*.json

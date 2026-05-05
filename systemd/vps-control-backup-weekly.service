@@ -1,0 +1,14 @@
+[Unit]
+Description=AI-First VPS Control Layer Weekly Backup and Restore Smoke Test
+Documentation=file:/opt/vps-backup-control/docs/V2-RUNBOOK.md
+Wants=network-online.target
+After=network-online.target docker.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/vps-backup-control
+Environment=VPS_CONTROL_CONFIG=/etc/vps-control/config.env
+ExecStart=/opt/vps-backup-control/scripts/v2/backup-vps.sh --mode weekly
+Nice=10
+IOSchedulingClass=best-effort
+IOSchedulingPriority=7
