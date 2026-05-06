@@ -29,6 +29,9 @@ done
 [[ -n "$inventory_dir" && -d "$inventory_dir" ]] || { echo "Inventory dir missing: $inventory_dir" >&2; exit 2; }
 [[ -d "$control_repo/.git" ]] || { echo "Control repo is not a git checkout: $control_repo" >&2; exit 2; }
 
+git -C "$control_repo" fetch origin main
+git -C "$control_repo" rebase --autostash origin/main
+
 mkdir -p "$control_repo/manifests" "$control_repo/inventory/v2" "$control_repo/restore-drills"
 cp "$manifest_path" "$control_repo/manifest.json"
 cp "$manifest_path" "$control_repo/manifests/latest-v2.json"
@@ -48,4 +51,5 @@ fi
 
 backup_id="$(jq -r '.backup_id' "$manifest_path")"
 git -C "$control_repo" commit -m "Update v2 VPS backup manifest ${backup_id}"
+git -C "$control_repo" pull --rebase --autostash origin main
 git -C "$control_repo" push
