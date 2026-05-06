@@ -71,7 +71,26 @@ scripts/v2/backup-vps.sh --mode weekly
 
 ## Enable Timers
 
-Enable only after one manual daily run passes:
+Enable only after one manual daily run passes and Healthchecks ping URLs are installed.
+
+Preferred Healthchecks setup uses a project read-write API key from the Project Settings page:
+
+```bash
+install -m 0400 /dev/stdin /etc/vps-control/healthchecks-api-key
+vps-control-configure-healthchecks --enable-timers
+shred -u /etc/vps-control/healthchecks-api-key
+systemctl list-timers 'vps-control-*'
+```
+
+The helper creates or updates these slugs and writes `/etc/vps-control/healthchecks.env` with mode `0400`:
+
+```text
+vps-backup-daily
+vps-backup-weekly
+vps-restore-monthly
+```
+
+Manual timer enable, if the ping URLs were configured another way:
 
 ```bash
 systemctl enable --now vps-control-backup-daily.timer

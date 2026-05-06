@@ -21,6 +21,7 @@ fi
 
 install -m 0755 "$control_repo/scripts/v2/backup-vps.sh" /usr/local/sbin/vps-control-backup
 install -m 0755 "$control_repo/scripts/v2/monthly-restore-drill.sh" /usr/local/sbin/vps-control-monthly-restore-drill
+install -m 0755 "$control_repo/scripts/v2/configure-healthchecks.py" /usr/local/sbin/vps-control-configure-healthchecks
 install -m 0644 "$control_repo/systemd/vps-control-backup-daily.service" /etc/systemd/system/vps-control-backup-daily.service
 install -m 0644 "$control_repo/systemd/vps-control-backup-daily.timer" /etc/systemd/system/vps-control-backup-daily.timer
 install -m 0644 "$control_repo/systemd/vps-control-backup-weekly.service" /etc/systemd/system/vps-control-backup-weekly.service
