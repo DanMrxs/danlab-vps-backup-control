@@ -1,0 +1,273 @@
+{
+  "backup_id": "20260506T001005Z",
+  "completed_at": "2026-05-06T00:10:33Z",
+  "errors": [],
+  "healthchecks": {
+    "daily": {
+      "slug": "vps-backup-daily"
+    },
+    "monthly": {
+      "slug": "vps-restore-monthly"
+    },
+    "weekly": {
+      "slug": "vps-backup-weekly"
+    }
+  },
+  "inventory_sha256": "3870f5e6cc8d5be34799be3dd64a440603ad0e399ec8d8d9576f6da29b25f6cc",
+  "job": "daily",
+  "manifest_sha256": "c0b461bd8f3f044910ed42c67a87d776bd605b1f1daececb58bd0be22541bc3b",
+  "ports_listening": [
+    {
+      "address": "0.0.0.0",
+      "port": 22,
+      "protocol": "tcp"
+    },
+    {
+      "address": "[::]",
+      "port": 22,
+      "protocol": "tcp"
+    },
+    {
+      "address": "0.0.0.0",
+      "port": 68,
+      "protocol": "udp"
+    },
+    {
+      "address": "0.0.0.0",
+      "port": 80,
+      "protocol": "tcp"
+    },
+    {
+      "address": "[::]",
+      "port": 80,
+      "protocol": "tcp"
+    },
+    {
+      "address": "0.0.0.0",
+      "port": 443,
+      "protocol": "tcp"
+    },
+    {
+      "address": "[::]",
+      "port": 443,
+      "protocol": "tcp"
+    },
+    {
+      "address": "*",
+      "port": 2377,
+      "protocol": "tcp"
+    },
+    {
+      "address": "0.0.0.0",
+      "port": 4789,
+      "protocol": "udp"
+    },
+    {
+      "address": "*",
+      "port": 7000,
+      "protocol": "tcp"
+    },
+    {
+      "address": "*",
+      "port": 7946,
+      "protocol": "tcp"
+    },
+    {
+      "address": "*",
+      "port": 7946,
+      "protocol": "udp"
+    },
+    {
+      "address": "*",
+      "port": 8002,
+      "protocol": "tcp"
+    },
+    {
+      "address": "*",
+      "port": 8300,
+      "protocol": "tcp"
+    },
+    {
+      "address": "*",
+      "port": 8888,
+      "protocol": "tcp"
+    }
+  ],
+  "restic": {
+    "repository_alias": "hetzner-storage-box",
+    "snapshot_id": "0f431422",
+    "stats": {
+      "files_changed": 0,
+      "files_new": 10,
+      "files_unmodified": 0,
+      "total_bytes": 53475461
+    },
+    "tags": [
+      "server=danlab-vps",
+      "job=daily",
+      "id=20260506T001005Z"
+    ]
+  },
+  "restore_tests": {
+    "monthly_cross_machine": {
+      "details": "",
+      "last_run": null,
+      "status": "not-run"
+    },
+    "weekly_postgres": {
+      "details": "",
+      "last_run": null,
+      "status": "not-run"
+    }
+  },
+  "retention_policy": {
+    "keep_daily": 14,
+    "keep_monthly": 12,
+    "keep_weekly": 8,
+    "last_forget_status": "not-run"
+  },
+  "scaled_to_zero": [
+    {
+      "image": "ghcr.io/joeferner/redis-commander:latest",
+      "name": "adminredis_redis-commander",
+      "replicas": "0/0"
+    },
+    {
+      "image": "baserow/baserow:latest",
+      "name": "baserow_baserow",
+      "replicas": "0/0"
+    },
+    {
+      "image": "chatwoot/chatwoot:latest-ce",
+      "name": "chatwoot_chatwoot_app",
+      "replicas": "0/0"
+    },
+    {
+      "image": "chatwoot/chatwoot:latest-ce",
+      "name": "chatwoot_chatwoot_sidekiq",
+      "replicas": "0/0"
+    },
+    {
+      "image": "atendai/evolution-api:latest",
+      "name": "evo2_evolution_api_v2",
+      "replicas": "0/0"
+    },
+    {
+      "image": "atendai/evolution-audio-converter:latest",
+      "name": "evo2_evolution_audio_converter",
+      "replicas": "0/0"
+    },
+    {
+      "image": "percona/percona-server:8.0",
+      "name": "mysql_mysql",
+      "replicas": "0/0"
+    },
+    {
+      "image": "dpage/pgadmin4:latest",
+      "name": "pgadmin_pgadmin4",
+      "replicas": "0/0"
+    },
+    {
+      "image": "phpmyadmin/phpmyadmin:latest",
+      "name": "phpmyadmin_pma",
+      "replicas": "0/0"
+    }
+  ],
+  "server_id": "danlab-vps",
+  "services": [
+    {
+      "image": "contentos-health-monitor:latest",
+      "name": "contentos-health_health-monitor",
+      "replicas": "1/1"
+    },
+    {
+      "image": "searxng/searxng:latest",
+      "name": "contentos-tools_searxng",
+      "replicas": "1/1"
+    },
+    {
+      "image": "contentos-vault-api:latest",
+      "name": "contentos-vault_vault-api",
+      "replicas": "1/1"
+    },
+    {
+      "image": "contentos-captions-api:v1",
+      "name": "contentos-video-producer_captions-api",
+      "replicas": "1/1"
+    },
+    {
+      "image": "contentos-kokoro-tts:latest",
+      "name": "contentos-video-producer_kokoro-tts",
+      "replicas": "1/1"
+    },
+    {
+      "image": "contentos-remotion:v4-kern-6",
+      "name": "contentos-video-producer_remotion",
+      "replicas": "1/1"
+    },
+    {
+      "image": "quay.io/minio/minio:latest",
+      "name": "minio_minio",
+      "replicas": "1/1"
+    },
+    {
+      "image": "n8nio/n8n:2.19.2",
+      "name": "n8nfila_n8n_editor",
+      "replicas": "1/1"
+    },
+    {
+      "image": "n8nio/n8n:2.19.2",
+      "name": "n8nfila_n8n_webhook",
+      "replicas": "1/1"
+    },
+    {
+      "image": "n8nio/n8n:2.19.2",
+      "name": "n8nfila_n8n_worker",
+      "replicas": "1/1"
+    },
+    {
+      "image": "pgvector/pgvector:pg16",
+      "name": "pgvector_pgvector",
+      "replicas": "1/1"
+    },
+    {
+      "image": "portainer/agent:sts",
+      "name": "portainer_agent",
+      "replicas": "1/1"
+    },
+    {
+      "image": "portainer/portainer-ce:sts",
+      "name": "portainer_portainer",
+      "replicas": "1/1"
+    },
+    {
+      "image": "postgres:14",
+      "name": "postgres_postgres",
+      "replicas": "1/1"
+    },
+    {
+      "image": "redis:latest",
+      "name": "redis_redis",
+      "replicas": "1/1"
+    },
+    {
+      "image": "traefik:v2.11",
+      "name": "traefik_traefik",
+      "replicas": "1/1"
+    }
+  ],
+  "started_at": "2026-05-06T00:10:05Z",
+  "status": "pass",
+  "version": 2,
+  "volumes_backed_up": [],
+  "volumes_considered": [
+    "baserow_data",
+    "chatwoot_data",
+    "contentos-tools_searxng-config",
+    "evolutionv2_instances",
+    "minio_data",
+    "portainer_data",
+    "volume_swarm_certificates"
+  ],
+  "warnings": []
+}
