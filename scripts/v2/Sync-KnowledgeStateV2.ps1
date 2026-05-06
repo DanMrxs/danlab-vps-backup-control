@@ -39,6 +39,8 @@ $manifest = Get-Content -Raw -LiteralPath $ManifestPath | ConvertFrom-Json
 if ($manifest.version -ne 2) {
     throw "Expected manifest version 2; refusing to update Obsidian."
 }
+$manifestSha256 = $manifest.manifest_sha256
+$inventorySha256 = $manifest.inventory_sha256
 
 function Convert-Bytes {
     param([double]$Bytes)
@@ -94,8 +96,8 @@ Generated from the canonical v2 `manifest.json`. This note is a derived view and
 | Restic repository | $($manifest.restic.repository_alias) |
 | Restic snapshot | $($manifest.restic.snapshot_id) |
 | Restic total bytes | $(Convert-Bytes $manifest.restic.stats.total_bytes) |
-| Manifest checksum | `$($manifest.manifest_sha256)` |
-| Inventory checksum | `$($manifest.inventory_sha256)` |
+| Manifest checksum | $manifestSha256 |
+| Inventory checksum | $inventorySha256 |
 
 ## Restore Tests
 
