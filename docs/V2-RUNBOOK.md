@@ -90,6 +90,22 @@ vps-backup-weekly
 vps-restore-monthly
 ```
 
+Fallback setup can use the project ping key and slug URLs:
+
+```bash
+install -m 0400 /dev/stdin /etc/vps-control/healthchecks-ping-key
+vps-control-configure-healthchecks --mode ping-key --autoprovision --enable-timers
+shred -u /etc/vps-control/healthchecks-ping-key
+```
+
+The ping-key fallback can auto-create checks but cannot customize their schedules. If using this path, verify these values in the Healthchecks UI:
+
+```text
+vps-backup-daily: cron 15 3 * * * UTC, grace 2 hours
+vps-backup-weekly: cron 15 4 * * 0 UTC, grace 2 hours
+vps-restore-monthly: cron 15 5 1 * * UTC, grace 24 hours
+```
+
 Manual timer enable, if the ping URLs were configured another way:
 
 ```bash

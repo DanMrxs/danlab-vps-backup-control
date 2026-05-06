@@ -16,6 +16,7 @@ from pathlib import Path
 
 API_URL = "https://healthchecks.io/api/v3/checks/"
 DEFAULT_API_KEY_FILE = Path("/etc/vps-control/healthchecks-api-key")
+DEFAULT_PING_KEY_FILE = Path("/etc/vps-control/healthchecks-ping-key")
 DEFAULT_ENV_FILE = Path("/etc/vps-control/healthchecks.env")
 
 CHECKS = [
@@ -57,6 +58,17 @@ def load_api_key(path: Path) -> str:
     )
 
 
+def load_ping_key(path: Path) -> str:
+    key = os.environ.get("HEALTHCHECKS_PING_KEY", "").strip()
+    if key:
+        return key
+    if path.exists():
+        return path.read_text(encoding="utf-8").strip()
+    raise SystemExit(
+        f"Missing Healthchecks ping key. Set HEALTHCHECKS_PING_KEY or create {path}."
+    )
+
+
 def request_check(api_key: str, spec: dict[str, object]) -> dict[str, object]:
     payload = {
         "name": spec["name"],
@@ -88,13 +100,45 @@ def request_check(api_key: str, spec: dict[str, object]) -> dict[str, object]:
         raise RuntimeError(f"Healthchecks API returned HTTP {exc.code}: {body}") from exc
 
 
-def write_env(path: Path, checks: list[dict[str, object]]) -> None:
-    values: dict[str, str] = {}
+def check_ping_urls_from_api(checks: list[dict[str, object]]) -> dict[str, str]:
+    values = {}
     for spec, check in zip(CHECKS, checks, strict=True):
         ping_url = str(check.get("ping_url", "")).strip()
         if not ping_url.startswith("https://hc-ping.com/"):
             raise RuntimeError(f"API response for {spec['slug']} did not include a ping_url.")
         values[str(spec["env"])] = ping_url
+    return values
+
+
+def check_ping_urls_from_ping_key(ping_key: str) -> dict[str, str]:
+    if "{" in ping_key or "}" in ping_key or "/" in ping_key:
+        raise SystemExit("Use the raw project ping key only, not a template or full URL.")
+    return {
+        str(spec["env"]): f"https://hc-ping.com/{ping_key}/{spec['slug']}"
+        for spec in CHECKS
+    }
+
+
+def autoprovision_slug_checks(values: dict[str, str]) -> None:
+    for url in values.values():
+        req = urllib.request.Request(
+            f"{url}?create=1",
+            method="GET",
+            headers={"User-Agent": "danlab-vps-control/2"},
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=30) as response:
+                if response.status not in {200, 201}:
+                    raise RuntimeError(f"{url} returned HTTP {response.status}")
+        except urllib.error.HTTPError as exc:
+            body = exc.read().decode("utf-8", errors="replace")
+            raise RuntimeError(f"Healthchecks ping endpoint returned HTTP {exc.code}: {body}") from exc
+
+
+def write_env(path: Path, values: dict[str, str]) -> None:
+    for key, value in values.items():
+        if not key.startswith("HC_") or not value.startswith("https://hc-ping.com/"):
+            raise RuntimeError(f"Invalid Healthchecks value for {key}.")
 
     content = "\n".join(
         [
@@ -130,20 +174,42 @@ def enable_timers() -> None:
 
 def main() -> int:
     parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--mode",
+        choices=["api", "ping-key"],
+        default="api",
+        help="api configures schedules through Management API; ping-key writes slug URLs.",
+    )
     parser.add_argument("--api-key-file", type=Path, default=DEFAULT_API_KEY_FILE)
+    parser.add_argument("--ping-key-file", type=Path, default=DEFAULT_PING_KEY_FILE)
     parser.add_argument("--env-file", type=Path, default=DEFAULT_ENV_FILE)
+    parser.add_argument(
+        "--autoprovision",
+        action="store_true",
+        help="With --mode ping-key, create missing slug checks using ?create=1.",
+    )
     parser.add_argument("--enable-timers", action="store_true")
     args = parser.parse_args()
 
-    api_key = load_api_key(args.api_key_file)
-    created = [request_check(api_key, spec) for spec in CHECKS]
-    write_env(args.env_file, created)
+    if args.mode == "api":
+        api_key = load_api_key(args.api_key_file)
+        created = [request_check(api_key, spec) for spec in CHECKS]
+        values = check_ping_urls_from_api(created)
+    else:
+        ping_key = load_ping_key(args.ping_key_file)
+        values = check_ping_urls_from_ping_key(ping_key)
+        if args.autoprovision:
+            autoprovision_slug_checks(values)
+
+    write_env(args.env_file, values)
     if args.enable_timers:
         enable_timers()
 
     slugs = ", ".join(str(spec["slug"]) for spec in CHECKS)
     print(f"Configured Healthchecks slugs: {slugs}")
     print(f"Wrote {args.env_file} with mode 0400.")
+    if args.mode == "ping-key":
+        print("Ping-key mode cannot customize schedules; verify weekly/monthly schedules in Healthchecks UI.")
     if args.enable_timers:
         print("Enabled vps-control daily and weekly timers.")
     return 0
