@@ -125,7 +125,7 @@ $($portRows -join "`n")
 ## Sync Rule
 
 1. VPS-side systemd timer runs the v2 backup script.
-2. restic stores encrypted off-site snapshots in Backblaze B2.
+2. restic stores encrypted off-site snapshots on Hetzner Storage Box.
 3. The backup script publishes the canonical `manifest.json` to GitHub.
 4. This note is regenerated only after schema and checksum validation pass.
 5. Graphify reads the control repo, schema, manifest, runbooks, and this generated note.

@@ -41,14 +41,14 @@ if snapshot_json="$(restic snapshots --json --latest 1 --tag "server=${SERVER_ID
   payload_dir="$(find "$tmp/restore" -type d -name payload | head -n 1)"
   dump_path="$payload_dir/databases/postgres_pg_dumpall.sql.gz"
   name="vps-monthly-restore-${drill_id}"
-  docker run --rm --name "$name" -e POSTGRES_PASSWORD=restore -d "$RESTORE_POSTGRES_IMAGE" >/dev/null
+  docker run --rm --name "$name" -e POSTGRES_USER=restore_admin -e POSTGRES_PASSWORD=restore -d "$RESTORE_POSTGRES_IMAGE" >/dev/null
   for _ in $(seq 1 45); do
-    docker exec "$name" pg_isready -U postgres >/dev/null 2>&1 && break
+    docker exec "$name" pg_isready -U restore_admin -d postgres >/dev/null 2>&1 && break
     sleep 2
   done
   if [[ -s "$dump_path" ]] &&
-     gunzip -c "$dump_path" | docker exec -i "$name" psql -U postgres -v ON_ERROR_STOP=1 -f - >/tmp/"${name}.log" 2>&1 &&
-     docker exec "$name" psql -U postgres -tAc "select 1" >/dev/null 2>&1; then
+     gunzip -c "$dump_path" | docker exec -i "$name" psql -U restore_admin -d postgres -v ON_ERROR_STOP=1 -f - >/tmp/"${name}.log" 2>&1 &&
+     docker exec "$name" psql -U restore_admin -d postgres -tAc "select 1" >/dev/null 2>&1; then
     status="pass"
     details="restic snapshot restored and postgres dump replayed on separate host"
   else

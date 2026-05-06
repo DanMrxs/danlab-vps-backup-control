@@ -39,7 +39,7 @@ WORK_ROOT="${WORK_ROOT:-/var/backups/vps-control/work}"
 LOG_ROOT="${LOG_ROOT:-/var/log/vps-control}"
 RESTIC_ENV_FILE="${RESTIC_ENV_FILE:-/etc/vps-control/restic.env}"
 HEALTHCHECKS_ENV_FILE="${HEALTHCHECKS_ENV_FILE:-/etc/vps-control/healthchecks.env}"
-RESTIC_REPOSITORY_ALIAS="${RESTIC_REPOSITORY_ALIAS:-backblaze-b2}"
+RESTIC_REPOSITORY_ALIAS="${RESTIC_REPOSITORY_ALIAS:-hetzner-storage-box}"
 POSTGRES_CONTAINER_FILTER="${POSTGRES_CONTAINER_FILTER:-postgres_postgres}"
 PGVECTOR_CONTAINER_FILTER="${PGVECTOR_CONTAINER_FILTER:-pgvector_pgvector}"
 REDIS_CONTAINER_FILTER="${REDIS_CONTAINER_FILTER:-redis_redis}"
@@ -188,15 +188,15 @@ run_weekly_restore_test() {
     return 0
   fi
   docker rm -f "$name" >/dev/null 2>&1 || true
-  docker run --rm --name "$name" -e POSTGRES_PASSWORD=restore -d "$RESTORE_POSTGRES_IMAGE" >/dev/null
+  docker run --rm --name "$name" -e POSTGRES_USER=restore_admin -e POSTGRES_PASSWORD=restore -d "$RESTORE_POSTGRES_IMAGE" >/dev/null
   for _ in $(seq 1 45); do
-    if docker exec "$name" pg_isready -U postgres >/dev/null 2>&1; then
+    if docker exec "$name" pg_isready -U restore_admin -d postgres >/dev/null 2>&1; then
       break
     fi
     sleep 2
   done
-  if gunzip -c "$dump_path" | docker exec -i "$name" psql -U postgres -v ON_ERROR_STOP=1 -f - >/tmp/"${name}.restore.log" 2>&1 &&
-     docker exec "$name" psql -U postgres -tAc "select 1" >/dev/null 2>&1; then
+  if gunzip -c "$dump_path" | docker exec -i "$name" psql -U restore_admin -d postgres -v ON_ERROR_STOP=1 -f - >/tmp/"${name}.restore.log" 2>&1 &&
+     docker exec "$name" psql -U restore_admin -d postgres -tAc "select 1" >/dev/null 2>&1; then
     restore_status="pass"
     restore_details="postgres pg_dumpall restored into disposable container"
   else
@@ -303,7 +303,14 @@ main() {
       --inventory-dir "$workdir/payload/inventory"
   ) 9>/run/lock/vps-control-backup.lock
 
-  ping_healthcheck ""
+  manifest_status="$(jq -r '.status' "$workdir/manifest.json")"
+  if [[ "$manifest_status" == "pass" ]]; then
+    ping_healthcheck ""
+  else
+    ping_healthcheck "/fail"
+    echo "Backup completed with manifest status=${manifest_status}; treating as failed for scheduler/monitoring." >&2
+    exit 1
+  fi
 }
 
 main "$@"

@@ -7,7 +7,7 @@ GitHub-safe control repo for the `danlab-vps` backup/control layer.
 v2 moves backup execution onto the VPS and makes this repository the public-safe control plane:
 
 - VPS-side `systemd` timers run backup jobs.
-- restic writes encrypted off-site snapshots to Backblaze B2.
+- restic writes encrypted off-site snapshots to Hetzner Storage Box over SFTP.
 - Healthchecks.io monitors every scheduled job.
 - `manifest.json` is the canonical state file.
 - Obsidian and Graphify are derived views generated from the canonical manifest.
@@ -29,7 +29,7 @@ config/v2/*.example         Secret-free configuration templates
 .github/workflows/          gitleaks secret scan
 ```
 
-Do not enable v2 timers until real Backblaze B2 credentials, restic passphrase, and Healthchecks URLs are installed under `/etc/vps-control` on the VPS.
+Do not enable v2 timers until Storage Box SSH access, the restic passphrase, and Healthchecks URLs are installed under `/etc/vps-control` on the VPS.
 
 ## v1 Local Backup Fallback
 

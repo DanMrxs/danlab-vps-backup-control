@@ -5,7 +5,7 @@
 v2 moves backup execution onto the VPS and makes the local machine a consumer of derived state.
 
 - Canonical state: `manifest.json`
-- Off-site encrypted backup: restic repository in Backblaze B2
+- Off-site encrypted backup: restic repository on Hetzner Storage Box over SFTP
 - Scheduler: VPS `systemd` timers
 - Alerting: Healthchecks.io pings
 - Derived views: Obsidian note and Graphify scope generated from the manifest
@@ -23,7 +23,7 @@ Real files live only on the VPS or restore endpoint:
 
 Rules:
 
-- Never commit real `.env`, restic passphrases, B2 keys, Healthchecks URLs, SSH private keys, or dumps.
+- Never commit real `.env`, restic passphrases, Storage Box credentials, Healthchecks URLs, SSH private keys, or dumps.
 - Store the restic passphrase in the password manager as the recovery source.
 - Keep `/etc/vps-control/restic-passphrase` mode `0400`.
 - Keep Healthchecks ping URLs secret; only slugs/names enter `manifest.json`.
@@ -39,7 +39,7 @@ cp config/v2/healthchecks.env.example /etc/vps-control/healthchecks.env
 chmod 0400 /etc/vps-control/restic-passphrase /etc/vps-control/restic.env /etc/vps-control/healthchecks.env
 ```
 
-Initialize restic only after filling real B2 values:
+Initialize restic only after Storage Box SSH key authentication works:
 
 ```bash
 set -a
