@@ -7,7 +7,6 @@ tcp   LISTEN 0      4096         0.0.0.0:80        0.0.0.0:*
 tcp   LISTEN 0      4096         0.0.0.0:443       0.0.0.0:*          
 tcp   LISTEN 0      4096               *:7946            *:*          
 tcp   LISTEN 0      4096               *:8002            *:*          
-tcp   LISTEN 0      4096               *:7000            *:*          
 tcp   LISTEN 0      4096               *:2377            *:*          
 tcp   LISTEN 0      4096               *:8888            *:*          
 tcp   LISTEN 0      128             [::]:22           [::]:*          
