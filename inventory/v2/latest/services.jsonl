@@ -1,5 +1,5 @@
 {"ID":"0povrdl0ehf3","Image":"ghcr.io/joeferner/redis-commander:latest","Mode":"replicated","Name":"adminredis_redis-commander","Ports":"*:8081-\u003e8081/tcp","Replicas":"0/0"}
-{"ID":"19u0rd1ettsi","Image":"baserow/baserow:latest","Mode":"replicated","Name":"baserow_baserow","Ports":"","Replicas":"0/0"}
+{"ID":"19u0rd1ettsi","Image":"baserow/baserow:latest","Mode":"replicated","Name":"baserow_baserow","Ports":"","Replicas":"1/1"}
 {"ID":"1nkbls12kqve","Image":"atendai/evolution-api:latest","Mode":"replicated","Name":"evo2_evolution_api_v2","Ports":"","Replicas":"0/0"}
 {"ID":"3az4ck8oxlik","Image":"searxng/searxng:latest","Mode":"replicated","Name":"contentos-tools_searxng","Ports":"*:8888-\u003e8080/tcp","Replicas":"1/1"}
 {"ID":"4d1v9ezq63or","Image":"contentos-captions-api:v1","Mode":"replicated","Name":"contentos-video-producer_captions-api","Ports":"*:8002-\u003e8002/tcp","Replicas":"1/1"}
@@ -10,6 +10,7 @@
 {"ID":"ewa8byq5uvlp","Image":"traefik:v2.11","Mode":"replicated","Name":"traefik_traefik","Ports":"","Replicas":"1/1"}
 {"ID":"hns7wizdinan","Image":"chatwoot/chatwoot:latest-ce","Mode":"replicated","Name":"chatwoot_chatwoot_sidekiq","Ports":"","Replicas":"0/0"}
 {"ID":"iyvjvb2fxedl","Image":"n8nio/n8n:2.19.2","Mode":"replicated","Name":"n8nfila_n8n_webhook","Ports":"","Replicas":"1/1"}
+{"ID":"le3gqnx8v2g2","Image":"contentos-higgsfield-bridge:latest","Mode":"replicated","Name":"contentos-higgsfield_higgsfield-bridge","Ports":"","Replicas":"1/1"}
 {"ID":"lpsukdicexpz","Image":"postgres:14","Mode":"replicated","Name":"postgres_postgres","Ports":"","Replicas":"1/1"}
 {"ID":"mbtls4sd7y3q","Image":"phpmyadmin/phpmyadmin:latest","Mode":"replicated","Name":"phpmyadmin_pma","Ports":"","Replicas":"0/0"}
 {"ID":"p981bqe7ovzc","Image":"n8nio/n8n:2.19.2","Mode":"replicated","Name":"n8nfila_n8n_worker","Ports":"","Replicas":"1/1"}

@@ -1,6 +1,6 @@
 {
-  "backup_id": "20260508T031853Z",
-  "completed_at": "2026-05-08T03:19:22Z",
+  "backup_id": "20260509T031726Z",
+  "completed_at": "2026-05-09T03:17:55Z",
   "errors": [],
   "healthchecks": {
     "daily": {
@@ -13,9 +13,9 @@
       "slug": "vps-backup-weekly"
     }
   },
-  "inventory_sha256": "c66fdc8c7f4209fc77aac01bf91bacc53688cd3b68c4c58af651208212a19834",
+  "inventory_sha256": "ff4f59f0a6c6ce4224b71dbb596a8b4ea545970564d54ae9daee908fb35fd809",
   "job": "daily",
-  "manifest_sha256": "8b1ec08b12505a6ed868904f07d257a6322f7121976d60d2dd642e8c6217f910",
+  "manifest_sha256": "9bffd117daad067656fbcb9068f1a3b484b7a49279c9279205fb357a0f67a2c6",
   "ports_listening": [
     {
       "address": "0.0.0.0",
@@ -95,17 +95,17 @@
   ],
   "restic": {
     "repository_alias": "hetzner-storage-box",
-    "snapshot_id": "8dc0bbb7",
+    "snapshot_id": "bde901ce",
     "stats": {
       "files_changed": 0,
       "files_new": 10,
       "files_unmodified": 0,
-      "total_bytes": 60323589
+      "total_bytes": 60783278
     },
     "tags": [
       "server=danlab-vps",
       "job=daily",
-      "id=20260508T031853Z"
+      "id=20260509T031726Z"
     ]
   },
   "restore_tests": {
@@ -130,11 +130,6 @@
     {
       "image": "ghcr.io/joeferner/redis-commander:latest",
       "name": "adminredis_redis-commander",
-      "replicas": "0/0"
-    },
-    {
-      "image": "baserow/baserow:latest",
-      "name": "baserow_baserow",
       "replicas": "0/0"
     },
     {
@@ -176,8 +171,18 @@
   "server_id": "danlab-vps",
   "services": [
     {
+      "image": "baserow/baserow:latest",
+      "name": "baserow_baserow",
+      "replicas": "1/1"
+    },
+    {
       "image": "contentos-health-monitor:latest",
       "name": "contentos-health_health-monitor",
+      "replicas": "1/1"
+    },
+    {
+      "image": "contentos-higgsfield-bridge:latest",
+      "name": "contentos-higgsfield_higgsfield-bridge",
       "replicas": "1/1"
     },
     {
@@ -256,7 +261,7 @@
       "replicas": "1/1"
     }
   ],
-  "started_at": "2026-05-08T03:18:53Z",
+  "started_at": "2026-05-09T03:17:26Z",
   "status": "pass",
   "version": 2,
   "volumes_backed_up": [],
