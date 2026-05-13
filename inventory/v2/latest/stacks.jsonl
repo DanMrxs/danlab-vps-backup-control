@@ -6,6 +6,7 @@
 {"Name":"contentos-tools","Services":"1"}
 {"Name":"contentos-vault","Services":"1"}
 {"Name":"contentos-video-producer","Services":"3"}
+{"Name":"crm-stripe","Services":"1"}
 {"Name":"evo2","Services":"2"}
 {"Name":"minio","Services":"1"}
 {"Name":"mysql","Services":"1"}
