@@ -1,6 +1,6 @@
 {
-  "backup_id": "20260517T031645Z",
-  "completed_at": "2026-05-17T03:17:15Z",
+  "backup_id": "20260517T041731Z",
+  "completed_at": "2026-05-17T04:20:44Z",
   "errors": [],
   "healthchecks": {
     "daily": {
@@ -13,9 +13,9 @@
       "slug": "vps-backup-weekly"
     }
   },
-  "inventory_sha256": "287c450210a1005ecb1238a59c61a6e4ed5286af44f362ba453c1c93353e1e52",
-  "job": "daily",
-  "manifest_sha256": "7722fd8febcc97c8753abf6f96bf9462d112ded268b277d44bed3e942c3dc140",
+  "inventory_sha256": "6d5cb43cca275e53e58555dafbe39574e3326f5e5d5cee764fce40b486c1e9de",
+  "job": "weekly",
+  "manifest_sha256": "22927e4163937d00b95c0e3ad14cd4d1c1f82c43bf76bd0f0420b03c63856732",
   "ports_listening": [
     {
       "address": "0.0.0.0",
@@ -95,17 +95,17 @@
   ],
   "restic": {
     "repository_alias": "hetzner-storage-box",
-    "snapshot_id": "dbd31643",
+    "snapshot_id": "a534ad26",
     "stats": {
       "files_changed": 0,
-      "files_new": 10,
+      "files_new": 17,
       "files_unmodified": 0,
-      "total_bytes": 59460814
+      "total_bytes": 686587439
     },
     "tags": [
       "server=danlab-vps",
-      "job=daily",
-      "id=20260517T031645Z"
+      "job=weekly",
+      "id=20260517T041731Z"
     ]
   },
   "restore_tests": {
@@ -115,16 +115,16 @@
       "status": "not-run"
     },
     "weekly_postgres": {
-      "details": "",
-      "last_run": null,
-      "status": "not-run"
+      "details": "postgres pg_dumpall restored into disposable container",
+      "last_run": "2026-05-17T04:20:44Z",
+      "status": "pass"
     }
   },
   "retention_policy": {
     "keep_daily": 14,
     "keep_monthly": 12,
     "keep_weekly": 8,
-    "last_forget_status": "not-run"
+    "last_forget_status": "pass"
   },
   "scaled_to_zero": [
     {
@@ -211,6 +211,11 @@
       "replicas": "1/1"
     },
     {
+      "image": "copa2026-track-a-doorbell:39eb7fe-weekwatch",
+      "name": "copa2026_track_a_doorbell",
+      "replicas": "1/1"
+    },
+    {
       "image": "crm-stripe-receiver:latest",
       "name": "crm-stripe_crm_stripe_receiver",
       "replicas": "1/1"
@@ -266,10 +271,18 @@
       "replicas": "1/1"
     }
   ],
-  "started_at": "2026-05-17T03:16:45Z",
+  "started_at": "2026-05-17T04:17:31Z",
   "status": "pass",
   "version": 2,
-  "volumes_backed_up": [],
+  "volumes_backed_up": [
+    "baserow_data",
+    "chatwoot_data",
+    "contentos-tools_searxng-config",
+    "evolutionv2_instances",
+    "minio_data",
+    "portainer_data",
+    "volume_swarm_certificates"
+  ],
   "volumes_considered": [
     "baserow_data",
     "chatwoot_data",
