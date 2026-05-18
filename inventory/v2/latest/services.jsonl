@@ -24,5 +24,5 @@
 {"ID":"vxbd52prxmt5","Image":"chatwoot/chatwoot:latest-ce","Mode":"replicated","Name":"chatwoot_chatwoot_app","Ports":"","Replicas":"0/0"}
 {"ID":"yw50j411tkrz","Image":"dpage/pgadmin4:latest","Mode":"replicated","Name":"pgadmin_pgadmin4","Ports":"","Replicas":"0/0"}
 {"ID":"yx3n19tkuj7a","Image":"percona/percona-server:8.0","Mode":"replicated","Name":"mysql_mysql","Ports":"","Replicas":"0/0"}
-{"ID":"zjjev8e70mw4","Image":"copa2026-track-a-doorbell:39eb7fe-weekwatch","Mode":"replicated","Name":"copa2026_track_a_doorbell","Ports":"","Replicas":"1/1"}
+{"ID":"zjjev8e70mw4","Image":"copa2026-track-a-doorbell:39eb7fe-drive-fallback3","Mode":"replicated","Name":"copa2026_track_a_doorbell","Ports":"","Replicas":"1/1"}
 {"ID":"zrt7sih05pwm","Image":"portainer/portainer-ce:sts","Mode":"replicated","Name":"portainer_portainer","Ports":"","Replicas":"1/1"}
