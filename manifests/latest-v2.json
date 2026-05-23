@@ -1,6 +1,6 @@
 {
-  "backup_id": "20260522T031608Z",
-  "completed_at": "2026-05-22T03:16:41Z",
+  "backup_id": "20260523T031919Z",
+  "completed_at": "2026-05-23T03:19:57Z",
   "errors": [],
   "healthchecks": {
     "daily": {
@@ -13,9 +13,9 @@
       "slug": "vps-backup-weekly"
     }
   },
-  "inventory_sha256": "81a09b4f8b847dd8d7613dd5c028155c7b574e4c390aac4867249a5750956c19",
+  "inventory_sha256": "af68919ed5f885fb8c1535e19f1acdc65fe93626196db0fcf68e1e2550271005",
   "job": "daily",
-  "manifest_sha256": "7dc1115944b061fbbbfcc2ccf4dc948f71695828425a8180469afcda8855b388",
+  "manifest_sha256": "e60b36a2575f70a3a15fbd7b36fea3b4932c82e03217712f942468644e15e0e3",
   "ports_listening": [
     {
       "address": "0.0.0.0",
@@ -95,17 +95,17 @@
   ],
   "restic": {
     "repository_alias": "hetzner-storage-box",
-    "snapshot_id": "f4954e6c",
+    "snapshot_id": "e915bb80",
     "stats": {
       "files_changed": 0,
       "files_new": 10,
       "files_unmodified": 0,
-      "total_bytes": 60761753
+      "total_bytes": 61363525
     },
     "tags": [
       "server=danlab-vps",
       "job=daily",
-      "id=20260522T031608Z"
+      "id=20260523T031919Z"
     ]
   },
   "restore_tests": {
@@ -211,11 +211,6 @@
       "replicas": "1/1"
     },
     {
-      "image": "copa2026-track-a-doorbell:39eb7fe-drive-fallback3",
-      "name": "copa2026_track_a_doorbell",
-      "replicas": "1/1"
-    },
-    {
       "image": "crm-stripe-receiver:latest",
       "name": "crm-stripe_crm_stripe_receiver",
       "replicas": "1/1"
@@ -271,7 +266,7 @@
       "replicas": "1/1"
     }
   ],
-  "started_at": "2026-05-22T03:16:08Z",
+  "started_at": "2026-05-23T03:19:19Z",
   "status": "pass",
   "version": 2,
   "volumes_backed_up": [],
