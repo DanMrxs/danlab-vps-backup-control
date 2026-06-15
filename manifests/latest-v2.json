@@ -1,6 +1,6 @@
 {
-  "backup_id": "20260614T041829Z",
-  "completed_at": "2026-06-14T04:24:19Z",
+  "backup_id": "20260615T031525Z",
+  "completed_at": "2026-06-15T03:15:58Z",
   "errors": [],
   "healthchecks": {
     "daily": {
@@ -13,9 +13,9 @@
       "slug": "vps-backup-weekly"
     }
   },
-  "inventory_sha256": "c9fd3a99ff0d169d92fd94fb64e1680ae8dafc89b8e29cfc91a7e1bda7657071",
-  "job": "weekly",
-  "manifest_sha256": "f4be2cd72d72902e1cf48331752b8db4950dfdcfce346ad4895888a5126184a2",
+  "inventory_sha256": "16508b95f30a9b029f136750389356fe5ba195b57ae28cd2ddfeb13d0f907248",
+  "job": "daily",
+  "manifest_sha256": "f23246da58bb0d2889b23126e715cf262cc6c04fc4caca5fcc80947b86291954",
   "ports_listening": [
     {
       "address": "0.0.0.0",
@@ -95,17 +95,17 @@
   ],
   "restic": {
     "repository_alias": "hetzner-storage-box",
-    "snapshot_id": "5eced064",
+    "snapshot_id": "3749bd34",
     "stats": {
       "files_changed": 0,
-      "files_new": 17,
+      "files_new": 10,
       "files_unmodified": 0,
-      "total_bytes": 1570698379
+      "total_bytes": 67650677
     },
     "tags": [
       "server=danlab-vps",
-      "job=weekly",
-      "id=20260614T041829Z"
+      "job=daily",
+      "id=20260615T031525Z"
     ]
   },
   "restore_tests": {
@@ -115,16 +115,16 @@
       "status": "not-run"
     },
     "weekly_postgres": {
-      "details": "postgres pg_dumpall restored into disposable container",
-      "last_run": "2026-06-14T04:24:19Z",
-      "status": "pass"
+      "details": "",
+      "last_run": null,
+      "status": "not-run"
     }
   },
   "retention_policy": {
     "keep_daily": 14,
     "keep_monthly": 12,
     "keep_weekly": 8,
-    "last_forget_status": "pass"
+    "last_forget_status": "not-run"
   },
   "scaled_to_zero": [
     {
@@ -266,18 +266,10 @@
       "replicas": "1/1"
     }
   ],
-  "started_at": "2026-06-14T04:18:29Z",
+  "started_at": "2026-06-15T03:15:25Z",
   "status": "pass",
   "version": 2,
-  "volumes_backed_up": [
-    "baserow_data",
-    "chatwoot_data",
-    "contentos-tools_searxng-config",
-    "evolutionv2_instances",
-    "minio_data",
-    "portainer_data",
-    "volume_swarm_certificates"
-  ],
+  "volumes_backed_up": [],
   "volumes_considered": [
     "baserow_data",
     "chatwoot_data",
