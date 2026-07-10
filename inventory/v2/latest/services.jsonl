@@ -15,6 +15,7 @@
 {"ID":"mbtls4sd7y3q","Image":"phpmyadmin/phpmyadmin:latest","Mode":"replicated","Name":"phpmyadmin_pma","Ports":"","Replicas":"0/0"}
 {"ID":"mpt9dxsqyf7l","Image":"crm-stripe-receiver:latest","Mode":"replicated","Name":"crm-stripe_crm_stripe_receiver","Ports":"","Replicas":"1/1"}
 {"ID":"p981bqe7ovzc","Image":"n8nio/n8n:2.19.2","Mode":"replicated","Name":"n8nfila_n8n_worker","Ports":"","Replicas":"1/1"}
+{"ID":"rpa82oxvbyvq","Image":"open-generative-ai:latest","Mode":"replicated","Name":"open-generative-ai_open-generative-ai","Ports":"","Replicas":"1/1"}
 {"ID":"sd324ycfy2hg","Image":"portainer/agent:sts","Mode":"global","Name":"portainer_agent","Ports":"","Replicas":"1/1"}
 {"ID":"tm1ypvu6myyi","Image":"contentos-kokoro-tts:latest","Mode":"replicated","Name":"contentos-video-producer_kokoro-tts","Ports":"*:8300-\u003e8300/tcp","Replicas":"1/1"}
 {"ID":"tvgca3cxl5yv","Image":"atendai/evolution-audio-converter:latest","Mode":"replicated","Name":"evo2_evolution_audio_converter","Ports":"","Replicas":"0/0"}

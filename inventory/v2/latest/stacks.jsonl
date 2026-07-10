@@ -11,6 +11,7 @@
 {"Name":"minio","Services":"1"}
 {"Name":"mysql","Services":"1"}
 {"Name":"n8nfila","Services":"3"}
+{"Name":"open-generative-ai","Services":"1"}
 {"Name":"pgadmin","Services":"1"}
 {"Name":"pgvector","Services":"1"}
 {"Name":"phpmyadmin","Services":"1"}
