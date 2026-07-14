@@ -1,9 +1,9 @@
-generated_at_utc=2026-07-13T03:19:26Z
+generated_at_utc=2026-07-14T03:18:43Z
 hostname=danlab
 Linux danlab 6.1.0-44-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.164-1 (2026-03-09) x86_64 GNU/Linux
 docker=27.5.1 swarm=active
 Filesystem      Size  Used Avail Use% Mounted on
-/dev/sda1        75G   66G  6.6G  91% /
+/dev/sda1        75G   57G   15G  80% /
                total        used        free      shared  buff/cache   available
-Mem:           7.6Gi       5.4Gi       171Mi       162Mi       2.4Gi       2.1Gi
-Swap:          2.0Gi       1.4Gi       619Mi
+Mem:           7.6Gi       4.6Gi       2.0Gi       162Mi       1.4Gi       2.9Gi
+Swap:          2.0Gi       2.0Gi       6.2Mi
