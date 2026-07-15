@@ -2,10 +2,9 @@
 {"Name":"baserow","Services":"1"}
 {"Name":"chatwoot","Services":"2"}
 {"Name":"contentos-health","Services":"1"}
-{"Name":"contentos-higgsfield","Services":"1"}
 {"Name":"contentos-tools","Services":"1"}
 {"Name":"contentos-vault","Services":"1"}
-{"Name":"contentos-video-producer","Services":"3"}
+{"Name":"contentos-video-producer","Services":"4"}
 {"Name":"crm-stripe","Services":"1"}
 {"Name":"evo2","Services":"2"}
 {"Name":"minio","Services":"1"}

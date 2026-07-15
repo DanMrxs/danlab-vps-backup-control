@@ -1,6 +1,6 @@
 {
-  "backup_id": "20260714T031843Z",
-  "completed_at": "2026-07-14T03:19:48Z",
+  "backup_id": "20260715T031958Z",
+  "completed_at": "2026-07-15T03:21:03Z",
   "errors": [],
   "healthchecks": {
     "daily": {
@@ -13,9 +13,9 @@
       "slug": "vps-backup-weekly"
     }
   },
-  "inventory_sha256": "7df5778151dbcceb1f3532dfadc11202490eed415bdbe14f31af23be49c566b3",
+  "inventory_sha256": "b764c3b167583264c615e47c5182adf0c2f48960af728145e2b5622881031cde",
   "job": "daily",
-  "manifest_sha256": "2ea44f630c5b986091b84fd29824fcf00da2f0c826b74d4f49c34106a6c9ce24",
+  "manifest_sha256": "b84c0af65f5dc5d1487e714c417763ae8aee50b20bc2f12ce615c68e99f2b62f",
   "ports_listening": [
     {
       "address": "0.0.0.0",
@@ -89,23 +89,28 @@
     },
     {
       "address": "*",
+      "port": 8400,
+      "protocol": "tcp"
+    },
+    {
+      "address": "*",
       "port": 8888,
       "protocol": "tcp"
     }
   ],
   "restic": {
     "repository_alias": "hetzner-storage-box",
-    "snapshot_id": "b83f707b",
+    "snapshot_id": "a1e3d4e2",
     "stats": {
       "files_changed": 0,
       "files_new": 10,
       "files_unmodified": 0,
-      "total_bytes": 175753052
+      "total_bytes": 175731912
     },
     "tags": [
       "server=danlab-vps",
       "job=daily",
-      "id=20260714T031843Z"
+      "id=20260715T031958Z"
     ]
   },
   "restore_tests": {
@@ -181,11 +186,6 @@
       "replicas": "1/1"
     },
     {
-      "image": "contentos-higgsfield-bridge:latest",
-      "name": "contentos-higgsfield_higgsfield-bridge",
-      "replicas": "1/1"
-    },
-    {
       "image": "searxng/searxng:latest",
       "name": "contentos-tools_searxng",
       "replicas": "1/1"
@@ -201,12 +201,17 @@
       "replicas": "1/1"
     },
     {
-      "image": "contentos-kokoro-tts:latest",
-      "name": "contentos-video-producer_kokoro-tts",
+      "image": "contentos-gemini-tts:latest",
+      "name": "contentos-video-producer_gemini-tts",
       "replicas": "1/1"
     },
     {
-      "image": "contentos-remotion:y3-7",
+      "image": "contentos-higgsfield-bridge:latest",
+      "name": "contentos-video-producer_higgsfield-bridge",
+      "replicas": "1/1"
+    },
+    {
+      "image": "contentos-remotion:latest",
       "name": "contentos-video-producer_remotion",
       "replicas": "1/1"
     },
@@ -271,7 +276,7 @@
       "replicas": "1/1"
     }
   ],
-  "started_at": "2026-07-14T03:18:43Z",
+  "started_at": "2026-07-15T03:19:58Z",
   "status": "pass",
   "version": 2,
   "volumes_backed_up": [],

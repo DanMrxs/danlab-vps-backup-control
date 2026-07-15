@@ -10,7 +10,8 @@ tcp   LISTEN 0      4096               *:8002            *:*
 tcp   LISTEN 0      4096               *:7000            *:*          
 tcp   LISTEN 0      4096               *:2377            *:*          
 tcp   LISTEN 0      4096               *:8888            *:*          
+tcp   LISTEN 0      4096               *:8400            *:*          
 tcp   LISTEN 0      128             [::]:22           [::]:*          
 tcp   LISTEN 0      4096            [::]:80           [::]:*          
-tcp   LISTEN 9      4096               *:8300            *:*          
+tcp   LISTEN 0      4096               *:8300            *:*          
 tcp   LISTEN 0      4096            [::]:443          [::]:*          
