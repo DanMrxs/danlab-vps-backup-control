@@ -17,4 +17,5 @@
 {"Name":"portainer","Services":"2"}
 {"Name":"postgres","Services":"1"}
 {"Name":"redis","Services":"1"}
+{"Name":"thi-studio","Services":"7"}
 {"Name":"traefik","Services":"1"}

@@ -6,3 +6,4 @@
 {"CreatedAt":"2026-04-10 02:34:50.120117165 +0000 UTC","Driver":"overlay","ID":"3qdnr324nmkx","IPv6":"false","Internal":"false","Labels":"com.docker.stack.namespace=contentos-tools","Name":"contentos-tools_default","Scope":"swarm"}
 {"CreatedAt":"2026-04-22 04:20:10.346621248 +0000 UTC","Driver":"bridge","ID":"80dc92db38cd","IPv6":"false","Internal":"false","Labels":"","Name":"bridge","Scope":"local"}
 {"CreatedAt":"2026-04-23 11:04:03.881944802 +0000 UTC","Driver":"overlay","ID":"4r1tszl4rym7","IPv6":"false","Internal":"false","Labels":"com.docker.stack.namespace=contentos-video-producer","Name":"contentos-video-producer_default","Scope":"swarm"}
+{"CreatedAt":"2026-07-15 16:17:20.519207076 +0000 UTC","Driver":"overlay","ID":"122xf68wol7b","IPv6":"false","Internal":"false","Labels":"com.docker.stack.namespace=thi-studio","Name":"thi-studio_thi-studio","Scope":"swarm"}
