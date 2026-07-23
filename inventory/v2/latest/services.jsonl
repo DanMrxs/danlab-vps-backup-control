@@ -1,7 +1,7 @@
 {"ID":"165n73239wf6","Image":"thi-studio/scheduler:latest","Mode":"replicated","Name":"thi-studio_scheduler","Ports":"","Replicas":"1/1"}
 {"ID":"19u0rd1ettsi","Image":"baserow/baserow:latest","Mode":"replicated","Name":"baserow_baserow","Ports":"","Replicas":"1/1"}
 {"ID":"3az4ck8oxlik","Image":"searxng/searxng:latest","Mode":"replicated","Name":"contentos-tools_searxng","Ports":"*:8888-\u003e8080/tcp","Replicas":"1/1"}
-{"ID":"4d1v9ezq63or","Image":"contentos-captions-api:v1","Mode":"replicated","Name":"contentos-video-producer_captions-api","Ports":"*:8002-\u003e8002/tcp","Replicas":"1/1"}
+{"ID":"4d1v9ezq63or","Image":"contentos-captions-api:v2","Mode":"replicated","Name":"contentos-video-producer_captions-api","Ports":"*:8002-\u003e8002/tcp","Replicas":"1/1"}
 {"ID":"58h9swe81iq5","Image":"contentos-health-monitor:latest","Mode":"replicated","Name":"contentos-health_health-monitor","Ports":"","Replicas":"1/1"}
 {"ID":"8wjxzzrb3gmz","Image":"thi-studio/hyperframes-renderer:latest","Mode":"replicated","Name":"thi-studio_hyperframes-renderer","Ports":"","Replicas":"1/1"}
 {"ID":"b1t9atec1o90","Image":"redis:latest","Mode":"replicated","Name":"redis_redis","Ports":"","Replicas":"1/1"}
