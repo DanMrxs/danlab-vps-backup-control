@@ -7,6 +7,7 @@ contentos-video-producer_higgsfield_auth
 contentos-video-producer_higgsfield_cache
 contentos-video-producer_remotion_out
 crm-stripe_kern_stripe_queue
+de091e8d37411a4124de58a4f9d3e44104b42e91f4f60fd9b6b5e123d19ba293
 minio_data
 pgvector_data
 portainer_data

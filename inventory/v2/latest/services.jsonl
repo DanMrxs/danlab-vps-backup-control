@@ -8,7 +8,7 @@
 {"ID":"brqqq4qozs45","Image":"contentos-remotion:latest","Mode":"replicated","Name":"contentos-video-producer_remotion","Ports":"*:7000-\u003e7000/tcp","Replicas":"1/1"}
 {"ID":"e6958l3a3m4j","Image":"pgvector/pgvector:pg16","Mode":"replicated","Name":"pgvector_pgvector","Ports":"","Replicas":"1/1"}
 {"ID":"ewa8byq5uvlp","Image":"traefik:v2.11","Mode":"replicated","Name":"traefik_traefik","Ports":"","Replicas":"1/1"}
-{"ID":"han5cjvouoal","Image":"thi-studio/higgsfield-bridge:latest","Mode":"replicated","Name":"thi-studio_higgsfield-bridge","Ports":"","Replicas":"1/1"}
+{"ID":"han5cjvouoal","Image":"thi-studio/higgsfield-bridge:latest","Mode":"replicated","Name":"thi-studio_higgsfield-bridge","Ports":"","Replicas":"0/1"}
 {"ID":"iyvjvb2fxedl","Image":"n8n-thi-studio:latest","Mode":"replicated","Name":"n8nfila_n8n_webhook","Ports":"","Replicas":"1/1"}
 {"ID":"ldy3l79fb458","Image":"thi-studio/gemini-tts:latest","Mode":"replicated","Name":"thi-studio_gemini-tts","Ports":"","Replicas":"1/1"}
 {"ID":"lpsukdicexpz","Image":"postgres:14","Mode":"replicated","Name":"postgres_postgres","Ports":"","Replicas":"1/1"}
