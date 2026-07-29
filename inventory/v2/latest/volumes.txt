@@ -13,6 +13,10 @@ pgvector_data
 portainer_data
 postgres_data
 redis_data
+surfsense-object-store
+surfsense-postgres
+surfsense-redis
+surfsense-shared-temp
 thi-studio_captions-api-models
 thi-studio_gemini-tts-jobs
 volume_swarm_certificates
