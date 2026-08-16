@@ -16,7 +16,7 @@
 {"ID":"p981bqe7ovzc","Image":"n8n-thi-studio:latest","Mode":"replicated","Name":"n8nfila_n8n_worker","Ports":"","Replicas":"1/1"}
 {"ID":"powfekrhaq2v","Image":"contentos-higgsfield-bridge:latest","Mode":"replicated","Name":"contentos-video-producer_higgsfield-bridge","Ports":"*:8400-\u003e8400/tcp","Replicas":"1/1"}
 {"ID":"r572p6zp5ohe","Image":"contentos-gemini-tts:latest","Mode":"replicated","Name":"contentos-video-producer_gemini-tts","Ports":"*:8300-\u003e8300/tcp","Replicas":"1/1"}
-{"ID":"rpa82oxvbyvq","Image":"open-generative-ai:latest","Mode":"replicated","Name":"open-generative-ai_open-generative-ai","Ports":"","Replicas":"1/1"}
+{"ID":"rpa82oxvbyvq","Image":"open-generative-ai:latest","Mode":"replicated","Name":"open-generative-ai_open-generative-ai","Ports":"","Replicas":"0/1"}
 {"ID":"sd324ycfy2hg","Image":"portainer/agent:sts","Mode":"global","Name":"portainer_agent","Ports":"","Replicas":"1/1"}
 {"ID":"uptoizqbahke","Image":"thi-studio/captions-api:latest","Mode":"replicated","Name":"thi-studio_captions-api","Ports":"","Replicas":"1/1"}
 {"ID":"usq89aqg0qhj","Image":"n8n-thi-studio:latest","Mode":"replicated","Name":"n8nfila_n8n_editor","Ports":"","Replicas":"1/1"}
