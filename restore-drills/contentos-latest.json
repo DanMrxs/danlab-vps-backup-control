@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "drill_id": "contentos-20260817T105009Z",
+  "snapshot_id": "c6482e49",
+  "started_at": "2026-08-17T10:50:09Z",
+  "completed_at": "2026-08-17T10:52:06Z",
+  "status": "pass",
+  "restore_target_policy": "verified temporary directory; removed after validation",
+  "timings_seconds": {
+    "restic_restore": 51,
+    "contentos_database_validation": 6,
+    "minio_archive_validation": 60,
+    "total": 117
+  },
+  "contentos_database": {
+    "artifact_bytes": 4801109,
+    "public_tables": 24,
+    "content_queue_rows": 1264,
+    "restored_into": "disposable postgres:14 container"
+  },
+  "minio": {
+    "artifact_bytes": 2962161437,
+    "gzip_stream_valid": true,
+    "brand_asset_entries": 171,
+    "video_render_entries": 2857,
+    "format_sha256": "9d3c5df15179d9f21eef8ccb3bc0855acfcada5d2ebb3e1950c3ce1810db70ad",
+    "format_matches_production": true
+  }
+}
