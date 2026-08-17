@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "completed_at": "2026-08-17T10:56:24Z",
+  "status": "pass",
+  "current_manifest_backup_id": "20260817T103635Z",
+  "safety": {
+    "backup_lock_held": true,
+    "exact_paths_only": true,
+    "offsite_snapshots_verified": true
+  },
+  "disk": {
+    "before_used_bytes": 60756021248,
+    "before_available_bytes": 16251338752,
+    "after_used_bytes": 54715781120,
+    "after_available_bytes": 22291578880,
+    "available_bytes_recovered": 6040240128
+  },
+  "removed": [
+    {
+      "path": "/var/backups/vps-control/work/20260809T041558Z.oawHAD",
+      "backup_id": "20260809T041558Z",
+      "snapshot_id": "640532df",
+      "started_at": "2026-08-09T04:15:58Z",
+      "age_seconds": 715215,
+      "bytes": 3015429566,
+      "manifest_status": "partial",
+      "errors": 0,
+      "offsite_snapshot_verified": true
+    },
+    {
+      "path": "/var/backups/vps-control/work/20260816T041914Z.5rLs0E",
+      "backup_id": "20260816T041914Z",
+      "snapshot_id": "60139fe6",
+      "started_at": "2026-08-16T04:19:14Z",
+      "age_seconds": 110219,
+      "bytes": 3024871212,
+      "manifest_status": "partial",
+      "errors": 0,
+      "offsite_snapshot_verified": true
+    }
+  ]
+}
