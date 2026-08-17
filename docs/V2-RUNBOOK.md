@@ -69,6 +69,17 @@ Manual weekly backup and restore smoke test:
 scripts/v2/backup-vps.sh --mode weekly
 ```
 
+## ContentOS Recovery Scope
+
+- Every daily and weekly run writes a dedicated custom-format dump of the
+  `content_os` database in addition to the server-wide `pg_dumpall` archive.
+- Weekly runs restore both PostgreSQL artifacts into a disposable container and
+  require at least one public ContentOS table before the restore test passes.
+- `minio_data` is the canonical ContentOS media/asset volume and is archived on
+  weekly runs. `contentos-video-producer_remotion_out` and
+  `contentos-video-producer_gemini_jobs` are reconstructible scratch volumes and
+  are intentionally outside backup scope.
+
 ## Enable Timers
 
 Enable only after one manual daily run passes and Healthchecks ping URLs are installed.

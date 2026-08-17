@@ -46,7 +46,9 @@ REDIS_CONTAINER_FILTER="${REDIS_CONTAINER_FILTER:-redis_redis}"
 POSTGRES_USER="${POSTGRES_USER:-postgres}"
 PGVECTOR_USER="${PGVECTOR_USER:-postgres}"
 RESTORE_POSTGRES_IMAGE="${RESTORE_POSTGRES_IMAGE:-postgres:14}"
-VOLUME_NAMES="${VOLUME_NAMES:-baserow_data chatwoot_data contentos-tools_searxng-config evolutionv2_instances minio_data portainer_data volume_swarm_certificates}"
+CONTENTOS_DATABASE="${CONTENTOS_DATABASE:-content_os}"
+CONTENTOS_DATABASE_DUMP="${CONTENTOS_DATABASE_DUMP:-contentos_content_os.dump}"
+VOLUME_NAMES="${VOLUME_NAMES:-baserow_data contentos-tools_searxng-config minio_data portainer_data volume_swarm_certificates}"
 
 if [[ -f "$HEALTHCHECKS_ENV_FILE" ]]; then
   # shellcheck disable=SC1090
@@ -139,6 +141,13 @@ dump_databases() {
   pgc="$(docker_container_by_filter "$POSTGRES_CONTAINER_FILTER")"
   if [[ -n "$pgc" ]]; then
     docker exec "$pgc" sh -lc "pg_dumpall -U '$POSTGRES_USER'" | gzip -c > "$db_dir/postgres_pg_dumpall.sql.gz" || record_error "postgres dump failed"
+    docker exec "$pgc" pg_dump \
+      -U "$POSTGRES_USER" \
+      -d "$CONTENTOS_DATABASE" \
+      --format=custom \
+      --no-owner \
+      --no-privileges \
+      > "$db_dir/$CONTENTOS_DATABASE_DUMP" || record_error "ContentOS database dump failed"
   else
     record_error "postgres container not found by filter ${POSTGRES_CONTAINER_FILTER}"
   fi
@@ -181,10 +190,11 @@ backup_volumes() {
 
 run_weekly_restore_test() {
   local dump_path="$1"
+  local contentos_dump_path="$2"
   local name="vps-restore-${backup_id}"
-  if [[ ! -s "$dump_path" ]]; then
+  if [[ ! -s "$dump_path" || ! -s "$contentos_dump_path" ]]; then
     restore_status="fail"
-    restore_details="postgres dump missing"
+    restore_details="postgres or ContentOS dump missing"
     return 0
   fi
   docker rm -f "$name" >/dev/null 2>&1 || true
@@ -196,13 +206,16 @@ run_weekly_restore_test() {
     sleep 2
   done
   if gunzip -c "$dump_path" | docker exec -i "$name" psql -U restore_admin -d postgres -v ON_ERROR_STOP=1 -f - >/tmp/"${name}.restore.log" 2>&1 &&
-     docker exec "$name" psql -U restore_admin -d postgres -tAc "select 1" >/dev/null 2>&1; then
+     docker exec "$name" psql -U restore_admin -d postgres -tAc "select 1" >/dev/null 2>&1 &&
+     docker exec "$name" createdb -U restore_admin contentos_restore_probe >/dev/null 2>&1 &&
+     docker exec -i "$name" pg_restore -U restore_admin -d contentos_restore_probe --exit-on-error --no-owner --no-privileges < "$contentos_dump_path" >>/tmp/"${name}.restore.log" 2>&1 &&
+     docker exec "$name" psql -U restore_admin -d contentos_restore_probe -tAc "select (count(*) > 0)::int from information_schema.tables where table_schema = 'public'" | grep -qx 1; then
     restore_status="pass"
-    restore_details="postgres pg_dumpall restored into disposable container"
+    restore_details="postgres pg_dumpall and dedicated ContentOS dump restored into disposable container"
   else
     restore_status="fail"
-    restore_details="postgres restore failed; see VPS logs"
-    record_error "weekly postgres restore smoke test failed"
+    restore_details="postgres or ContentOS restore failed; see VPS logs"
+    record_error "weekly postgres/ContentOS restore smoke test failed"
   fi
   docker rm -f "$name" >/dev/null 2>&1 || true
 }
@@ -245,7 +258,9 @@ main() {
     dump_databases "$workdir/payload/databases"
     if [[ "$mode" == "weekly" ]]; then
       backup_volumes "$workdir/payload/volumes"
-      run_weekly_restore_test "$workdir/payload/databases/postgres_pg_dumpall.sql.gz"
+      run_weekly_restore_test \
+        "$workdir/payload/databases/postgres_pg_dumpall.sql.gz" \
+        "$workdir/payload/databases/$CONTENTOS_DATABASE_DUMP"
     else
       : > "$workdir/volumes-backed-up.txt"
     fi
