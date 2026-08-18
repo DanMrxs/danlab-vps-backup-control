@@ -220,6 +220,57 @@ run_weekly_restore_test() {
   docker rm -f "$name" >/dev/null 2>&1 || true
 }
 
+cleanup_staging_dirs() {
+  local keep_success=1
+  local -a staging_dirs=()
+  local candidate candidate_id candidate_snapshot resolved work_resolved status
+  local successful_seen=0
+  local snapshot_matches=0
+
+  work_resolved="$(realpath -e -- "$WORK_ROOT")"
+  mapfile -t staging_dirs < <(ls -1dt "$WORK_ROOT"/*/ 2>/dev/null)
+  for candidate in "${staging_dirs[@]}"; do
+    candidate="${candidate%/}"
+    status="$(jq -r '.status // empty' "$candidate/manifest.json" 2>/dev/null || true)"
+    if [[ "$status" != "pass" || ! -f "$candidate/restic-backup.json" ||
+          -L "$candidate" || -L "$candidate/manifest.json" || -L "$candidate/restic-backup.json" ]]; then
+      echo "cleanup: keeping ${candidate} (not an exact successful local staging copy)"
+      continue
+    fi
+
+    successful_seen=$((successful_seen + 1))
+    if [[ "$successful_seen" -le "$keep_success" ]]; then
+      echo "cleanup: keeping newest successful local staging dir ${candidate}"
+      continue
+    fi
+
+    resolved="$(realpath -e -- "$candidate")"
+    if [[ "$(dirname -- "$resolved")" != "$work_resolved" ]]; then
+      record_warning "cleanup: refusing path outside exact work root ${candidate}"
+      continue
+    fi
+    candidate_id="$(jq -r '.backup_id // empty' "$candidate/manifest.json")"
+    candidate_snapshot="$(jq -r '.restic.snapshot_id // empty' "$candidate/manifest.json")"
+    if [[ ! "$candidate_id" =~ ^[0-9]{8}T[0-9]{6}Z$ || ! "$candidate_snapshot" =~ ^[0-9a-f]{8,64}$ ]]; then
+      record_warning "cleanup: refusing ${candidate}; invalid backup or snapshot identity"
+      continue
+    fi
+    snapshot_matches="$(restic snapshots --json --tag "id=${candidate_id}" 2>/dev/null |
+      jq --arg snapshot "$candidate_snapshot" '[.[] | select((.id | startswith($snapshot)))] | length' 2>/dev/null || echo 0)"
+    if [[ "$snapshot_matches" != "1" ]]; then
+      record_warning "cleanup: keeping ${candidate}; exact offsite snapshot is not uniquely visible"
+      continue
+    fi
+
+    if rm -rf --one-file-system -- "$resolved"; then
+      echo "cleanup: removed exact older successful staging dir ${resolved} (offsite snapshot ${candidate_snapshot})"
+    else
+      record_warning "cleanup: failed to remove staging dir ${resolved}"
+    fi
+  done
+  echo "cleanup: local successful staging retention keep=${keep_success}; offsite retention unchanged"
+}
+
 main() {
   require_command docker
   require_command jq
@@ -321,6 +372,10 @@ main() {
   manifest_status="$(jq -r '.status' "$workdir/manifest.json")"
   if [[ "$manifest_status" == "pass" ]]; then
     ping_healthcheck ""
+    (
+      flock -n 9 || { echo "cleanup: backup controller lock busy; skipping local retention"; exit 0; }
+      cleanup_staging_dirs
+    ) 9>/run/lock/vps-control-backup.lock || record_warning "staging cleanup failed; backup result unaffected" || true
   else
     ping_healthcheck "/fail"
     echo "Backup completed with manifest status=${manifest_status}; treating as failed for scheduler/monitoring." >&2
