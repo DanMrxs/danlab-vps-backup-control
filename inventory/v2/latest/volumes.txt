@@ -14,6 +14,7 @@ contentos-video-producer_remotion-out
 contentos-video-producer_remotion_out
 crm-stripe_kern_stripe_queue
 ee20e6d856e5793c04b6c57c8b40c3ce751bf6a369065646a80f0428d4a6f453
+f7ad61f02237ae196a4e298d26b286338733e14bc1fba0f52a99f67184427209
 minio_data
 pgvector_data
 portainer_data
