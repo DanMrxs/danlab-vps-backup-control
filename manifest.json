@@ -1,9 +1,7 @@
 {
-  "backup_id": "20260823T042006Z",
-  "completed_at": "2026-08-23T04:36:37Z",
-  "errors": [
-    "restic retention forget/prune failed"
-  ],
+  "backup_id": "20260824T031614Z",
+  "completed_at": "2026-08-24T03:17:11Z",
+  "errors": [],
   "healthchecks": {
     "daily": {
       "slug": "vps-backup-daily"
@@ -15,9 +13,9 @@
       "slug": "vps-backup-weekly"
     }
   },
-  "inventory_sha256": "5de1ca7309697230eb988fde645f1b4384896fd31374f0410d999984f7029d85",
-  "job": "weekly",
-  "manifest_sha256": "e20f4d52819b5e026d76a32f31ae8811e3ffeed7e9793d1a960f769083f9d53e",
+  "inventory_sha256": "81bb0d9dcb6b1aa422dadeddf31d62078916def17fdebc9fc18fbb850cf2ce84",
+  "job": "daily",
+  "manifest_sha256": "2bca0a58ba2a7ba0e5ab49fa7eec2b51017f4fcfd213e1defa9776f8917ff088",
   "ports_listening": [
     {
       "address": "0.0.0.0",
@@ -107,17 +105,17 @@
   ],
   "restic": {
     "repository_alias": "hetzner-storage-box",
-    "snapshot_id": "043b2edb",
+    "snapshot_id": "5537fe51",
     "stats": {
       "files_changed": 0,
-      "files_new": 16,
+      "files_new": 11,
       "files_unmodified": 0,
-      "total_bytes": 3045136055
+      "total_bytes": 69600300
     },
     "tags": [
       "server=danlab-vps",
-      "job=weekly",
-      "id=20260823T042006Z"
+      "job=daily",
+      "id=20260824T031614Z"
     ]
   },
   "restore_tests": {
@@ -127,16 +125,16 @@
       "status": "not-run"
     },
     "weekly_postgres": {
-      "details": "postgres pg_dumpall and dedicated ContentOS dump restored into disposable container",
-      "last_run": "2026-08-23T04:36:37Z",
-      "status": "pass"
+      "details": "",
+      "last_run": null,
+      "status": "not-run"
     }
   },
   "retention_policy": {
     "keep_daily": 14,
     "keep_monthly": 12,
     "keep_weekly": 8,
-    "last_forget_status": "fail"
+    "last_forget_status": "not-run"
   },
   "scaled_to_zero": [
     {
@@ -288,16 +286,10 @@
       "replicas": "1/1"
     }
   ],
-  "started_at": "2026-08-23T04:20:06Z",
-  "status": "fail",
+  "started_at": "2026-08-24T03:16:14Z",
+  "status": "pass",
   "version": 2,
-  "volumes_backed_up": [
-    "baserow_data",
-    "contentos-tools_searxng-config",
-    "minio_data",
-    "portainer_data",
-    "volume_swarm_certificates"
-  ],
+  "volumes_backed_up": [],
   "volumes_considered": [
     "baserow_data",
     "contentos-tools_searxng-config",
