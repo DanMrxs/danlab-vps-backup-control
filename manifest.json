@@ -1,6 +1,6 @@
 {
-  "backup_id": "20260826T031636Z",
-  "completed_at": "2026-08-26T03:17:31Z",
+  "backup_id": "20260827T031955Z",
+  "completed_at": "2026-08-27T03:20:16Z",
   "errors": [],
   "healthchecks": {
     "daily": {
@@ -13,9 +13,9 @@
       "slug": "vps-backup-weekly"
     }
   },
-  "inventory_sha256": "450effb3a030d9682ef2944106e761de3ec6127a54d36cb372456e8d43b0890b",
+  "inventory_sha256": "517cb23f0a02a220a47d0f5a250618c4d9b472391634f807a9282eb5e042041e",
   "job": "daily",
-  "manifest_sha256": "d69f61dd9b7dba708287c0417a25e681cb0c50a3b34db9af151fc43e8c7e0518",
+  "manifest_sha256": "e73b01225bc865588ff61f7ce65798d21f7a85d657310c760a3c77740ebc1a6c",
   "ports_listening": [
     {
       "address": "0.0.0.0",
@@ -94,28 +94,23 @@
     },
     {
       "address": "*",
-      "port": 8400,
-      "protocol": "tcp"
-    },
-    {
-      "address": "*",
       "port": 8888,
       "protocol": "tcp"
     }
   ],
   "restic": {
     "repository_alias": "hetzner-storage-box",
-    "snapshot_id": "5f3819e1",
+    "snapshot_id": "18da8919",
     "stats": {
       "files_changed": 0,
       "files_new": 11,
       "files_unmodified": 0,
-      "total_bytes": 70959179
+      "total_bytes": 762010
     },
     "tags": [
       "server=danlab-vps",
       "job=daily",
-      "id=20260826T031636Z"
+      "id=20260827T031955Z"
     ]
   },
   "restore_tests": {
@@ -138,14 +133,29 @@
   },
   "scaled_to_zero": [
     {
+      "image": "sha256:fb5e1d2ce615f5e989515168f5a8957eb544697e09e02e94770502daefc36b30",
+      "name": "contentos-core_contentos-core",
+      "replicas": "0/0"
+    },
+    {
+      "image": "contentos-health-monitor:latest",
+      "name": "contentos-health_health-monitor",
+      "replicas": "0/0"
+    },
+    {
+      "image": "contentos-storage-guard:v8-20260817T1155Z",
+      "name": "contentos-storage-guard_storage-guard",
+      "replicas": "0/0"
+    },
+    {
+      "image": "contentos-higgsfield-bridge:v8-20260818-sync-contract",
+      "name": "contentos-video-producer_higgsfield-bridge",
+      "replicas": "0/0"
+    },
+    {
       "image": "open-generative-ai:latest",
       "name": "open-generative-ai_open-generative-ai",
       "replicas": "0/1"
-    },
-    {
-      "image": "thi-studio/higgsfield-bridge:latest",
-      "name": "thi-studio_higgsfield-bridge",
-      "replicas": "0/0"
     }
   ],
   "server_id": "danlab-vps",
@@ -153,21 +163,6 @@
     {
       "image": "baserow/baserow:latest",
       "name": "baserow_baserow",
-      "replicas": "1/1"
-    },
-    {
-      "image": "sha256:fb5e1d2ce615f5e989515168f5a8957eb544697e09e02e94770502daefc36b30",
-      "name": "contentos-core_contentos-core",
-      "replicas": "1/1"
-    },
-    {
-      "image": "contentos-health-monitor:latest",
-      "name": "contentos-health_health-monitor",
-      "replicas": "1/1"
-    },
-    {
-      "image": "contentos-storage-guard:v8-20260817T1155Z",
-      "name": "contentos-storage-guard_storage-guard",
       "replicas": "1/1"
     },
     {
@@ -191,11 +186,6 @@
       "replicas": "1/1"
     },
     {
-      "image": "contentos-higgsfield-bridge:v8-20260818-sync-contract",
-      "name": "contentos-video-producer_higgsfield-bridge",
-      "replicas": "1/1"
-    },
-    {
       "image": "contentos-remotion:v8-20260818-master-audio",
       "name": "contentos-video-producer_remotion",
       "replicas": "1/1"
@@ -211,17 +201,17 @@
       "replicas": "1/1"
     },
     {
-      "image": "n8n-thi-studio:latest",
+      "image": "n8nio/n8n:2.36.7",
       "name": "n8nfila_n8n_editor",
       "replicas": "1/1"
     },
     {
-      "image": "n8n-thi-studio:latest",
+      "image": "n8nio/n8n:2.36.7",
       "name": "n8nfila_n8n_webhook",
       "replicas": "1/1"
     },
     {
-      "image": "n8n-thi-studio:latest",
+      "image": "n8nio/n8n:2.36.7",
       "name": "n8nfila_n8n_worker",
       "replicas": "1/1"
     },
@@ -251,42 +241,12 @@
       "replicas": "1/1"
     },
     {
-      "image": "thi-studio/captions-api:latest",
-      "name": "thi-studio_captions-api",
-      "replicas": "1/1"
-    },
-    {
-      "image": "thi-studio/cleanup:latest",
-      "name": "thi-studio_cleanup",
-      "replicas": "1/1"
-    },
-    {
-      "image": "thi-studio/gemini-tts:latest",
-      "name": "thi-studio_gemini-tts",
-      "replicas": "1/1"
-    },
-    {
-      "image": "thi-studio/hyperframes-renderer:latest",
-      "name": "thi-studio_hyperframes-renderer",
-      "replicas": "1/1"
-    },
-    {
-      "image": "thi-studio/remotion-server:latest",
-      "name": "thi-studio_remotion-server",
-      "replicas": "1/1"
-    },
-    {
-      "image": "thi-studio/scheduler:latest",
-      "name": "thi-studio_scheduler",
-      "replicas": "1/1"
-    },
-    {
       "image": "traefik:v2.11",
       "name": "traefik_traefik",
       "replicas": "1/1"
     }
   ],
-  "started_at": "2026-08-26T03:16:36Z",
+  "started_at": "2026-08-27T03:19:55Z",
   "status": "pass",
   "version": 2,
   "volumes_backed_up": [],
