@@ -4,7 +4,7 @@
 {"ID":"4d1v9ezq63or","Image":"contentos-captions-api:v2","Mode":"replicated","Name":"contentos-video-producer_captions-api","Ports":"*:8002-\u003e8002/tcp","Replicas":"1/1"}
 {"ID":"58h9swe81iq5","Image":"contentos-health-monitor:latest","Mode":"replicated","Name":"contentos-health_health-monitor","Ports":"","Replicas":"0/0"}
 {"ID":"b1t9atec1o90","Image":"redis:latest","Mode":"replicated","Name":"redis_redis","Ports":"","Replicas":"1/1"}
-{"ID":"brqqq4qozs45","Image":"contentos-remotion:v8-20260818-master-audio","Mode":"replicated","Name":"contentos-video-producer_remotion","Ports":"*:7000-\u003e7000/tcp","Replicas":"1/1"}
+{"ID":"brqqq4qozs45","Image":"contentos-remotion:v9-20260827-minio-upload","Mode":"replicated","Name":"contentos-video-producer_remotion","Ports":"*:7000-\u003e7000/tcp","Replicas":"1/1"}
 {"ID":"e6958l3a3m4j","Image":"pgvector/pgvector:pg16","Mode":"replicated","Name":"pgvector_pgvector","Ports":"","Replicas":"1/1"}
 {"ID":"ewa8byq5uvlp","Image":"traefik:v2.11","Mode":"replicated","Name":"traefik_traefik","Ports":"","Replicas":"1/1"}
 {"ID":"iyvjvb2fxedl","Image":"n8nio/n8n:2.36.7","Mode":"replicated","Name":"n8nfila_n8n_webhook","Ports":"","Replicas":"1/1"}
