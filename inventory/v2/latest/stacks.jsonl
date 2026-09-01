@@ -4,8 +4,10 @@
 {"Name":"contentos-vault","Services":"1"}
 {"Name":"contentos-video-producer","Services":"4"}
 {"Name":"crm-stripe","Services":"1"}
+{"Name":"fullmrktdept","Services":"6"}
 {"Name":"minio","Services":"1"}
 {"Name":"n8nfila","Services":"3"}
+{"Name":"n8npg17","Services":"1"}
 {"Name":"open-generative-ai","Services":"1"}
 {"Name":"pgvector","Services":"1"}
 {"Name":"portainer","Services":"2"}

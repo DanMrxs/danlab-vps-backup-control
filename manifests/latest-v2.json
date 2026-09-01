@@ -1,6 +1,6 @@
 {
-  "backup_id": "20260831T031512Z",
-  "completed_at": "2026-08-31T03:15:27Z",
+  "backup_id": "20260901T031509Z",
+  "completed_at": "2026-09-01T03:15:23Z",
   "errors": [],
   "healthchecks": {
     "daily": {
@@ -13,9 +13,9 @@
       "slug": "vps-backup-weekly"
     }
   },
-  "inventory_sha256": "f03886d262bb0de67fef1f06b5f83ca99c435686f6383dd6f1c7abf4db87a81c",
+  "inventory_sha256": "3afbfe88ebd38c632924a94cf4a72125f53ec4ca36bbf8bff9512cdc9c09410f",
   "job": "daily",
-  "manifest_sha256": "7c49f23586f20b97ee7411bbf4a371dc675f642b000dbe8f2707159d476a193f",
+  "manifest_sha256": "ac60c8096532fdbd2f1c834d142099fa828eef3d52bfda23d7d919860583c1bc",
   "ports_listening": [
     {
       "address": "0.0.0.0",
@@ -100,17 +100,17 @@
   ],
   "restic": {
     "repository_alias": "hetzner-storage-box",
-    "snapshot_id": "f2bcf1ca",
+    "snapshot_id": "c2a45706",
     "stats": {
       "files_changed": 0,
       "files_new": 11,
       "files_unmodified": 0,
-      "total_bytes": 765576
+      "total_bytes": 773469
     },
     "tags": [
       "server=danlab-vps",
       "job=daily",
-      "id=20260831T031512Z"
+      "id=20260901T031509Z"
     ]
   },
   "restore_tests": {
@@ -150,6 +150,31 @@
     {
       "image": "contentos-higgsfield-bridge:v8-20260818-sync-contract",
       "name": "contentos-video-producer_higgsfield-bridge",
+      "replicas": "0/0"
+    },
+    {
+      "image": "fullmrktdept:prephase-20260831-r6",
+      "name": "fullmrktdept_bootstrap",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:production-20260831-r8",
+      "name": "fullmrktdept_reconcile_thi_release_20260831",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:production-20260831-r7",
+      "name": "fullmrktdept_record_thi_release_20260831",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:prephase-20260831-r6",
+      "name": "fullmrktdept_scheduler",
+      "replicas": "0/0"
+    },
+    {
+      "image": "fullmrktdept:prephase-20260831-r6",
+      "name": "fullmrktdept_worker",
       "replicas": "0/0"
     },
     {
@@ -196,6 +221,21 @@
       "replicas": "1/1"
     },
     {
+      "image": "fullmrktdept:production-20260831-r7",
+      "name": "fullmrktdept_api",
+      "replicas": "1/1"
+    },
+    {
+      "image": "fullmrktdept:production-20260831-r7",
+      "name": "fullmrktdept_outbox",
+      "replicas": "1/1"
+    },
+    {
+      "image": "postgres:17-alpine",
+      "name": "fullmrktdept_postgres",
+      "replicas": "1/1"
+    },
+    {
       "image": "quay.io/minio/minio:latest",
       "name": "minio_minio",
       "replicas": "1/1"
@@ -213,6 +253,11 @@
     {
       "image": "n8nio/n8n:2.36.7",
       "name": "n8nfila_n8n_worker",
+      "replicas": "1/1"
+    },
+    {
+      "image": "postgres:17-alpine",
+      "name": "n8npg17_postgres",
       "replicas": "1/1"
     },
     {
@@ -246,7 +291,7 @@
       "replicas": "1/1"
     }
   ],
-  "started_at": "2026-08-31T03:15:12Z",
+  "started_at": "2026-09-01T03:15:09Z",
   "status": "pass",
   "version": 2,
   "volumes_backed_up": [],
