@@ -1,6 +1,6 @@
 {
-  "backup_id": "20260901T031509Z",
-  "completed_at": "2026-09-01T03:15:23Z",
+  "backup_id": "20260902T031548Z",
+  "completed_at": "2026-09-02T03:16:07Z",
   "errors": [],
   "healthchecks": {
     "daily": {
@@ -13,9 +13,9 @@
       "slug": "vps-backup-weekly"
     }
   },
-  "inventory_sha256": "3afbfe88ebd38c632924a94cf4a72125f53ec4ca36bbf8bff9512cdc9c09410f",
+  "inventory_sha256": "96b6c4b8bb8823de101f71267d7643a3bb018cb99565d46012862673f2c56f46",
   "job": "daily",
-  "manifest_sha256": "ac60c8096532fdbd2f1c834d142099fa828eef3d52bfda23d7d919860583c1bc",
+  "manifest_sha256": "bbe927c2ac71ca54d185e8de87aa8d4ebf24a7922c020de5bb9ce319798e7dda",
   "ports_listening": [
     {
       "address": "0.0.0.0",
@@ -100,17 +100,17 @@
   ],
   "restic": {
     "repository_alias": "hetzner-storage-box",
-    "snapshot_id": "c2a45706",
+    "snapshot_id": "10508dcf",
     "stats": {
       "files_changed": 0,
       "files_new": 11,
       "files_unmodified": 0,
-      "total_bytes": 773469
+      "total_bytes": 776049
     },
     "tags": [
       "server=danlab-vps",
       "job=daily",
-      "id=20260901T031509Z"
+      "id=20260902T031548Z"
     ]
   },
   "restore_tests": {
@@ -158,6 +158,21 @@
       "replicas": "0/1 (1/1 completed)"
     },
     {
+      "image": "fullmrktdept:production-20260902-r1",
+      "name": "fullmrktdept_dispatch_thi_20260902_p0404",
+      "replicas": "0/1"
+    },
+    {
+      "image": "fullmrktdept:production-20260902-r1",
+      "name": "fullmrktdept_migrate_20260902_p0404",
+      "replicas": "0/1"
+    },
+    {
+      "image": "fullmrktdept:production-20260902-r1",
+      "name": "fullmrktdept_promote_thi_20260902_p0404",
+      "replicas": "0/1"
+    },
+    {
       "image": "fullmrktdept:production-20260831-r8",
       "name": "fullmrktdept_reconcile_thi_release_20260831",
       "replicas": "0/1 (1/1 completed)"
@@ -168,12 +183,42 @@
       "replicas": "0/1 (1/1 completed)"
     },
     {
-      "image": "fullmrktdept:prephase-20260831-r6",
+      "image": "fullmrktdept:production-20260902-r2",
+      "name": "fullmrktdept_review_malc_en_confirm_20260902",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:production-20260902-r2",
+      "name": "fullmrktdept_review_malc_en_readiness2_20260902",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:production-20260902-r2",
+      "name": "fullmrktdept_review_malc_en_readiness3_20260902",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:production-20260902-r2",
+      "name": "fullmrktdept_review_malc_en_receipt_recovery_20260902",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:production-20260902-r2",
+      "name": "fullmrktdept_review_malc_en_send_20260902",
+      "replicas": "0/1 (0/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:production-20260902-r2",
+      "name": "fullmrktdept_review_malc_en_send_r2_20260902",
+      "replicas": "0/1 (0/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:production-20260902-r1",
       "name": "fullmrktdept_scheduler",
       "replicas": "0/0"
     },
     {
-      "image": "fullmrktdept:prephase-20260831-r6",
+      "image": "fullmrktdept:production-20260902-r1",
       "name": "fullmrktdept_worker",
       "replicas": "0/0"
     },
@@ -221,18 +266,23 @@
       "replicas": "1/1"
     },
     {
-      "image": "fullmrktdept:production-20260831-r7",
+      "image": "fullmrktdept:production-20260902-r1",
       "name": "fullmrktdept_api",
       "replicas": "1/1"
     },
     {
-      "image": "fullmrktdept:production-20260831-r7",
+      "image": "fullmrktdept:production-20260902-r1",
       "name": "fullmrktdept_outbox",
       "replicas": "1/1"
     },
     {
       "image": "postgres:17-alpine",
       "name": "fullmrktdept_postgres",
+      "replicas": "1/1"
+    },
+    {
+      "image": "fullmrktdept:production-20260902-r1",
+      "name": "fullmrktdept_reconcile_thi_20260902_p0405",
       "replicas": "1/1"
     },
     {
@@ -291,7 +341,7 @@
       "replicas": "1/1"
     }
   ],
-  "started_at": "2026-09-01T03:15:09Z",
+  "started_at": "2026-09-02T03:15:48Z",
   "status": "pass",
   "version": 2,
   "volumes_backed_up": [],
