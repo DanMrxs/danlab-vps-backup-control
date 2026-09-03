@@ -1,6 +1,6 @@
 {
-  "backup_id": "20260902T031548Z",
-  "completed_at": "2026-09-02T03:16:07Z",
+  "backup_id": "20260903T031653Z",
+  "completed_at": "2026-09-03T03:17:07Z",
   "errors": [],
   "healthchecks": {
     "daily": {
@@ -13,9 +13,9 @@
       "slug": "vps-backup-weekly"
     }
   },
-  "inventory_sha256": "96b6c4b8bb8823de101f71267d7643a3bb018cb99565d46012862673f2c56f46",
+  "inventory_sha256": "930b3b7a060298387532f79a61dc60b8ced044fad53e2bb97d9afd3fdedd43be",
   "job": "daily",
-  "manifest_sha256": "bbe927c2ac71ca54d185e8de87aa8d4ebf24a7922c020de5bb9ce319798e7dda",
+  "manifest_sha256": "a154fe7a4fc10b9f7cdd9be97e5c8f468f800532feb10b188ee07dd4356b81dd",
   "ports_listening": [
     {
       "address": "0.0.0.0",
@@ -100,17 +100,17 @@
   ],
   "restic": {
     "repository_alias": "hetzner-storage-box",
-    "snapshot_id": "10508dcf",
+    "snapshot_id": "fbfd6190",
     "stats": {
       "files_changed": 0,
       "files_new": 11,
       "files_unmodified": 0,
-      "total_bytes": 776049
+      "total_bytes": 776983
     },
     "tags": [
       "server=danlab-vps",
       "job=daily",
-      "id=20260902T031548Z"
+      "id=20260903T031653Z"
     ]
   },
   "restore_tests": {
@@ -286,6 +286,11 @@
       "replicas": "1/1"
     },
     {
+      "image": "fullmrktdept:production-20260902-r1",
+      "name": "fullmrktdept_telegram-listener",
+      "replicas": "1/1"
+    },
+    {
       "image": "quay.io/minio/minio:latest",
       "name": "minio_minio",
       "replicas": "1/1"
@@ -341,7 +346,7 @@
       "replicas": "1/1"
     }
   ],
-  "started_at": "2026-09-02T03:15:48Z",
+  "started_at": "2026-09-03T03:16:53Z",
   "status": "pass",
   "version": 2,
   "volumes_backed_up": [],

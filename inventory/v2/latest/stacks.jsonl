@@ -4,7 +4,7 @@
 {"Name":"contentos-vault","Services":"1"}
 {"Name":"contentos-video-producer","Services":"4"}
 {"Name":"crm-stripe","Services":"1"}
-{"Name":"fullmrktdept","Services":"6"}
+{"Name":"fullmrktdept","Services":"7"}
 {"Name":"minio","Services":"1"}
 {"Name":"n8nfila","Services":"3"}
 {"Name":"n8npg17","Services":"1"}

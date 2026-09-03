@@ -22,6 +22,7 @@
 {"ID":"ncstsxwxq3r1","Image":"fullmrktdept:production-20260902-r2","Mode":"replicated job","Name":"fullmrktdept_review_malc_en_readiness2_20260902","Ports":"","Replicas":"0/1 (1/1 completed)"}
 {"ID":"ozuu53oczphz","Image":"contentos-storage-guard:v8-20260817T1155Z","Mode":"replicated","Name":"contentos-storage-guard_storage-guard","Ports":"","Replicas":"0/0"}
 {"ID":"p981bqe7ovzc","Image":"n8nio/n8n:2.36.7","Mode":"replicated","Name":"n8nfila_n8n_worker","Ports":"","Replicas":"1/1"}
+{"ID":"phzs76m6vkrm","Image":"fullmrktdept:production-20260902-r1","Mode":"replicated","Name":"fullmrktdept_telegram-listener","Ports":"","Replicas":"1/1"}
 {"ID":"powfekrhaq2v","Image":"contentos-higgsfield-bridge:v8-20260818-sync-contract","Mode":"replicated","Name":"contentos-video-producer_higgsfield-bridge","Ports":"*:8400-\u003e8400/tcp","Replicas":"0/0"}
 {"ID":"qr5lz12gv3ud","Image":"fullmrktdept:production-20260902-r1","Mode":"replicated","Name":"fullmrktdept_promote_thi_20260902_p0404","Ports":"","Replicas":"0/1"}
 {"ID":"r572p6zp5ohe","Image":"contentos-gemini-tts:v8-20260818-fallback-provenance-a937085","Mode":"replicated","Name":"contentos-video-producer_gemini-tts","Ports":"*:8300-\u003e8300/tcp","Replicas":"1/1"}
