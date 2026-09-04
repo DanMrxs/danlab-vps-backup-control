@@ -1,35 +1,52 @@
+{"ID":"16wkotusfj2w","Image":"fullmrktdept:production-20260903-r4","Mode":"replicated job","Name":"fullmrktdept_plan_malc_en_20260903_p0604_r4","Ports":"","Replicas":"0/1 (1/1 completed)"}
 {"ID":"19u0rd1ettsi","Image":"baserow/baserow:latest","Mode":"replicated","Name":"baserow_baserow","Ports":"","Replicas":"1/1"}
 {"ID":"2i7bvf6mt1xv","Image":"sha256:fb5e1d2ce615f5e989515168f5a8957eb544697e09e02e94770502daefc36b30","Mode":"replicated","Name":"contentos-core_contentos-core","Ports":"","Replicas":"0/0"}
 {"ID":"3az4ck8oxlik","Image":"searxng/searxng:latest","Mode":"replicated","Name":"contentos-tools_searxng","Ports":"*:8888-\u003e8080/tcp","Replicas":"1/1"}
+{"ID":"3kwfccdrx5xr","Image":"fullmrktdept:production-20260903-r6","Mode":"replicated job","Name":"fullmrktdept_malc-de-readiness-20260903","Ports":"","Replicas":"0/1 (0/1 completed)"}
+{"ID":"3xp6mbn4e4q6","Image":"fullmrktdept:production-20260903-r3","Mode":"replicated job","Name":"fullmrktdept_review_malc_en_replacement_readiness_20260903","Ports":"","Replicas":"0/1 (1/1 completed)"}
 {"ID":"4d1v9ezq63or","Image":"contentos-captions-api:v2","Mode":"replicated","Name":"contentos-video-producer_captions-api","Ports":"*:8002-\u003e8002/tcp","Replicas":"1/1"}
 {"ID":"58h9swe81iq5","Image":"contentos-health-monitor:latest","Mode":"replicated","Name":"contentos-health_health-monitor","Ports":"","Replicas":"0/0"}
+{"ID":"5e2sj3nqsibf","Image":"fullmrktdept:production-20260903-r4","Mode":"replicated job","Name":"fullmrktdept_plan_malc_en_20260903_p0604_r3","Ports":"","Replicas":"0/1 (0/1 completed)"}
 {"ID":"5hs2fjvwphsi","Image":"fullmrktdept:production-20260902-r1","Mode":"replicated","Name":"fullmrktdept_migrate_20260902_p0404","Ports":"","Replicas":"0/1"}
+{"ID":"5rix1rb967pn","Image":"fullmrktdept:production-20260903-r4","Mode":"replicated job","Name":"fullmrktdept_review_malc_en_publication_send_20260903","Ports":"","Replicas":"0/1 (1/1 completed)"}
+{"ID":"6ag1mg12ec31","Image":"fullmrktdept:production-20260903-r4","Mode":"replicated job","Name":"fullmrktdept_plan_malc_en_20260903_p0604","Ports":"","Replicas":"0/1 (0/1 completed)"}
+{"ID":"6mzopsmy1hmg","Image":"fullmrktdept:production-20260903-r3","Mode":"replicated job","Name":"fullmrktdept_review_malc_en_replacement_send_20260903","Ports":"","Replicas":"0/1 (1/1 completed)"}
 {"ID":"7krmer7snvfg","Image":"fullmrktdept:production-20260902-r1","Mode":"replicated","Name":"fullmrktdept_dispatch_thi_20260902_p0404","Ports":"","Replicas":"0/1"}
 {"ID":"83ise3onblfa","Image":"postgres:17-alpine","Mode":"replicated","Name":"n8npg17_postgres","Ports":"","Replicas":"1/1"}
+{"ID":"8hpmt3vzx2ta","Image":"fullmrktdept:production-20260903-r8","Mode":"replicated job","Name":"fullmrktdept_plan-malc-de-write-20260903-r1","Ports":"","Replicas":"0/1 (1/1 completed)"}
+{"ID":"acfnstctq3ho","Image":"fullmrktdept:production-20260903-r6","Mode":"replicated job","Name":"fullmrktdept_malc-de-send-20260903-r1","Ports":"","Replicas":"0/1 (1/1 completed)"}
 {"ID":"b1t9atec1o90","Image":"redis:latest","Mode":"replicated","Name":"redis_redis","Ports":"","Replicas":"1/1"}
 {"ID":"bbfxvibe9u5l","Image":"fullmrktdept:production-20260902-r1","Mode":"replicated","Name":"fullmrktdept_worker","Ports":"","Replicas":"0/0"}
 {"ID":"brqqq4qozs45","Image":"contentos-remotion:v9-20260827-minio-upload","Mode":"replicated","Name":"contentos-video-producer_remotion","Ports":"*:7000-\u003e7000/tcp","Replicas":"1/1"}
+{"ID":"cw6w3amx8d2k","Image":"fullmrktdept:production-20260903-r8","Mode":"replicated job","Name":"fullmrktdept_review-malc-de-publication-readiness-20260903-r1","Ports":"","Replicas":"0/1 (1/1 completed)"}
 {"ID":"e6958l3a3m4j","Image":"pgvector/pgvector:pg16","Mode":"replicated","Name":"pgvector_pgvector","Ports":"","Replicas":"1/1"}
 {"ID":"ewa8byq5uvlp","Image":"traefik:v2.11","Mode":"replicated","Name":"traefik_traefik","Ports":"","Replicas":"1/1"}
+{"ID":"eza1zvimdex2","Image":"fullmrktdept:production-20260903-r7","Mode":"replicated job","Name":"fullmrktdept_malc-de-replacement-readiness-20260903-r1","Ports":"","Replicas":"0/1 (1/1 completed)"}
 {"ID":"fay03yhxm018","Image":"fullmrktdept:production-20260902-r2","Mode":"replicated job","Name":"fullmrktdept_review_malc_en_receipt_recovery_20260902","Ports":"","Replicas":"0/1 (1/1 completed)"}
+{"ID":"fbdm1vhyv5b9","Image":"fullmrktdept:production-20260903-r8","Mode":"replicated job","Name":"fullmrktdept_review-malc-de-publication-send-20260903-r1","Ports":"","Replicas":"0/1 (1/1 completed)"}
+{"ID":"gzotabh7eysn","Image":"fullmrktdept:production-20260903-r4","Mode":"replicated job","Name":"fullmrktdept_plan_malc_en_20260903_p0604_r2","Ports":"","Replicas":"0/1 (0/1 completed)"}
 {"ID":"h2jmfsj66ltt","Image":"fullmrktdept:production-20260902-r2","Mode":"replicated job","Name":"fullmrktdept_review_malc_en_confirm_20260902","Ports":"","Replicas":"0/1 (1/1 completed)"}
-{"ID":"hy0degl49ldy","Image":"fullmrktdept:production-20260902-r1","Mode":"replicated","Name":"fullmrktdept_api","Ports":"","Replicas":"1/1"}
+{"ID":"hki2pkemia56","Image":"fullmrktdept:production-20260903-r6","Mode":"replicated job","Name":"fullmrktdept_malc-de-readiness-20260903-r2","Ports":"","Replicas":"0/1 (0/1 completed)"}
+{"ID":"hy0degl49ldy","Image":"fullmrktdept:production-20260903-r5","Mode":"replicated","Name":"fullmrktdept_api","Ports":"","Replicas":"1/1"}
 {"ID":"iwdvgmlm27a6","Image":"fullmrktdept:production-20260831-r7","Mode":"replicated job","Name":"fullmrktdept_record_thi_release_20260831","Ports":"","Replicas":"0/1 (1/1 completed)"}
 {"ID":"iyvjvb2fxedl","Image":"n8nio/n8n:2.36.7","Mode":"replicated","Name":"n8nfila_n8n_webhook","Ports":"","Replicas":"1/1"}
+{"ID":"ldntr64c1c2b","Image":"fullmrktdept:production-20260903-r6","Mode":"replicated job","Name":"fullmrktdept_malc-de-readiness-20260903-r3","Ports":"","Replicas":"0/1 (1/1 completed)"}
 {"ID":"lpsukdicexpz","Image":"postgres:14","Mode":"replicated","Name":"postgres_postgres","Ports":"","Replicas":"1/1"}
+{"ID":"mafcdm5qwqn3","Image":"fullmrktdept:production-20260903-r7","Mode":"replicated job","Name":"fullmrktdept_blotato-malc-de-readback-20260903-r1","Ports":"","Replicas":"0/1 (1/1 completed)"}
 {"ID":"mf2320dsf7jx","Image":"fullmrktdept:production-20260902-r1","Mode":"replicated","Name":"fullmrktdept_scheduler","Ports":"","Replicas":"0/0"}
 {"ID":"mpt9dxsqyf7l","Image":"crm-stripe-receiver:latest","Mode":"replicated","Name":"crm-stripe_crm_stripe_receiver","Ports":"","Replicas":"1/1"}
 {"ID":"ncstsxwxq3r1","Image":"fullmrktdept:production-20260902-r2","Mode":"replicated job","Name":"fullmrktdept_review_malc_en_readiness2_20260902","Ports":"","Replicas":"0/1 (1/1 completed)"}
 {"ID":"ozuu53oczphz","Image":"contentos-storage-guard:v8-20260817T1155Z","Mode":"replicated","Name":"contentos-storage-guard_storage-guard","Ports":"","Replicas":"0/0"}
 {"ID":"p981bqe7ovzc","Image":"n8nio/n8n:2.36.7","Mode":"replicated","Name":"n8nfila_n8n_worker","Ports":"","Replicas":"1/1"}
-{"ID":"phzs76m6vkrm","Image":"fullmrktdept:production-20260902-r1","Mode":"replicated","Name":"fullmrktdept_telegram-listener","Ports":"","Replicas":"1/1"}
+{"ID":"phzs76m6vkrm","Image":"fullmrktdept:production-20260903-r5","Mode":"replicated","Name":"fullmrktdept_telegram-listener","Ports":"","Replicas":"1/1"}
 {"ID":"powfekrhaq2v","Image":"contentos-higgsfield-bridge:v8-20260818-sync-contract","Mode":"replicated","Name":"contentos-video-producer_higgsfield-bridge","Ports":"*:8400-\u003e8400/tcp","Replicas":"0/0"}
 {"ID":"qr5lz12gv3ud","Image":"fullmrktdept:production-20260902-r1","Mode":"replicated","Name":"fullmrktdept_promote_thi_20260902_p0404","Ports":"","Replicas":"0/1"}
 {"ID":"r572p6zp5ohe","Image":"contentos-gemini-tts:v8-20260818-fallback-provenance-a937085","Mode":"replicated","Name":"contentos-video-producer_gemini-tts","Ports":"*:8300-\u003e8300/tcp","Replicas":"1/1"}
 {"ID":"rpa82oxvbyvq","Image":"open-generative-ai:latest","Mode":"replicated","Name":"open-generative-ai_open-generative-ai","Ports":"","Replicas":"0/1"}
 {"ID":"s3kg9588csi0","Image":"fullmrktdept:production-20260831-r8","Mode":"replicated job","Name":"fullmrktdept_reconcile_thi_release_20260831","Ports":"","Replicas":"0/1 (1/1 completed)"}
+{"ID":"s44kmv3des8i","Image":"fullmrktdept:production-20260903-r8","Mode":"replicated job","Name":"fullmrktdept_plan-malc-de-readiness-20260903-r1","Ports":"","Replicas":"0/1 (0/1 completed)"}
 {"ID":"sd324ycfy2hg","Image":"portainer/agent:sts","Mode":"global","Name":"portainer_agent","Ports":"","Replicas":"1/1"}
-{"ID":"sqdvczqyhy8i","Image":"fullmrktdept:production-20260902-r1","Mode":"replicated","Name":"fullmrktdept_reconcile_thi_20260902_p0405","Ports":"","Replicas":"1/1"}
+{"ID":"sqdvczqyhy8i","Image":"fullmrktdept:production-20260902-r1","Mode":"replicated","Name":"fullmrktdept_reconcile_thi_20260902_p0405","Ports":"","Replicas":"0/1"}
 {"ID":"sxye7m03qv33","Image":"fullmrktdept:prephase-20260831-r6","Mode":"replicated job","Name":"fullmrktdept_bootstrap","Ports":"","Replicas":"0/1 (1/1 completed)"}
 {"ID":"t2ykra7x2fzq","Image":"fullmrktdept:production-20260902-r2","Mode":"replicated job","Name":"fullmrktdept_review_malc_en_send_r2_20260902","Ports":"","Replicas":"0/1 (0/1 completed)"}
 {"ID":"tqvy0hi9s4kf","Image":"postgres:17-alpine","Mode":"replicated","Name":"fullmrktdept_postgres","Ports":"","Replicas":"1/1"}
@@ -38,5 +55,7 @@
 {"ID":"usq89aqg0qhj","Image":"n8nio/n8n:2.36.7","Mode":"replicated","Name":"n8nfila_n8n_editor","Ports":"","Replicas":"1/1"}
 {"ID":"v06owd8ty1fl","Image":"contentos-vault-api:v8-20260818-pinned-a937085","Mode":"replicated","Name":"contentos-vault_vault-api","Ports":"","Replicas":"1/1"}
 {"ID":"vo3hd9bkdtqj","Image":"quay.io/minio/minio:latest","Mode":"replicated","Name":"minio_minio","Ports":"","Replicas":"1/1"}
+{"ID":"vuxq3ufcb107","Image":"fullmrktdept:production-20260903-r7","Mode":"replicated job","Name":"fullmrktdept_malc-de-replacement-send-20260903-r1","Ports":"","Replicas":"0/1 (1/1 completed)"}
+{"ID":"whww6c3stmbi","Image":"fullmrktdept:production-20260903-r8","Mode":"replicated job","Name":"fullmrktdept_plan-malc-de-readiness-20260903-r2","Ports":"","Replicas":"0/1 (1/1 completed)"}
 {"ID":"yrrinlmeurrk","Image":"fullmrktdept:production-20260902-r2","Mode":"replicated job","Name":"fullmrktdept_review_malc_en_readiness3_20260902","Ports":"","Replicas":"0/1 (1/1 completed)"}
 {"ID":"zrt7sih05pwm","Image":"portainer/portainer-ce:sts","Mode":"replicated","Name":"portainer_portainer","Ports":"","Replicas":"1/1"}
