@@ -1,6 +1,6 @@
 {
-  "backup_id": "20260904T031652Z",
-  "completed_at": "2026-09-04T03:17:06Z",
+  "backup_id": "20260905T031714Z",
+  "completed_at": "2026-09-05T03:17:34Z",
   "errors": [],
   "healthchecks": {
     "daily": {
@@ -13,9 +13,9 @@
       "slug": "vps-backup-weekly"
     }
   },
-  "inventory_sha256": "a84c8424f34c9d472c52331c8b70f25ba99d9a7112b24e21ddda40b19d0a29f3",
+  "inventory_sha256": "fa2c32ccdc8564ec24bc998e36a9de230999fd0fcb4a911ec2809f08f6d6c2f3",
   "job": "daily",
-  "manifest_sha256": "fbec713cb8a6875558fb2182693c1925af2f1ebd702374ed8f12eafd30ce176b",
+  "manifest_sha256": "e26fb2e02e9eb4b1d7e7288e3179a8c111af5b773f7271749ab0195a5b58700b",
   "ports_listening": [
     {
       "address": "0.0.0.0",
@@ -100,17 +100,17 @@
   ],
   "restic": {
     "repository_alias": "hetzner-storage-box",
-    "snapshot_id": "63a189bd",
+    "snapshot_id": "bfd9a30a",
     "stats": {
       "files_changed": 0,
       "files_new": 11,
       "files_unmodified": 0,
-      "total_bytes": 779894
+      "total_bytes": 789399
     },
     "tags": [
       "server=danlab-vps",
       "job=daily",
-      "id=20260904T031652Z"
+      "id=20260905T031714Z"
     ]
   },
   "restore_tests": {
@@ -158,6 +158,31 @@
       "replicas": "0/1 (1/1 completed)"
     },
     {
+      "image": "fullmrktdept:production-20260904-r3",
+      "name": "fullmrktdept_blotato-malc-de-readback-20260904-r2",
+      "replicas": "0/1 (0/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:production-20260904-r3",
+      "name": "fullmrktdept_blotato-malc-de-readback-20260904-r3",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:production-20260904-phs-r4",
+      "name": "fullmrktdept_blotato-phs-readback-20260904-r1",
+      "replicas": "0/1"
+    },
+    {
+      "image": "fullmrktdept:production-20260904-phs-r5",
+      "name": "fullmrktdept_blotato-phs-readback-dispatch-20260904-r2",
+      "replicas": "0/1 (0/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:production-20260904-phs-r5",
+      "name": "fullmrktdept_blotato-phs-readback-dispatch-20260904-r3",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
       "image": "fullmrktdept:prephase-20260831-r6",
       "name": "fullmrktdept_bootstrap",
       "replicas": "0/1 (1/1 completed)"
@@ -166,6 +191,16 @@
       "image": "fullmrktdept:production-20260902-r1",
       "name": "fullmrktdept_dispatch_thi_20260902_p0404",
       "replicas": "0/1"
+    },
+    {
+      "image": "fullmrktdept:production-20260904-r3",
+      "name": "fullmrktdept_gemini-tts-readback-20260904-r1",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:production-20260904-r2",
+      "name": "fullmrktdept_malc-de-r2-dispatch-reconcile-20260904",
+      "replicas": "0/0"
     },
     {
       "image": "fullmrktdept:production-20260903-r6",
@@ -203,6 +238,46 @@
       "replicas": "0/1"
     },
     {
+      "image": "fullmrktdept:production-20260904-phs-r5",
+      "name": "fullmrktdept_phs-r1-dispatch-reconcile-20260904",
+      "replicas": "0/1"
+    },
+    {
+      "image": "fullmrktdept:production-20260904-phs-r6",
+      "name": "fullmrktdept_phs-r1-pre-submit-recovery-20260904",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:production-20260904-phs-r1",
+      "name": "fullmrktdept_phs-voice-audition-20260904-r1",
+      "replicas": "0/1"
+    },
+    {
+      "image": "fullmrktdept:production-20260904-phs-r2",
+      "name": "fullmrktdept_phs-voice-audition-20260904-r2",
+      "replicas": "0/1"
+    },
+    {
+      "image": "fullmrktdept:production-20260904-phs-r3",
+      "name": "fullmrktdept_phs-voice-audition-20260904-r3",
+      "replicas": "0/1"
+    },
+    {
+      "image": "fullmrktdept:production-20260904-r1",
+      "name": "fullmrktdept_plan-malc-de-r2-readiness-20260904",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:production-20260904-r1",
+      "name": "fullmrktdept_plan-malc-de-r2-write-20260904",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:production-20260904-r3",
+      "name": "fullmrktdept_plan-malc-de-r3-write-20260904",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
       "image": "fullmrktdept:production-20260903-r8",
       "name": "fullmrktdept_plan-malc-de-readiness-20260903-r1",
       "replicas": "0/1 (0/1 completed)"
@@ -215,6 +290,21 @@
     {
       "image": "fullmrktdept:production-20260903-r8",
       "name": "fullmrktdept_plan-malc-de-write-20260903-r1",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:production-20260904-phs-r5",
+      "name": "fullmrktdept_plan-phs-r1-readiness-20260904",
+      "replicas": "0/1 (0/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:production-20260904-phs-r5",
+      "name": "fullmrktdept_plan-phs-r1-readiness-20260904-r2",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:production-20260904-phs-r5",
+      "name": "fullmrktdept_plan-phs-r1-write-20260904",
       "replicas": "0/1 (1/1 completed)"
     },
     {
@@ -243,6 +333,46 @@
       "replicas": "0/1"
     },
     {
+      "image": "fullmrktdept:production-20260904-r1",
+      "name": "fullmrktdept_public-media-malc-de-r2-build-20260904",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:production-20260904-r2",
+      "name": "fullmrktdept_public-media-malc-de-r2-replay-20260904",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:production-20260904-r2",
+      "name": "fullmrktdept_public-media-malc-de-r2-upload-20260904",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:production-20260904-r3",
+      "name": "fullmrktdept_public-media-malc-de-r3-build-20260904",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:production-20260904-r3",
+      "name": "fullmrktdept_public-media-malc-de-r3-replay-20260904",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:production-20260904-r3",
+      "name": "fullmrktdept_public-media-malc-de-r3-upload-20260904",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:production-20260904-phs-r5",
+      "name": "fullmrktdept_public-media-phs-r1-replay-20260904",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:production-20260904-phs-r5",
+      "name": "fullmrktdept_public-media-phs-r1-upload-20260904",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
       "image": "fullmrktdept:production-20260902-r1",
       "name": "fullmrktdept_reconcile_thi_20260902_p0405",
       "replicas": "0/1"
@@ -258,6 +388,31 @@
       "replicas": "0/1 (1/1 completed)"
     },
     {
+      "image": "fullmrktdept:production-20260904-r2",
+      "name": "fullmrktdept_review-malc-de-publication-r2-readiness-20260904",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:production-20260904-r2",
+      "name": "fullmrktdept_review-malc-de-publication-r2-send-20260904",
+      "replicas": "0/1 (0/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:production-20260904-r3",
+      "name": "fullmrktdept_review-malc-de-publication-r3-readiness-20260904",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:production-20260904-r3",
+      "name": "fullmrktdept_review-malc-de-publication-r3-send-20260904",
+      "replicas": "0/1 (0/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:production-20260904-r3",
+      "name": "fullmrktdept_review-malc-de-publication-r3-send-20260904-r2",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
       "image": "fullmrktdept:production-20260903-r8",
       "name": "fullmrktdept_review-malc-de-publication-readiness-20260903-r1",
       "replicas": "0/1 (1/1 completed)"
@@ -265,6 +420,36 @@
     {
       "image": "fullmrktdept:production-20260903-r8",
       "name": "fullmrktdept_review-malc-de-publication-send-20260903-r1",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:production-20260904-phs-r4",
+      "name": "fullmrktdept_review-phs-formats-readiness-20260904-r1",
+      "replicas": "0/1"
+    },
+    {
+      "image": "fullmrktdept:production-20260904-phs-r4",
+      "name": "fullmrktdept_review-phs-formats-readiness-20260904-r2",
+      "replicas": "0/1"
+    },
+    {
+      "image": "fullmrktdept:production-20260904-phs-r4",
+      "name": "fullmrktdept_review-phs-formats-readiness-20260904-r3",
+      "replicas": "0/1"
+    },
+    {
+      "image": "fullmrktdept:production-20260904-phs-r4",
+      "name": "fullmrktdept_review-phs-formats-send-20260904-r1",
+      "replicas": "0/1"
+    },
+    {
+      "image": "fullmrktdept:production-20260904-phs-r5",
+      "name": "fullmrktdept_review-phs-publication-r1-readiness-20260904",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:production-20260904-phs-r5",
+      "name": "fullmrktdept_review-phs-publication-r1-send-20260904",
       "replicas": "0/1 (1/1 completed)"
     },
     {
@@ -316,6 +501,16 @@
       "image": "fullmrktdept:production-20260902-r1",
       "name": "fullmrktdept_scheduler",
       "replicas": "0/0"
+    },
+    {
+      "image": "fullmrktdept:production-20260904-r2",
+      "name": "fullmrktdept_telegram-payload-probe-20260904",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:production-20260904-r2",
+      "name": "fullmrktdept_telegram-readonly-probe-20260904",
+      "replicas": "0/1 (1/1 completed)"
     },
     {
       "image": "fullmrktdept:production-20260902-r1",
@@ -371,8 +566,18 @@
       "replicas": "1/1"
     },
     {
+      "image": "fullmrktdept:production-20260904-r3",
+      "name": "fullmrktdept_malc-de-r3-dispatch-reconcile-20260904",
+      "replicas": "1/1"
+    },
+    {
       "image": "fullmrktdept:production-20260902-r1",
       "name": "fullmrktdept_outbox",
+      "replicas": "1/1"
+    },
+    {
+      "image": "fullmrktdept:production-20260904-phs-r6",
+      "name": "fullmrktdept_phs-r1-dispatch-reconcile-20260904-r2",
       "replicas": "1/1"
     },
     {
@@ -441,7 +646,7 @@
       "replicas": "1/1"
     }
   ],
-  "started_at": "2026-09-04T03:16:52Z",
+  "started_at": "2026-09-05T03:17:14Z",
   "status": "pass",
   "version": 2,
   "volumes_backed_up": [],
