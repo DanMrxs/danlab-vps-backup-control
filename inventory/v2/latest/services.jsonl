@@ -6,7 +6,7 @@
 {"ID":"3kwfccdrx5xr","Image":"fullmrktdept:production-20260903-r6","Mode":"replicated job","Name":"fullmrktdept_malc-de-readiness-20260903","Ports":"","Replicas":"0/1 (0/1 completed)"}
 {"ID":"3lgod1ckohgo","Image":"fullmrktdept:production-20260904-r3","Mode":"replicated job","Name":"fullmrktdept_plan-malc-de-r3-write-20260904","Ports":"","Replicas":"0/1 (1/1 completed)"}
 {"ID":"3xp6mbn4e4q6","Image":"fullmrktdept:production-20260903-r3","Mode":"replicated job","Name":"fullmrktdept_review_malc_en_replacement_readiness_20260903","Ports":"","Replicas":"0/1 (1/1 completed)"}
-{"ID":"3xswkexq1tzf","Image":"fullmrktdept:production-20260904-phs-r6","Mode":"replicated","Name":"fullmrktdept_phs-r1-dispatch-reconcile-20260904-r2","Ports":"","Replicas":"1/1"}
+{"ID":"3xswkexq1tzf","Image":"fullmrktdept:production-20260904-phs-r6","Mode":"replicated","Name":"fullmrktdept_phs-r1-dispatch-reconcile-20260904-r2","Ports":"","Replicas":"0/1"}
 {"ID":"41dkn448wtxt","Image":"fullmrktdept:production-20260904-r2","Mode":"replicated job","Name":"fullmrktdept_review-malc-de-publication-r2-readiness-20260904","Ports":"","Replicas":"0/1 (1/1 completed)"}
 {"ID":"4d1v9ezq63or","Image":"contentos-captions-api:v2","Mode":"replicated","Name":"contentos-video-producer_captions-api","Ports":"*:8002-\u003e8002/tcp","Replicas":"1/1"}
 {"ID":"58h9swe81iq5","Image":"contentos-health-monitor:latest","Mode":"replicated","Name":"contentos-health_health-monitor","Ports":"","Replicas":"0/0"}
@@ -60,7 +60,7 @@
 {"ID":"ng3ynvumjpwc","Image":"fullmrktdept:production-20260904-phs-r5","Mode":"replicated job","Name":"fullmrktdept_review-phs-publication-r1-send-20260904","Ports":"","Replicas":"0/1 (1/1 completed)"}
 {"ID":"nojf3enb031w","Image":"fullmrktdept:production-20260904-phs-r5","Mode":"replicated job","Name":"fullmrktdept_plan-phs-r1-readiness-20260904-r2","Ports":"","Replicas":"0/1 (1/1 completed)"}
 {"ID":"nqi53ydl2036","Image":"fullmrktdept:production-20260904-phs-r4","Mode":"replicated","Name":"fullmrktdept_review-phs-formats-readiness-20260904-r1","Ports":"","Replicas":"0/1"}
-{"ID":"nx9lcpuxsp4l","Image":"fullmrktdept:production-20260904-r3","Mode":"replicated","Name":"fullmrktdept_malc-de-r3-dispatch-reconcile-20260904","Ports":"","Replicas":"1/1"}
+{"ID":"nx9lcpuxsp4l","Image":"fullmrktdept:production-20260904-r3","Mode":"replicated","Name":"fullmrktdept_malc-de-r3-dispatch-reconcile-20260904","Ports":"","Replicas":"0/1"}
 {"ID":"nyc13goibja6","Image":"fullmrktdept:production-20260904-phs-r4","Mode":"replicated","Name":"fullmrktdept_review-phs-formats-readiness-20260904-r3","Ports":"","Replicas":"0/1"}
 {"ID":"ozuu53oczphz","Image":"contentos-storage-guard:v8-20260817T1155Z","Mode":"replicated","Name":"contentos-storage-guard_storage-guard","Ports":"","Replicas":"0/0"}
 {"ID":"p981bqe7ovzc","Image":"n8nio/n8n:2.36.7","Mode":"replicated","Name":"n8nfila_n8n_worker","Ports":"","Replicas":"1/1"}
