@@ -1,6 +1,6 @@
 {
-  "backup_id": "20260907T031840Z",
-  "completed_at": "2026-09-07T03:19:00Z",
+  "backup_id": "20260908T031958Z",
+  "completed_at": "2026-09-08T03:20:25Z",
   "errors": [],
   "healthchecks": {
     "daily": {
@@ -13,9 +13,9 @@
       "slug": "vps-backup-weekly"
     }
   },
-  "inventory_sha256": "e42786a44d7bdfa8edd85bd9cea28f68c4b280d465aa664aae4e5a4e4bdde150",
+  "inventory_sha256": "66d8f6252bd1e3ef1bee4855a5bb0b230863f1ad3884f9029b8c57f62640b06d",
   "job": "daily",
-  "manifest_sha256": "ad2b0a9e6dfbea502ccc3f65fbc1700f823567c756b526cb7b48268834bcd271",
+  "manifest_sha256": "4a093fab1b9d5e2f59df3d90a4d492024b645af3d0891e93176d3aebf3b9a2e9",
   "ports_listening": [
     {
       "address": "0.0.0.0",
@@ -100,17 +100,17 @@
   ],
   "restic": {
     "repository_alias": "hetzner-storage-box",
-    "snapshot_id": "3ebf3ee5",
+    "snapshot_id": "acc51d9e",
     "stats": {
       "files_changed": 0,
       "files_new": 11,
       "files_unmodified": 0,
-      "total_bytes": 787820
+      "total_bytes": 807271
     },
     "tags": [
       "server=danlab-vps",
       "job=daily",
-      "id=20260907T031840Z"
+      "id=20260908T031958Z"
     ]
   },
   "restore_tests": {
@@ -188,13 +188,278 @@
       "replicas": "0/1 (1/1 completed)"
     },
     {
+      "image": "fullmrktdept:completion-runtime-20260907-r3",
+      "name": "fullmrktdept_brand-kern-pt-br-readiness-20260907-r1",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:completion-runtime-20260907-r3",
+      "name": "fullmrktdept_brand-kern-pt-br-send-20260907-r1",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:completion-control-20260907-r1",
+      "name": "fullmrktdept_brand-malc-de-readiness-20260907-r1",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:completion-control-20260907-r1",
+      "name": "fullmrktdept_brand-malc-de-send-20260907-r1",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:completion-control-20260907-r1",
+      "name": "fullmrktdept_brand-malc-en-readiness-20260907-r1",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:completion-control-20260907-r1",
+      "name": "fullmrktdept_brand-malc-en-send-20260907-r1",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:completion-control-20260907-r1",
+      "name": "fullmrktdept_brand-phs-pt-br-readiness-20260907-r1",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:completion-control-20260907-r1",
+      "name": "fullmrktdept_brand-phs-pt-br-send-20260907-r1",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:completion-control-20260907-r1",
+      "name": "fullmrktdept_brand-thi-en-readiness-20260907-r1",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:completion-control-20260907-r1",
+      "name": "fullmrktdept_brand-thi-en-send-20260907-r1",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:production-20260904-phs-r6",
+      "name": "fullmrktdept_completion-account-probe-20260907-r1",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:production-20260904-phs-r6",
+      "name": "fullmrktdept_completion-account-probe-20260907-r2",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:completion-control-20260907-r1",
+      "name": "fullmrktdept_completion-migrate-20260907-r1",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:completion-runtime-20260907-r2",
+      "name": "fullmrktdept_daily-editorial-diagnostic-20260907-r2",
+      "replicas": "0/1 (0/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:completion-runtime-20260907-r2",
+      "name": "fullmrktdept_daily-editorial-diagnostic-20260907-r2-a2",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:completion-runtime-20260907-r2",
+      "name": "fullmrktdept_daily-editorial-readiness-20260907-r2",
+      "replicas": "0/1 (0/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:completion-runtime-20260907-r3",
+      "name": "fullmrktdept_daily-editorial-readiness-20260907-r3",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:completion-runtime-20260907-r4",
+      "name": "fullmrktdept_daily-editorial-readiness-20260907-r4",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:completion-runtime-20260907-r5",
+      "name": "fullmrktdept_daily-editorial-readiness-20260907-r5",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "sha256:836dd26b8ebe6adc80886f8de554cff9205f145079d855d3123923a92984feb8",
+      "name": "fullmrktdept_daily-migrate-20260907-r11",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "sha256:e04c0448539bde93a58a99e878fae8915350c752d31e8687160a6719debd88de",
+      "name": "fullmrktdept_daily-migrate-20260907-r14",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:completion-runtime-20260907-r3",
+      "name": "fullmrktdept_daily-migrate-20260907-r3",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:completion-runtime-20260907-r4",
+      "name": "fullmrktdept_daily-migrate-20260907-r4",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:completion-runtime-20260907-r7",
+      "name": "fullmrktdept_daily-migrate-20260907-r7",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "sha256:b6be027d61ab16773baf0bd4a1929019b56df3e26a46208f803644d774c3a0b6",
+      "name": "fullmrktdept_daily-migrate-20260907-r9",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:completion-runtime-20260907-r3",
+      "name": "fullmrktdept_daily-publications-readiness-20260907-r3",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:completion-runtime-20260907-r4",
+      "name": "fullmrktdept_daily-publications-readiness-20260907-r4",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:completion-runtime-20260907-r3",
+      "name": "fullmrktdept_daily-release-review-readiness-20260907-r3",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:completion-runtime-20260907-r4",
+      "name": "fullmrktdept_daily-release-review-readiness-20260907-r4",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:completion-runtime-20260907-r4",
+      "name": "fullmrktdept_daily-scheduler-readiness-20260907-r4",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
       "image": "fullmrktdept:production-20260902-r1",
       "name": "fullmrktdept_dispatch_thi_20260902_p0404",
       "replicas": "0/1"
     },
     {
+      "image": "fullmrktdept:editorial-review-20260907-r1",
+      "name": "fullmrktdept_editorial-phs-review-readiness-20260907-r1",
+      "replicas": "0/1 (0/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:editorial-review-20260907-r1",
+      "name": "fullmrktdept_editorial-phs-review-readiness-20260907-r2",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:editorial-review-20260907-r2",
+      "name": "fullmrktdept_editorial-phs-review-readiness-20260907-r3",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:editorial-review-20260907-r1",
+      "name": "fullmrktdept_editorial-phs-review-send-20260907-r2",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
       "image": "fullmrktdept:production-20260904-r3",
       "name": "fullmrktdept_gemini-tts-readback-20260904-r1",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "sha256:2d3e565fa32d0e1596d1f50e4b7b98fe2324573bf83edd011939d3c53857ab23",
+      "name": "fullmrktdept_generation-replacement-662de8a5-execute-1",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "sha256:2d3e565fa32d0e1596d1f50e4b7b98fe2324573bf83edd011939d3c53857ab23",
+      "name": "fullmrktdept_generation-replacement-662de8a5-preview",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "sha256:37de154eead711231ba40dfae0060fd4275974b4589e6a930e582d62dc8810e1",
+      "name": "fullmrktdept_kern-canary-execute-35e39fc3-1",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "sha256:b6be027d61ab16773baf0bd4a1929019b56df3e26a46208f803644d774c3a0b6",
+      "name": "fullmrktdept_kern-canary-execute-35e39fc3-2",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "sha256:836dd26b8ebe6adc80886f8de554cff9205f145079d855d3123923a92984feb8",
+      "name": "fullmrktdept_kern-canary-execute-35e39fc3-3",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "sha256:836dd26b8ebe6adc80886f8de554cff9205f145079d855d3123923a92984feb8",
+      "name": "fullmrktdept_kern-canary-execute-35e39fc3-4",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "sha256:836dd26b8ebe6adc80886f8de554cff9205f145079d855d3123923a92984feb8",
+      "name": "fullmrktdept_kern-canary-execute-35e39fc3-5",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "sha256:836dd26b8ebe6adc80886f8de554cff9205f145079d855d3123923a92984feb8",
+      "name": "fullmrktdept_kern-canary-execute-35e39fc3-6",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "sha256:836dd26b8ebe6adc80886f8de554cff9205f145079d855d3123923a92984feb8",
+      "name": "fullmrktdept_kern-canary-execute-35e39fc3-7",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "sha256:37de154eead711231ba40dfae0060fd4275974b4589e6a930e582d62dc8810e1",
+      "name": "fullmrktdept_kern-canary-preview-35e39fc3",
+      "replicas": "0/1 (0/1 completed)"
+    },
+    {
+      "image": "sha256:37de154eead711231ba40dfae0060fd4275974b4589e6a930e582d62dc8810e1",
+      "name": "fullmrktdept_kern-canary-preview-35e39fc3-2",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "sha256:37de154eead711231ba40dfae0060fd4275974b4589e6a930e582d62dc8810e1",
+      "name": "fullmrktdept_kern-canary-register-35e39fc3",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:completion-kern-audition-20260907-r1",
+      "name": "fullmrktdept_kern-native-qc-20260907-r1",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "sha256:e04c0448539bde93a58a99e878fae8915350c752d31e8687160a6719debd88de",
+      "name": "fullmrktdept_kern-tail-e-fd48159d-a15f-413f-ad36-f9404eb98e65-1",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "sha256:e04c0448539bde93a58a99e878fae8915350c752d31e8687160a6719debd88de",
+      "name": "fullmrktdept_kern-tail-p-fd48159d-a15f-413f-ad36-f9404eb98e65-1",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "sha256:e04c0448539bde93a58a99e878fae8915350c752d31e8687160a6719debd88de",
+      "name": "fullmrktdept_kern-tail-r-fd48159d-a15f-413f-ad36-f9404eb98e65-1",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "fullmrktdept:completion-kern-audition-20260907-r1",
+      "name": "fullmrktdept_kern-voice-audition-20260907-r1",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "sha256:b6be027d61ab16773baf0bd4a1929019b56df3e26a46208f803644d774c3a0b6",
+      "name": "fullmrktdept_known-invalid-86cdec6abe45-execute-1",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "sha256:b6be027d61ab16773baf0bd4a1929019b56df3e26a46208f803644d774c3a0b6",
+      "name": "fullmrktdept_known-invalid-86cdec6abe45-preview",
       "replicas": "0/1 (1/1 completed)"
     },
     {
@@ -241,6 +506,11 @@
       "image": "fullmrktdept:production-20260902-r1",
       "name": "fullmrktdept_migrate_20260902_p0404",
       "replicas": "0/1"
+    },
+    {
+      "image": "fullmrktdept:completion-runtime-20260907-r5",
+      "name": "fullmrktdept_operations-monitor-readiness-46490863",
+      "replicas": "0/1 (1/1 completed)"
     },
     {
       "image": "fullmrktdept:production-20260904-phs-r5",
@@ -380,6 +650,21 @@
     {
       "image": "fullmrktdept:production-20260904-phs-r5",
       "name": "fullmrktdept_public-media-phs-r1-upload-20260904",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "sha256:b6be027d61ab16773baf0bd4a1929019b56df3e26a46208f803644d774c3a0b6",
+      "name": "fullmrktdept_publication-analytics-once-20260907-r9",
+      "replicas": "0/1 (0/1 completed)"
+    },
+    {
+      "image": "sha256:b6be027d61ab16773baf0bd4a1929019b56df3e26a46208f803644d774c3a0b6",
+      "name": "fullmrktdept_publication-analytics-once-20260907-r9-mode0600",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "sha256:b6be027d61ab16773baf0bd4a1929019b56df3e26a46208f803644d774c3a0b6",
+      "name": "fullmrktdept_publication-analytics-readiness-20260907-r9",
       "replicas": "0/1 (1/1 completed)"
     },
     {
@@ -523,6 +808,16 @@
       "replicas": "0/1 (1/1 completed)"
     },
     {
+      "image": "sha256:b6be027d61ab16773baf0bd4a1929019b56df3e26a46208f803644d774c3a0b6",
+      "name": "fullmrktdept_thi-reconcile-7cce588589c8-apply-1",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "sha256:b6be027d61ab16773baf0bd4a1929019b56df3e26a46208f803644d774c3a0b6",
+      "name": "fullmrktdept_thi-reconcile-7cce588589c8-preview",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
       "image": "fullmrktdept:production-20260902-r1",
       "name": "fullmrktdept_worker",
       "replicas": "0/0"
@@ -551,7 +846,7 @@
       "replicas": "1/1"
     },
     {
-      "image": "contentos-captions-api:v2",
+      "image": "fullmrktdept-captions:languages-20260907-r2",
       "name": "contentos-video-producer_captions-api",
       "replicas": "1/1"
     },
@@ -571,12 +866,37 @@
       "replicas": "1/1"
     },
     {
-      "image": "fullmrktdept:production-20260903-r5",
+      "image": "sha256:8fd05c82ae71d56ab2deb883a2b77badd809a27a4f66373f4b8daa1d94f73067",
       "name": "fullmrktdept_api",
       "replicas": "1/1"
     },
     {
-      "image": "fullmrktdept:production-20260902-r1",
+      "image": "sha256:8fd05c82ae71d56ab2deb883a2b77badd809a27a4f66373f4b8daa1d94f73067",
+      "name": "fullmrktdept_daily-editorial",
+      "replicas": "1/1"
+    },
+    {
+      "image": "sha256:8fd05c82ae71d56ab2deb883a2b77badd809a27a4f66373f4b8daa1d94f73067",
+      "name": "fullmrktdept_daily-publications",
+      "replicas": "1/1"
+    },
+    {
+      "image": "sha256:8fd05c82ae71d56ab2deb883a2b77badd809a27a4f66373f4b8daa1d94f73067",
+      "name": "fullmrktdept_daily-release-review",
+      "replicas": "1/1"
+    },
+    {
+      "image": "sha256:8fd05c82ae71d56ab2deb883a2b77badd809a27a4f66373f4b8daa1d94f73067",
+      "name": "fullmrktdept_daily-scheduler",
+      "replicas": "1/1"
+    },
+    {
+      "image": "sha256:8fd05c82ae71d56ab2deb883a2b77badd809a27a4f66373f4b8daa1d94f73067",
+      "name": "fullmrktdept_operations-monitor",
+      "replicas": "1/1"
+    },
+    {
+      "image": "sha256:8fd05c82ae71d56ab2deb883a2b77badd809a27a4f66373f4b8daa1d94f73067",
       "name": "fullmrktdept_outbox",
       "replicas": "1/1"
     },
@@ -586,8 +906,18 @@
       "replicas": "1/1"
     },
     {
-      "image": "fullmrktdept:production-20260903-r5",
+      "image": "sha256:8fd05c82ae71d56ab2deb883a2b77badd809a27a4f66373f4b8daa1d94f73067",
+      "name": "fullmrktdept_publication-analytics",
+      "replicas": "1/1"
+    },
+    {
+      "image": "sha256:8fd05c82ae71d56ab2deb883a2b77badd809a27a4f66373f4b8daa1d94f73067",
       "name": "fullmrktdept_telegram-listener",
+      "replicas": "1/1"
+    },
+    {
+      "image": "sha256:8fd05c82ae71d56ab2deb883a2b77badd809a27a4f66373f4b8daa1d94f73067",
+      "name": "fullmrktdept_telegram-operations",
       "replicas": "1/1"
     },
     {
@@ -646,7 +976,7 @@
       "replicas": "1/1"
     }
   ],
-  "started_at": "2026-09-07T03:18:40Z",
+  "started_at": "2026-09-08T03:19:58Z",
   "status": "pass",
   "version": 2,
   "volumes_backed_up": [],
