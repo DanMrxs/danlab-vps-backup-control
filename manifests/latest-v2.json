@@ -1,6 +1,6 @@
 {
-  "backup_id": "20260908T031958Z",
-  "completed_at": "2026-09-08T03:20:25Z",
+  "backup_id": "20260909T031914Z",
+  "completed_at": "2026-09-09T03:19:53Z",
   "errors": [],
   "healthchecks": {
     "daily": {
@@ -13,9 +13,9 @@
       "slug": "vps-backup-weekly"
     }
   },
-  "inventory_sha256": "66d8f6252bd1e3ef1bee4855a5bb0b230863f1ad3884f9029b8c57f62640b06d",
+  "inventory_sha256": "ce89380d179115a2e859b82a54d3d12d64606c56a5726697697212c2b02cf9cb",
   "job": "daily",
-  "manifest_sha256": "4a093fab1b9d5e2f59df3d90a4d492024b645af3d0891e93176d3aebf3b9a2e9",
+  "manifest_sha256": "f201b3ccedba20e3d828c7ad658d4bff18ff311e82540e7af95a321649cd808f",
   "ports_listening": [
     {
       "address": "0.0.0.0",
@@ -100,17 +100,17 @@
   ],
   "restic": {
     "repository_alias": "hetzner-storage-box",
-    "snapshot_id": "acc51d9e",
+    "snapshot_id": "f4b9c38e",
     "stats": {
       "files_changed": 0,
       "files_new": 11,
       "files_unmodified": 0,
-      "total_bytes": 807271
+      "total_bytes": 807775
     },
     "tags": [
       "server=danlab-vps",
       "job=daily",
-      "id=20260908T031958Z"
+      "id=20260909T031914Z"
     ]
   },
   "restore_tests": {
@@ -290,6 +290,16 @@
     {
       "image": "sha256:e04c0448539bde93a58a99e878fae8915350c752d31e8687160a6719debd88de",
       "name": "fullmrktdept_daily-migrate-20260907-r14",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "sha256:2a0240149edfb5675a634bb1236598232bad9b0fc89aa8870b9ab658a8b2b476",
+      "name": "fullmrktdept_daily-migrate-20260907-r16",
+      "replicas": "0/1 (1/1 completed)"
+    },
+    {
+      "image": "sha256:f13a2ea0aabbd7534fce0ae58a041d713dbbefa4c0b09bcfe7bcd672bb6ecb5a",
+      "name": "fullmrktdept_daily-migrate-20260907-r18",
       "replicas": "0/1 (1/1 completed)"
     },
     {
@@ -866,37 +876,37 @@
       "replicas": "1/1"
     },
     {
-      "image": "sha256:8fd05c82ae71d56ab2deb883a2b77badd809a27a4f66373f4b8daa1d94f73067",
+      "image": "sha256:6397db762fce95af25edcb58b100e63a6ddf7d983531c368c6ba113745525a4f",
       "name": "fullmrktdept_api",
       "replicas": "1/1"
     },
     {
-      "image": "sha256:8fd05c82ae71d56ab2deb883a2b77badd809a27a4f66373f4b8daa1d94f73067",
+      "image": "sha256:6397db762fce95af25edcb58b100e63a6ddf7d983531c368c6ba113745525a4f",
       "name": "fullmrktdept_daily-editorial",
       "replicas": "1/1"
     },
     {
-      "image": "sha256:8fd05c82ae71d56ab2deb883a2b77badd809a27a4f66373f4b8daa1d94f73067",
+      "image": "sha256:6397db762fce95af25edcb58b100e63a6ddf7d983531c368c6ba113745525a4f",
       "name": "fullmrktdept_daily-publications",
       "replicas": "1/1"
     },
     {
-      "image": "sha256:8fd05c82ae71d56ab2deb883a2b77badd809a27a4f66373f4b8daa1d94f73067",
+      "image": "sha256:6397db762fce95af25edcb58b100e63a6ddf7d983531c368c6ba113745525a4f",
       "name": "fullmrktdept_daily-release-review",
       "replicas": "1/1"
     },
     {
-      "image": "sha256:8fd05c82ae71d56ab2deb883a2b77badd809a27a4f66373f4b8daa1d94f73067",
+      "image": "sha256:6397db762fce95af25edcb58b100e63a6ddf7d983531c368c6ba113745525a4f",
       "name": "fullmrktdept_daily-scheduler",
       "replicas": "1/1"
     },
     {
-      "image": "sha256:8fd05c82ae71d56ab2deb883a2b77badd809a27a4f66373f4b8daa1d94f73067",
+      "image": "sha256:6397db762fce95af25edcb58b100e63a6ddf7d983531c368c6ba113745525a4f",
       "name": "fullmrktdept_operations-monitor",
       "replicas": "1/1"
     },
     {
-      "image": "sha256:8fd05c82ae71d56ab2deb883a2b77badd809a27a4f66373f4b8daa1d94f73067",
+      "image": "sha256:6397db762fce95af25edcb58b100e63a6ddf7d983531c368c6ba113745525a4f",
       "name": "fullmrktdept_outbox",
       "replicas": "1/1"
     },
@@ -906,17 +916,17 @@
       "replicas": "1/1"
     },
     {
-      "image": "sha256:8fd05c82ae71d56ab2deb883a2b77badd809a27a4f66373f4b8daa1d94f73067",
+      "image": "sha256:6397db762fce95af25edcb58b100e63a6ddf7d983531c368c6ba113745525a4f",
       "name": "fullmrktdept_publication-analytics",
       "replicas": "1/1"
     },
     {
-      "image": "sha256:8fd05c82ae71d56ab2deb883a2b77badd809a27a4f66373f4b8daa1d94f73067",
+      "image": "sha256:6397db762fce95af25edcb58b100e63a6ddf7d983531c368c6ba113745525a4f",
       "name": "fullmrktdept_telegram-listener",
       "replicas": "1/1"
     },
     {
-      "image": "sha256:8fd05c82ae71d56ab2deb883a2b77badd809a27a4f66373f4b8daa1d94f73067",
+      "image": "sha256:6397db762fce95af25edcb58b100e63a6ddf7d983531c368c6ba113745525a4f",
       "name": "fullmrktdept_telegram-operations",
       "replicas": "1/1"
     },
@@ -976,7 +986,7 @@
       "replicas": "1/1"
     }
   ],
-  "started_at": "2026-09-08T03:19:58Z",
+  "started_at": "2026-09-09T03:19:14Z",
   "status": "pass",
   "version": 2,
   "volumes_backed_up": [],
