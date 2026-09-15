@@ -1,6 +1,6 @@
 {
-  "backup_id": "20260914T032009Z",
-  "completed_at": "2026-09-14T03:20:58Z",
+  "backup_id": "20260915T031741Z",
+  "completed_at": "2026-09-15T03:18:34Z",
   "errors": [],
   "healthchecks": {
     "daily": {
@@ -13,9 +13,9 @@
       "slug": "vps-backup-weekly"
     }
   },
-  "inventory_sha256": "87d147d68f938d40a13808ccec76160fd47452ff60e51a81ad8544e4c32fc6cd",
+  "inventory_sha256": "09c76a4e0b14a3340ad4be44d560f0f3178a2eb34bfc49650fbaca162adcea89",
   "job": "daily",
-  "manifest_sha256": "480c11d44245bb5df3078d8300444ce0bffbc2abcaa1c23c7ef2b7a5e0f49249",
+  "manifest_sha256": "e506e83dd1759a710077f8d8a4d6b681cde9e5a14af6845b0789e6c5ebc99652",
   "ports_listening": [
     {
       "address": "0.0.0.0",
@@ -100,17 +100,17 @@
   ],
   "restic": {
     "repository_alias": "hetzner-storage-box",
-    "snapshot_id": "177fc9a6",
+    "snapshot_id": "58771829",
     "stats": {
       "files_changed": 0,
       "files_new": 11,
       "files_unmodified": 0,
-      "total_bytes": 808000
+      "total_bytes": 808435
     },
     "tags": [
       "server=danlab-vps",
       "job=daily",
-      "id=20260914T032009Z"
+      "id=20260915T031741Z"
     ]
   },
   "restore_tests": {
@@ -813,11 +813,6 @@
       "replicas": "0/0"
     },
     {
-      "image": "sha256:6397db762fce95af25edcb58b100e63a6ddf7d983531c368c6ba113745525a4f",
-      "name": "fullmrktdept_telegram-listener",
-      "replicas": "0/1"
-    },
-    {
       "image": "fullmrktdept:production-20260904-r2",
       "name": "fullmrktdept_telegram-payload-probe-20260904",
       "replicas": "0/1 (1/1 completed)"
@@ -866,7 +861,7 @@
       "replicas": "1/1"
     },
     {
-      "image": "fullmrktdept-captions:languages-20260907-r2",
+      "image": "fullmrktdept-captions:languages-20260914-r4",
       "name": "contentos-video-producer_captions-api",
       "replicas": "1/1"
     },
@@ -886,27 +881,27 @@
       "replicas": "1/1"
     },
     {
-      "image": "sha256:6397db762fce95af25edcb58b100e63a6ddf7d983531c368c6ba113745525a4f",
+      "image": "fullmrktdept:reliability-api-20260914-r7",
       "name": "fullmrktdept_api",
       "replicas": "1/1"
     },
     {
-      "image": "sha256:5dce7cd78c1dab8c330ded6b814c674a90bdbbc3c1b5c8f5aff8f505c4832cc4",
+      "image": "sha256:61aab3a5e9027f2b53d93ccdef9fb9f9651fdc5ada2a9c2eeee344065d809a2a",
       "name": "fullmrktdept_daily-editorial",
       "replicas": "1/1"
     },
     {
-      "image": "sha256:4f7fd796e9f679b3c000b289237b921ceefe0b6ef80d8909f80636feebc68228",
+      "image": "sha256:e92ddffd95c57691cc93e94ac98ab036f1abce955de84140babefec67243f535",
       "name": "fullmrktdept_daily-publications",
       "replicas": "1/1"
     },
     {
-      "image": "sha256:adbebaae901e583cc5088461add4c158d0e55c7abc14fc391ee0af60f2f5a2c1",
+      "image": "sha256:1055a1c2af1541ff7d0284b9647b5c155b2150f2addaad73de44b7f6dbd22d97",
       "name": "fullmrktdept_daily-release-review",
       "replicas": "1/1"
     },
     {
-      "image": "sha256:6397db762fce95af25edcb58b100e63a6ddf7d983531c368c6ba113745525a4f",
+      "image": "sha256:0c852b0f765e73b38ab189461ce93f6a0837a125f1b1b3ab7ebcaa5ec5aa7ffb",
       "name": "fullmrktdept_daily-scheduler",
       "replicas": "1/1"
     },
@@ -926,8 +921,13 @@
       "replicas": "1/1"
     },
     {
-      "image": "sha256:6397db762fce95af25edcb58b100e63a6ddf7d983531c368c6ba113745525a4f",
+      "image": "sha256:f7ced6a5983ee5da2b03d8a4324a4a7a497c1e302a73461e33171eb3add1fca5",
       "name": "fullmrktdept_publication-analytics",
+      "replicas": "1/1"
+    },
+    {
+      "image": "fullmrktdept:reliability-telegram-20260914-r5",
+      "name": "fullmrktdept_telegram-listener",
       "replicas": "1/1"
     },
     {
@@ -991,7 +991,7 @@
       "replicas": "1/1"
     }
   ],
-  "started_at": "2026-09-14T03:20:09Z",
+  "started_at": "2026-09-15T03:17:41Z",
   "status": "pass",
   "version": 2,
   "volumes_backed_up": [],
