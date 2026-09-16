@@ -1,6 +1,6 @@
 {
-  "backup_id": "20260915T031741Z",
-  "completed_at": "2026-09-15T03:18:34Z",
+  "backup_id": "20260916T032004Z",
+  "completed_at": "2026-09-16T03:21:14Z",
   "errors": [],
   "healthchecks": {
     "daily": {
@@ -13,9 +13,9 @@
       "slug": "vps-backup-weekly"
     }
   },
-  "inventory_sha256": "09c76a4e0b14a3340ad4be44d560f0f3178a2eb34bfc49650fbaca162adcea89",
+  "inventory_sha256": "fc6276b864e4d3fa18e1de30ddcda53b921d6700f4a0ea47fb4143339c0b5917",
   "job": "daily",
-  "manifest_sha256": "e506e83dd1759a710077f8d8a4d6b681cde9e5a14af6845b0789e6c5ebc99652",
+  "manifest_sha256": "3a09000e70ba08c57fd8a45379509b818740c9b1c94ec4dc727ab9abb4507df4",
   "ports_listening": [
     {
       "address": "0.0.0.0",
@@ -100,17 +100,17 @@
   ],
   "restic": {
     "repository_alias": "hetzner-storage-box",
-    "snapshot_id": "58771829",
+    "snapshot_id": "358bdfbd",
     "stats": {
       "files_changed": 0,
       "files_new": 11,
       "files_unmodified": 0,
-      "total_bytes": 808435
+      "total_bytes": 808482
     },
     "tags": [
       "server=danlab-vps",
       "job=daily",
-      "id=20260915T031741Z"
+      "id=20260916T032004Z"
     ]
   },
   "restore_tests": {
@@ -886,12 +886,12 @@
       "replicas": "1/1"
     },
     {
-      "image": "sha256:61aab3a5e9027f2b53d93ccdef9fb9f9651fdc5ada2a9c2eeee344065d809a2a",
+      "image": "sha256:451116d481deed5c8e5b0af1187f1b572c11e02b0ac7d7cc257a1b8f9e7fe561",
       "name": "fullmrktdept_daily-editorial",
       "replicas": "1/1"
     },
     {
-      "image": "sha256:e92ddffd95c57691cc93e94ac98ab036f1abce955de84140babefec67243f535",
+      "image": "fullmrktdept:daily-machine-publisher-r11",
       "name": "fullmrktdept_daily-publications",
       "replicas": "1/1"
     },
@@ -906,7 +906,7 @@
       "replicas": "1/1"
     },
     {
-      "image": "sha256:92d1fd114c674859adb85f0c1dfd56554f50633f86ebd475bdc16a7be6d811ee",
+      "image": "sha256:8984fe4e1bf162cc766ed553b7c045e9128304f96aaee9855da1f6e32449ef55",
       "name": "fullmrktdept_operations-monitor",
       "replicas": "1/1"
     },
@@ -991,7 +991,7 @@
       "replicas": "1/1"
     }
   ],
-  "started_at": "2026-09-15T03:17:41Z",
+  "started_at": "2026-09-16T03:20:04Z",
   "status": "pass",
   "version": 2,
   "volumes_backed_up": [],
