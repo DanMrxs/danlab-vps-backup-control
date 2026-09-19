@@ -1,6 +1,6 @@
 {
-  "backup_id": "20260918T031838Z",
-  "completed_at": "2026-09-18T03:20:12Z",
+  "backup_id": "20260919T031914Z",
+  "completed_at": "2026-09-19T03:20:49Z",
   "errors": [],
   "healthchecks": {
     "daily": {
@@ -13,9 +13,9 @@
       "slug": "vps-backup-weekly"
     }
   },
-  "inventory_sha256": "3fdc321a83aead034fd29717d4cf52fb424d6f8fe3c8088f544243db2eda647e",
+  "inventory_sha256": "89b035fda1bb9742cd0bd7056cd37cb78a0f45ad56ceb435243613b5be121de3",
   "job": "daily",
-  "manifest_sha256": "6997c338fe3e83fa523bbd640b40edc9a0f2ec7a5ea8d0d3e5973742dd6f13cf",
+  "manifest_sha256": "e9fbc57c02a662335df4807a2e257c99926d1439df90761ba8766bfe46dd4b98",
   "ports_listening": [
     {
       "address": "0.0.0.0",
@@ -100,17 +100,17 @@
   ],
   "restic": {
     "repository_alias": "hetzner-storage-box",
-    "snapshot_id": "44346730",
+    "snapshot_id": "01a237e0",
     "stats": {
       "files_changed": 0,
       "files_new": 11,
       "files_unmodified": 0,
-      "total_bytes": 808348
+      "total_bytes": 808341
     },
     "tags": [
       "server=danlab-vps",
       "job=daily",
-      "id=20260918T031838Z"
+      "id=20260919T031914Z"
     ]
   },
   "restore_tests": {
@@ -881,37 +881,37 @@
       "replicas": "1/1"
     },
     {
-      "image": "fullmrktdept:reliability-api-20260914-r7",
+      "image": "sha256:577cfb231a593d1be5027c73b682f4beb7a1edd168a69c78973c8acf2c4ac665",
       "name": "fullmrktdept_api",
       "replicas": "1/1"
     },
     {
-      "image": "sha256:0452bc7977aad48192b87d099445a1413202e83e346244dd1337555eb5b1235a",
+      "image": "sha256:e3045c4305966baf1921333d2c9871a702a815651d03e6761418629f60622a70",
       "name": "fullmrktdept_daily-editorial",
       "replicas": "1/1"
     },
     {
-      "image": "sha256:23f0114322976dba25e19cc3f108d2b8eaac4ada691d868f52cef3cfe9911964",
+      "image": "sha256:3922606583b5538e77bf058716d59a50eeb185aaf7303456521506e90497f24f",
       "name": "fullmrktdept_daily-publications",
       "replicas": "1/1"
     },
     {
-      "image": "sha256:1055a1c2af1541ff7d0284b9647b5c155b2150f2addaad73de44b7f6dbd22d97",
+      "image": "sha256:4bd3f6b5e4a6c48956f933d8e9dc9c4c9d1ded3cc4c54ff11ea948d3f4aa28e7",
       "name": "fullmrktdept_daily-release-review",
       "replicas": "1/1"
     },
     {
-      "image": "sha256:0c852b0f765e73b38ab189461ce93f6a0837a125f1b1b3ab7ebcaa5ec5aa7ffb",
+      "image": "sha256:a8c435980880dd130619605d0bf3f8b4a73e8820e25468ceb76f75d730242c02",
       "name": "fullmrktdept_daily-scheduler",
       "replicas": "1/1"
     },
     {
-      "image": "sha256:091ce49ad4a419c1b720c20ef083bea7365146a5e07ad2d6c0b311e19f87e516",
+      "image": "sha256:8e63361502d6d6b4181096fb1e896914ef114d47251fbbbe24ef792f4eebd83b",
       "name": "fullmrktdept_operations-monitor",
       "replicas": "1/1"
     },
     {
-      "image": "sha256:6397db762fce95af25edcb58b100e63a6ddf7d983531c368c6ba113745525a4f",
+      "image": "sha256:05e4421d6648c953379947fab9cdbe970ab7cebac5dcfab99a41ae040b57270a",
       "name": "fullmrktdept_outbox",
       "replicas": "1/1"
     },
@@ -921,17 +921,17 @@
       "replicas": "1/1"
     },
     {
-      "image": "sha256:f7ced6a5983ee5da2b03d8a4324a4a7a497c1e302a73461e33171eb3add1fca5",
+      "image": "sha256:5de88dd2d1951582dc1eee51d55a3635eda713709caa265de03b51f1e682183c",
       "name": "fullmrktdept_publication-analytics",
       "replicas": "1/1"
     },
     {
-      "image": "fullmrktdept:reliability-telegram-20260914-r5",
+      "image": "sha256:d360a4b4c81ea4b7f7e0d84e917df5822662225da4e54dcbf60772f62c56eb37",
       "name": "fullmrktdept_telegram-listener",
       "replicas": "1/1"
     },
     {
-      "image": "sha256:6397db762fce95af25edcb58b100e63a6ddf7d983531c368c6ba113745525a4f",
+      "image": "sha256:05e4421d6648c953379947fab9cdbe970ab7cebac5dcfab99a41ae040b57270a",
       "name": "fullmrktdept_telegram-operations",
       "replicas": "1/1"
     },
@@ -991,7 +991,7 @@
       "replicas": "1/1"
     }
   ],
-  "started_at": "2026-09-18T03:18:38Z",
+  "started_at": "2026-09-19T03:19:14Z",
   "status": "pass",
   "version": 2,
   "volumes_backed_up": [],
