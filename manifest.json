@@ -1,6 +1,6 @@
 {
-  "backup_id": "20260921T031645Z",
-  "completed_at": "2026-09-21T03:18:17Z",
+  "backup_id": "20260922T032000Z",
+  "completed_at": "2026-09-22T03:21:48Z",
   "errors": [],
   "healthchecks": {
     "daily": {
@@ -13,9 +13,9 @@
       "slug": "vps-backup-weekly"
     }
   },
-  "inventory_sha256": "aee84852d48c23f176f077711aa26b32047cb6b85269e72a6c3d20e2533e9b7d",
+  "inventory_sha256": "1fb85328922fa9dbc5f84fec368e0eab09973aaf6d599a2f54ee6e8b8bbf4508",
   "job": "daily",
-  "manifest_sha256": "9e482dff4c5f540e655948022203b4ab330cb55db66a6b091b96b94995104c58",
+  "manifest_sha256": "1ef1a4f26303838723fe6411a454c20d5ae4063f20d069fd578a12100c272355",
   "ports_listening": [
     {
       "address": "0.0.0.0",
@@ -100,17 +100,17 @@
   ],
   "restic": {
     "repository_alias": "hetzner-storage-box",
-    "snapshot_id": "bb21c785",
+    "snapshot_id": "38b17f26",
     "stats": {
       "files_changed": 0,
       "files_new": 11,
       "files_unmodified": 0,
-      "total_bytes": 808434
+      "total_bytes": 787641
     },
     "tags": [
       "server=danlab-vps",
       "job=daily",
-      "id=20260921T031645Z"
+      "id=20260922T032000Z"
     ]
   },
   "restore_tests": {
@@ -153,24 +153,9 @@
       "replicas": "0/0"
     },
     {
-      "image": "sha256:adbebaae901e583cc5088461add4c158d0e55c7abc14fc391ee0af60f2f5a2c1",
-      "name": "fullmrktdept_authority-migrate-20260909-33",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:production-20260903-r7",
-      "name": "fullmrktdept_blotato-malc-de-readback-20260903-r1",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
       "image": "fullmrktdept:production-20260904-r3",
       "name": "fullmrktdept_blotato-malc-de-readback-20260904-r2",
       "replicas": "0/1 (0/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:production-20260904-r3",
-      "name": "fullmrktdept_blotato-malc-de-readback-20260904-r3",
-      "replicas": "0/1 (1/1 completed)"
     },
     {
       "image": "fullmrktdept:production-20260904-phs-r4",
@@ -183,174 +168,14 @@
       "replicas": "0/1 (0/1 completed)"
     },
     {
-      "image": "fullmrktdept:production-20260904-phs-r5",
-      "name": "fullmrktdept_blotato-phs-readback-dispatch-20260904-r3",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:prephase-20260831-r6",
-      "name": "fullmrktdept_bootstrap",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:completion-runtime-20260907-r3",
-      "name": "fullmrktdept_brand-kern-pt-br-readiness-20260907-r1",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:completion-runtime-20260907-r3",
-      "name": "fullmrktdept_brand-kern-pt-br-send-20260907-r1",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:completion-control-20260907-r1",
-      "name": "fullmrktdept_brand-malc-de-readiness-20260907-r1",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:completion-control-20260907-r1",
-      "name": "fullmrktdept_brand-malc-de-send-20260907-r1",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:completion-control-20260907-r1",
-      "name": "fullmrktdept_brand-malc-en-readiness-20260907-r1",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:completion-control-20260907-r1",
-      "name": "fullmrktdept_brand-malc-en-send-20260907-r1",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:completion-control-20260907-r1",
-      "name": "fullmrktdept_brand-phs-pt-br-readiness-20260907-r1",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:completion-control-20260907-r1",
-      "name": "fullmrktdept_brand-phs-pt-br-send-20260907-r1",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:completion-control-20260907-r1",
-      "name": "fullmrktdept_brand-thi-en-readiness-20260907-r1",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:completion-control-20260907-r1",
-      "name": "fullmrktdept_brand-thi-en-send-20260907-r1",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:production-20260904-phs-r6",
-      "name": "fullmrktdept_completion-account-probe-20260907-r1",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:production-20260904-phs-r6",
-      "name": "fullmrktdept_completion-account-probe-20260907-r2",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:completion-control-20260907-r1",
-      "name": "fullmrktdept_completion-migrate-20260907-r1",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
       "image": "fullmrktdept:completion-runtime-20260907-r2",
       "name": "fullmrktdept_daily-editorial-diagnostic-20260907-r2",
       "replicas": "0/1 (0/1 completed)"
     },
     {
       "image": "fullmrktdept:completion-runtime-20260907-r2",
-      "name": "fullmrktdept_daily-editorial-diagnostic-20260907-r2-a2",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:completion-runtime-20260907-r2",
       "name": "fullmrktdept_daily-editorial-readiness-20260907-r2",
       "replicas": "0/1 (0/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:completion-runtime-20260907-r3",
-      "name": "fullmrktdept_daily-editorial-readiness-20260907-r3",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:completion-runtime-20260907-r4",
-      "name": "fullmrktdept_daily-editorial-readiness-20260907-r4",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:completion-runtime-20260907-r5",
-      "name": "fullmrktdept_daily-editorial-readiness-20260907-r5",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "sha256:836dd26b8ebe6adc80886f8de554cff9205f145079d855d3123923a92984feb8",
-      "name": "fullmrktdept_daily-migrate-20260907-r11",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "sha256:e04c0448539bde93a58a99e878fae8915350c752d31e8687160a6719debd88de",
-      "name": "fullmrktdept_daily-migrate-20260907-r14",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "sha256:2a0240149edfb5675a634bb1236598232bad9b0fc89aa8870b9ab658a8b2b476",
-      "name": "fullmrktdept_daily-migrate-20260907-r16",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "sha256:f13a2ea0aabbd7534fce0ae58a041d713dbbefa4c0b09bcfe7bcd672bb6ecb5a",
-      "name": "fullmrktdept_daily-migrate-20260907-r18",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:completion-runtime-20260907-r3",
-      "name": "fullmrktdept_daily-migrate-20260907-r3",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:completion-runtime-20260907-r4",
-      "name": "fullmrktdept_daily-migrate-20260907-r4",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:completion-runtime-20260907-r7",
-      "name": "fullmrktdept_daily-migrate-20260907-r7",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "sha256:b6be027d61ab16773baf0bd4a1929019b56df3e26a46208f803644d774c3a0b6",
-      "name": "fullmrktdept_daily-migrate-20260907-r9",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:completion-runtime-20260907-r3",
-      "name": "fullmrktdept_daily-publications-readiness-20260907-r3",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:completion-runtime-20260907-r4",
-      "name": "fullmrktdept_daily-publications-readiness-20260907-r4",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:completion-runtime-20260907-r3",
-      "name": "fullmrktdept_daily-release-review-readiness-20260907-r3",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:completion-runtime-20260907-r4",
-      "name": "fullmrktdept_daily-release-review-readiness-20260907-r4",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:completion-runtime-20260907-r4",
-      "name": "fullmrktdept_daily-scheduler-readiness-20260907-r4",
-      "replicas": "0/1 (1/1 completed)"
     },
     {
       "image": "fullmrktdept:production-20260902-r1",
@@ -363,119 +188,9 @@
       "replicas": "0/1 (0/1 completed)"
     },
     {
-      "image": "fullmrktdept:editorial-review-20260907-r1",
-      "name": "fullmrktdept_editorial-phs-review-readiness-20260907-r2",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:editorial-review-20260907-r2",
-      "name": "fullmrktdept_editorial-phs-review-readiness-20260907-r3",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:editorial-review-20260907-r1",
-      "name": "fullmrktdept_editorial-phs-review-send-20260907-r2",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:production-20260904-r3",
-      "name": "fullmrktdept_gemini-tts-readback-20260904-r1",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "sha256:2d3e565fa32d0e1596d1f50e4b7b98fe2324573bf83edd011939d3c53857ab23",
-      "name": "fullmrktdept_generation-replacement-662de8a5-execute-1",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "sha256:2d3e565fa32d0e1596d1f50e4b7b98fe2324573bf83edd011939d3c53857ab23",
-      "name": "fullmrktdept_generation-replacement-662de8a5-preview",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "sha256:37de154eead711231ba40dfae0060fd4275974b4589e6a930e582d62dc8810e1",
-      "name": "fullmrktdept_kern-canary-execute-35e39fc3-1",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "sha256:b6be027d61ab16773baf0bd4a1929019b56df3e26a46208f803644d774c3a0b6",
-      "name": "fullmrktdept_kern-canary-execute-35e39fc3-2",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "sha256:836dd26b8ebe6adc80886f8de554cff9205f145079d855d3123923a92984feb8",
-      "name": "fullmrktdept_kern-canary-execute-35e39fc3-3",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "sha256:836dd26b8ebe6adc80886f8de554cff9205f145079d855d3123923a92984feb8",
-      "name": "fullmrktdept_kern-canary-execute-35e39fc3-4",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "sha256:836dd26b8ebe6adc80886f8de554cff9205f145079d855d3123923a92984feb8",
-      "name": "fullmrktdept_kern-canary-execute-35e39fc3-5",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "sha256:836dd26b8ebe6adc80886f8de554cff9205f145079d855d3123923a92984feb8",
-      "name": "fullmrktdept_kern-canary-execute-35e39fc3-6",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "sha256:836dd26b8ebe6adc80886f8de554cff9205f145079d855d3123923a92984feb8",
-      "name": "fullmrktdept_kern-canary-execute-35e39fc3-7",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
       "image": "sha256:37de154eead711231ba40dfae0060fd4275974b4589e6a930e582d62dc8810e1",
       "name": "fullmrktdept_kern-canary-preview-35e39fc3",
       "replicas": "0/1 (0/1 completed)"
-    },
-    {
-      "image": "sha256:37de154eead711231ba40dfae0060fd4275974b4589e6a930e582d62dc8810e1",
-      "name": "fullmrktdept_kern-canary-preview-35e39fc3-2",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "sha256:37de154eead711231ba40dfae0060fd4275974b4589e6a930e582d62dc8810e1",
-      "name": "fullmrktdept_kern-canary-register-35e39fc3",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:completion-kern-audition-20260907-r1",
-      "name": "fullmrktdept_kern-native-qc-20260907-r1",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "sha256:e04c0448539bde93a58a99e878fae8915350c752d31e8687160a6719debd88de",
-      "name": "fullmrktdept_kern-tail-e-fd48159d-a15f-413f-ad36-f9404eb98e65-1",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "sha256:e04c0448539bde93a58a99e878fae8915350c752d31e8687160a6719debd88de",
-      "name": "fullmrktdept_kern-tail-p-fd48159d-a15f-413f-ad36-f9404eb98e65-1",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "sha256:e04c0448539bde93a58a99e878fae8915350c752d31e8687160a6719debd88de",
-      "name": "fullmrktdept_kern-tail-r-fd48159d-a15f-413f-ad36-f9404eb98e65-1",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:completion-kern-audition-20260907-r1",
-      "name": "fullmrktdept_kern-voice-audition-20260907-r1",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "sha256:b6be027d61ab16773baf0bd4a1929019b56df3e26a46208f803644d774c3a0b6",
-      "name": "fullmrktdept_known-invalid-86cdec6abe45-execute-1",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "sha256:b6be027d61ab16773baf0bd4a1929019b56df3e26a46208f803644d774c3a0b6",
-      "name": "fullmrktdept_known-invalid-86cdec6abe45-preview",
-      "replicas": "0/1 (1/1 completed)"
     },
     {
       "image": "fullmrktdept:production-20260904-r2",
@@ -498,34 +213,9 @@
       "replicas": "0/1 (0/1 completed)"
     },
     {
-      "image": "fullmrktdept:production-20260903-r6",
-      "name": "fullmrktdept_malc-de-readiness-20260903-r3",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:production-20260903-r7",
-      "name": "fullmrktdept_malc-de-replacement-readiness-20260903-r1",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:production-20260903-r7",
-      "name": "fullmrktdept_malc-de-replacement-send-20260903-r1",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:production-20260903-r6",
-      "name": "fullmrktdept_malc-de-send-20260903-r1",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
       "image": "fullmrktdept:production-20260902-r1",
       "name": "fullmrktdept_migrate_20260902_p0404",
       "replicas": "0/1"
-    },
-    {
-      "image": "fullmrktdept:completion-runtime-20260907-r5",
-      "name": "fullmrktdept_operations-monitor-readiness-46490863",
-      "replicas": "0/1 (1/1 completed)"
     },
     {
       "image": "fullmrktdept:production-20260904-phs-r5",
@@ -536,11 +226,6 @@
       "image": "fullmrktdept:production-20260904-phs-r6",
       "name": "fullmrktdept_phs-r1-dispatch-reconcile-20260904-r2",
       "replicas": "0/1"
-    },
-    {
-      "image": "fullmrktdept:production-20260904-phs-r6",
-      "name": "fullmrktdept_phs-r1-pre-submit-recovery-20260904",
-      "replicas": "0/1 (1/1 completed)"
     },
     {
       "image": "fullmrktdept:production-20260904-phs-r1",
@@ -558,49 +243,14 @@
       "replicas": "0/1"
     },
     {
-      "image": "fullmrktdept:production-20260904-r1",
-      "name": "fullmrktdept_plan-malc-de-r2-readiness-20260904",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:production-20260904-r1",
-      "name": "fullmrktdept_plan-malc-de-r2-write-20260904",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:production-20260904-r3",
-      "name": "fullmrktdept_plan-malc-de-r3-write-20260904",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
       "image": "fullmrktdept:production-20260903-r8",
       "name": "fullmrktdept_plan-malc-de-readiness-20260903-r1",
       "replicas": "0/1 (0/1 completed)"
     },
     {
-      "image": "fullmrktdept:production-20260903-r8",
-      "name": "fullmrktdept_plan-malc-de-readiness-20260903-r2",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:production-20260903-r8",
-      "name": "fullmrktdept_plan-malc-de-write-20260903-r1",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
       "image": "fullmrktdept:production-20260904-phs-r5",
       "name": "fullmrktdept_plan-phs-r1-readiness-20260904",
       "replicas": "0/1 (0/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:production-20260904-phs-r5",
-      "name": "fullmrktdept_plan-phs-r1-readiness-20260904-r2",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:production-20260904-phs-r5",
-      "name": "fullmrktdept_plan-phs-r1-write-20260904",
-      "replicas": "0/1 (1/1 completed)"
     },
     {
       "image": "fullmrktdept:production-20260903-r4",
@@ -618,54 +268,9 @@
       "replicas": "0/1 (0/1 completed)"
     },
     {
-      "image": "fullmrktdept:production-20260903-r4",
-      "name": "fullmrktdept_plan_malc_en_20260903_p0604_r4",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
       "image": "fullmrktdept:production-20260902-r1",
       "name": "fullmrktdept_promote_thi_20260902_p0404",
       "replicas": "0/1"
-    },
-    {
-      "image": "fullmrktdept:production-20260904-r1",
-      "name": "fullmrktdept_public-media-malc-de-r2-build-20260904",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:production-20260904-r2",
-      "name": "fullmrktdept_public-media-malc-de-r2-replay-20260904",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:production-20260904-r2",
-      "name": "fullmrktdept_public-media-malc-de-r2-upload-20260904",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:production-20260904-r3",
-      "name": "fullmrktdept_public-media-malc-de-r3-build-20260904",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:production-20260904-r3",
-      "name": "fullmrktdept_public-media-malc-de-r3-replay-20260904",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:production-20260904-r3",
-      "name": "fullmrktdept_public-media-malc-de-r3-upload-20260904",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:production-20260904-phs-r5",
-      "name": "fullmrktdept_public-media-phs-r1-replay-20260904",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:production-20260904-phs-r5",
-      "name": "fullmrktdept_public-media-phs-r1-upload-20260904",
-      "replicas": "0/1 (1/1 completed)"
     },
     {
       "image": "sha256:b6be027d61ab16773baf0bd4a1929019b56df3e26a46208f803644d774c3a0b6",
@@ -673,34 +278,9 @@
       "replicas": "0/1 (0/1 completed)"
     },
     {
-      "image": "sha256:b6be027d61ab16773baf0bd4a1929019b56df3e26a46208f803644d774c3a0b6",
-      "name": "fullmrktdept_publication-analytics-once-20260907-r9-mode0600",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "sha256:b6be027d61ab16773baf0bd4a1929019b56df3e26a46208f803644d774c3a0b6",
-      "name": "fullmrktdept_publication-analytics-readiness-20260907-r9",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
       "image": "fullmrktdept:production-20260902-r1",
       "name": "fullmrktdept_reconcile_thi_20260902_p0405",
       "replicas": "0/1"
-    },
-    {
-      "image": "fullmrktdept:production-20260831-r8",
-      "name": "fullmrktdept_reconcile_thi_release_20260831",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:production-20260831-r7",
-      "name": "fullmrktdept_record_thi_release_20260831",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:production-20260904-r2",
-      "name": "fullmrktdept_review-malc-de-publication-r2-readiness-20260904",
-      "replicas": "0/1 (1/1 completed)"
     },
     {
       "image": "fullmrktdept:production-20260904-r2",
@@ -709,28 +289,8 @@
     },
     {
       "image": "fullmrktdept:production-20260904-r3",
-      "name": "fullmrktdept_review-malc-de-publication-r3-readiness-20260904",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:production-20260904-r3",
       "name": "fullmrktdept_review-malc-de-publication-r3-send-20260904",
       "replicas": "0/1 (0/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:production-20260904-r3",
-      "name": "fullmrktdept_review-malc-de-publication-r3-send-20260904-r2",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:production-20260903-r8",
-      "name": "fullmrktdept_review-malc-de-publication-readiness-20260903-r1",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:production-20260903-r8",
-      "name": "fullmrktdept_review-malc-de-publication-send-20260903-r1",
-      "replicas": "0/1 (1/1 completed)"
     },
     {
       "image": "fullmrktdept:production-20260904-phs-r4",
@@ -753,51 +313,6 @@
       "replicas": "0/1"
     },
     {
-      "image": "fullmrktdept:production-20260904-phs-r5",
-      "name": "fullmrktdept_review-phs-publication-r1-readiness-20260904",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:production-20260904-phs-r5",
-      "name": "fullmrktdept_review-phs-publication-r1-send-20260904",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:production-20260902-r2",
-      "name": "fullmrktdept_review_malc_en_confirm_20260902",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:production-20260903-r4",
-      "name": "fullmrktdept_review_malc_en_publication_send_20260903",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:production-20260902-r2",
-      "name": "fullmrktdept_review_malc_en_readiness2_20260902",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:production-20260902-r2",
-      "name": "fullmrktdept_review_malc_en_readiness3_20260902",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:production-20260902-r2",
-      "name": "fullmrktdept_review_malc_en_receipt_recovery_20260902",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:production-20260903-r3",
-      "name": "fullmrktdept_review_malc_en_replacement_readiness_20260903",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:production-20260903-r3",
-      "name": "fullmrktdept_review_malc_en_replacement_send_20260903",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
       "image": "fullmrktdept:production-20260902-r2",
       "name": "fullmrktdept_review_malc_en_send_20260902",
       "replicas": "0/1 (0/1 completed)"
@@ -811,26 +326,6 @@
       "image": "fullmrktdept:production-20260902-r1",
       "name": "fullmrktdept_scheduler",
       "replicas": "0/0"
-    },
-    {
-      "image": "fullmrktdept:production-20260904-r2",
-      "name": "fullmrktdept_telegram-payload-probe-20260904",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "fullmrktdept:production-20260904-r2",
-      "name": "fullmrktdept_telegram-readonly-probe-20260904",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "sha256:b6be027d61ab16773baf0bd4a1929019b56df3e26a46208f803644d774c3a0b6",
-      "name": "fullmrktdept_thi-reconcile-7cce588589c8-apply-1",
-      "replicas": "0/1 (1/1 completed)"
-    },
-    {
-      "image": "sha256:b6be027d61ab16773baf0bd4a1929019b56df3e26a46208f803644d774c3a0b6",
-      "name": "fullmrktdept_thi-reconcile-7cce588589c8-preview",
-      "replicas": "0/1 (1/1 completed)"
     },
     {
       "image": "fullmrktdept:production-20260902-r1",
@@ -881,32 +376,32 @@
       "replicas": "1/1"
     },
     {
-      "image": "sha256:577cfb231a593d1be5027c73b682f4beb7a1edd168a69c78973c8acf2c4ac665",
+      "image": "sha256:22820e6d99b466ca428864a6122dc70040438c4c5b4836203d9c83dc499f20f9",
       "name": "fullmrktdept_api",
       "replicas": "1/1"
     },
     {
-      "image": "sha256:e3045c4305966baf1921333d2c9871a702a815651d03e6761418629f60622a70",
+      "image": "sha256:a9de43f1852574d7f85ee7e596b59d4efd997e8fa6c75bc00beb921b10cf4922",
       "name": "fullmrktdept_daily-editorial",
       "replicas": "1/1"
     },
     {
-      "image": "sha256:3922606583b5538e77bf058716d59a50eeb185aaf7303456521506e90497f24f",
+      "image": "sha256:665c308ef85c7991e077b3eac23817792312e48f2d0a95eace05cc67ddcd5473",
       "name": "fullmrktdept_daily-publications",
       "replicas": "1/1"
     },
     {
-      "image": "sha256:4bd3f6b5e4a6c48956f933d8e9dc9c4c9d1ded3cc4c54ff11ea948d3f4aa28e7",
+      "image": "sha256:d8f98b5dad591d67417bb442657fdb0b44d95139c96d09fef58881b713a4e2b4",
       "name": "fullmrktdept_daily-release-review",
       "replicas": "1/1"
     },
     {
-      "image": "sha256:a8c435980880dd130619605d0bf3f8b4a73e8820e25468ceb76f75d730242c02",
+      "image": "sha256:964f1f68b68059dcf5e7f1101982a39fd20f32039a159f5a60f50c3f40d2cc08",
       "name": "fullmrktdept_daily-scheduler",
       "replicas": "1/1"
     },
     {
-      "image": "sha256:8e63361502d6d6b4181096fb1e896914ef114d47251fbbbe24ef792f4eebd83b",
+      "image": "sha256:b61c454d00d78813d21d7dd99944ca49561c0818a41d11b61dadf87767eaeabb",
       "name": "fullmrktdept_operations-monitor",
       "replicas": "1/1"
     },
@@ -926,12 +421,12 @@
       "replicas": "1/1"
     },
     {
-      "image": "sha256:d360a4b4c81ea4b7f7e0d84e917df5822662225da4e54dcbf60772f62c56eb37",
+      "image": "sha256:1d3e35d86ddf49e20d82d8158b3f6fb1ec74f209e085fdabcc8c502c6cd972ca",
       "name": "fullmrktdept_telegram-listener",
       "replicas": "1/1"
     },
     {
-      "image": "sha256:05e4421d6648c953379947fab9cdbe970ab7cebac5dcfab99a41ae040b57270a",
+      "image": "sha256:b68cfe101ae0954ef58f0d84eb53d9a4fe432249312e805e36b8d9882e72b98e",
       "name": "fullmrktdept_telegram-operations",
       "replicas": "1/1"
     },
@@ -991,7 +486,7 @@
       "replicas": "1/1"
     }
   ],
-  "started_at": "2026-09-21T03:16:45Z",
+  "started_at": "2026-09-22T03:20:00Z",
   "status": "pass",
   "version": 2,
   "volumes_backed_up": [],
