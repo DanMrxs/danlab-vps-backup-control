@@ -1,6 +1,6 @@
 {
-  "backup_id": "20260925T031757Z",
-  "completed_at": "2026-09-25T03:20:27Z",
+  "backup_id": "20260926T031944Z",
+  "completed_at": "2026-09-26T03:22:26Z",
   "errors": [],
   "healthchecks": {
     "daily": {
@@ -13,9 +13,9 @@
       "slug": "vps-backup-weekly"
     }
   },
-  "inventory_sha256": "4e8e8b0257e2ecf8dbc46fb25c26f21551d7deef7005412e847e4065015bf545",
+  "inventory_sha256": "e0710e618639e1aec348bcb28db8fda35af1bc0dda0140cba01beeb3f8e84b5d",
   "job": "daily",
-  "manifest_sha256": "e227761326502d9a4cd58e5ee5d6e4e0c79043fc7b11d205cffb28178b099c9d",
+  "manifest_sha256": "83bc9e1f1acace900ba16e147edce31a9af7c741729eee3b341a622523b66513",
   "ports_listening": [
     {
       "address": "0.0.0.0",
@@ -100,17 +100,17 @@
   ],
   "restic": {
     "repository_alias": "hetzner-storage-box",
-    "snapshot_id": "2c205278",
+    "snapshot_id": "86d07849",
     "stats": {
       "files_changed": 0,
       "files_new": 11,
       "files_unmodified": 0,
-      "total_bytes": 788153
+      "total_bytes": 788160
     },
     "tags": [
       "server=danlab-vps",
       "job=daily",
-      "id=20260925T031757Z"
+      "id=20260926T031944Z"
     ]
   },
   "restore_tests": {
@@ -381,27 +381,27 @@
       "replicas": "1/1"
     },
     {
-      "image": "sha256:a9de43f1852574d7f85ee7e596b59d4efd997e8fa6c75bc00beb921b10cf4922",
+      "image": "sha256:7b092f07c2552aac51039ed6c511772d4960a6582dc742e7999b6bb7b137e626",
       "name": "fullmrktdept_daily-editorial",
       "replicas": "1/1"
     },
     {
-      "image": "sha256:665c308ef85c7991e077b3eac23817792312e48f2d0a95eace05cc67ddcd5473",
+      "image": "sha256:dc28a5a33f6b169157712d7d9f15dd4e3a6c45bc72bc4d76385c7fd155ae9e8e",
       "name": "fullmrktdept_daily-publications",
       "replicas": "1/1"
     },
     {
-      "image": "sha256:d8f98b5dad591d67417bb442657fdb0b44d95139c96d09fef58881b713a4e2b4",
+      "image": "sha256:bf0f0d331346735b47de01a2df6841f92eea9548e7a01bec0f5a97c32240e237",
       "name": "fullmrktdept_daily-release-review",
       "replicas": "1/1"
     },
     {
-      "image": "sha256:964f1f68b68059dcf5e7f1101982a39fd20f32039a159f5a60f50c3f40d2cc08",
+      "image": "sha256:ed9144a34c75fb35ba2627e8b5e2b67cd79ac934bfb844d11f13d25108b2404f",
       "name": "fullmrktdept_daily-scheduler",
       "replicas": "1/1"
     },
     {
-      "image": "sha256:b61c454d00d78813d21d7dd99944ca49561c0818a41d11b61dadf87767eaeabb",
+      "image": "sha256:c73ffc2b5de1466ec7f178474794c5cda44ba588f948951b09a1e413ce9529b2",
       "name": "fullmrktdept_operations-monitor",
       "replicas": "1/1"
     },
@@ -486,7 +486,7 @@
       "replicas": "1/1"
     }
   ],
-  "started_at": "2026-09-25T03:17:57Z",
+  "started_at": "2026-09-26T03:19:44Z",
   "status": "pass",
   "version": 2,
   "volumes_backed_up": [],
