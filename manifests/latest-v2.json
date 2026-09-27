@@ -1,6 +1,6 @@
 {
-  "backup_id": "20260926T031944Z",
-  "completed_at": "2026-09-26T03:22:26Z",
+  "backup_id": "20260927T031717Z",
+  "completed_at": "2026-09-27T03:20:02Z",
   "errors": [],
   "healthchecks": {
     "daily": {
@@ -13,9 +13,9 @@
       "slug": "vps-backup-weekly"
     }
   },
-  "inventory_sha256": "e0710e618639e1aec348bcb28db8fda35af1bc0dda0140cba01beeb3f8e84b5d",
+  "inventory_sha256": "a1a19d5cd406be0900aa2e47a98c7883681ec16b5bc491e93ef24357023da3a2",
   "job": "daily",
-  "manifest_sha256": "83bc9e1f1acace900ba16e147edce31a9af7c741729eee3b341a622523b66513",
+  "manifest_sha256": "ce62cdcb51f936fed84ffa5d544d05a8ce005c2896d12475a029c54e30f2f3a0",
   "ports_listening": [
     {
       "address": "0.0.0.0",
@@ -100,17 +100,17 @@
   ],
   "restic": {
     "repository_alias": "hetzner-storage-box",
-    "snapshot_id": "86d07849",
+    "snapshot_id": "ef7695ec",
     "stats": {
       "files_changed": 0,
       "files_new": 11,
       "files_unmodified": 0,
-      "total_bytes": 788160
+      "total_bytes": 788219
     },
     "tags": [
       "server=danlab-vps",
       "job=daily",
-      "id=20260926T031944Z"
+      "id=20260927T031717Z"
     ]
   },
   "restore_tests": {
@@ -381,17 +381,17 @@
       "replicas": "1/1"
     },
     {
-      "image": "sha256:7b092f07c2552aac51039ed6c511772d4960a6582dc742e7999b6bb7b137e626",
+      "image": "sha256:fc3ed5dd4b32fdde58a2c9030a04e65c2d27227dea75bf959df607d3cd9cbb96",
       "name": "fullmrktdept_daily-editorial",
       "replicas": "1/1"
     },
     {
-      "image": "sha256:dc28a5a33f6b169157712d7d9f15dd4e3a6c45bc72bc4d76385c7fd155ae9e8e",
+      "image": "sha256:2d0c0b0c78d88a76bb5948810417d7b91322fdf93633d23204ec556cba4565a3",
       "name": "fullmrktdept_daily-publications",
       "replicas": "1/1"
     },
     {
-      "image": "sha256:bf0f0d331346735b47de01a2df6841f92eea9548e7a01bec0f5a97c32240e237",
+      "image": "sha256:d3f3f8fee1dc8797521fd71dbdd1f1f84113dc008cfa699cb995c1ae77850c0f",
       "name": "fullmrktdept_daily-release-review",
       "replicas": "1/1"
     },
@@ -401,7 +401,7 @@
       "replicas": "1/1"
     },
     {
-      "image": "sha256:c73ffc2b5de1466ec7f178474794c5cda44ba588f948951b09a1e413ce9529b2",
+      "image": "sha256:2cd6fb1cf613a19184121999d9a677faeecc38f4fedadd48ee528323900bdb32",
       "name": "fullmrktdept_operations-monitor",
       "replicas": "1/1"
     },
@@ -486,7 +486,7 @@
       "replicas": "1/1"
     }
   ],
-  "started_at": "2026-09-26T03:19:44Z",
+  "started_at": "2026-09-27T03:17:17Z",
   "status": "pass",
   "version": 2,
   "volumes_backed_up": [],

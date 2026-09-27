@@ -1,5 +1,5 @@
 {"ID":"19u0rd1ettsi","Image":"baserow/baserow:latest","Mode":"replicated","Name":"baserow_baserow","Ports":"","Replicas":"1/1"}
-{"ID":"1sgyo4dbzd9x","Image":"sha256:dc28a5a33f6b169157712d7d9f15dd4e3a6c45bc72bc4d76385c7fd155ae9e8e","Mode":"replicated","Name":"fullmrktdept_daily-publications","Ports":"","Replicas":"1/1"}
+{"ID":"1sgyo4dbzd9x","Image":"sha256:2d0c0b0c78d88a76bb5948810417d7b91322fdf93633d23204ec556cba4565a3","Mode":"replicated","Name":"fullmrktdept_daily-publications","Ports":"","Replicas":"1/1"}
 {"ID":"2i7bvf6mt1xv","Image":"sha256:fb5e1d2ce615f5e989515168f5a8957eb544697e09e02e94770502daefc36b30","Mode":"replicated","Name":"contentos-core_contentos-core","Ports":"","Replicas":"0/0"}
 {"ID":"2qv93chenk5g","Image":"fullmrktdept:production-20260904-phs-r4","Mode":"replicated","Name":"fullmrktdept_blotato-phs-readback-20260904-r1","Ports":"","Replicas":"0/1"}
 {"ID":"3az4ck8oxlik","Image":"searxng/searxng:latest","Mode":"replicated","Name":"contentos-tools_searxng","Ports":"*:8888-\u003e8080/tcp","Replicas":"1/1"}
@@ -36,7 +36,7 @@
 {"ID":"nqi53ydl2036","Image":"fullmrktdept:production-20260904-phs-r4","Mode":"replicated","Name":"fullmrktdept_review-phs-formats-readiness-20260904-r1","Ports":"","Replicas":"0/1"}
 {"ID":"nx9lcpuxsp4l","Image":"fullmrktdept:production-20260904-r3","Mode":"replicated","Name":"fullmrktdept_malc-de-r3-dispatch-reconcile-20260904","Ports":"","Replicas":"0/1"}
 {"ID":"nyc13goibja6","Image":"fullmrktdept:production-20260904-phs-r4","Mode":"replicated","Name":"fullmrktdept_review-phs-formats-readiness-20260904-r3","Ports":"","Replicas":"0/1"}
-{"ID":"oit7xuw0eyio","Image":"sha256:c73ffc2b5de1466ec7f178474794c5cda44ba588f948951b09a1e413ce9529b2","Mode":"replicated","Name":"fullmrktdept_operations-monitor","Ports":"","Replicas":"1/1"}
+{"ID":"oit7xuw0eyio","Image":"sha256:2cd6fb1cf613a19184121999d9a677faeecc38f4fedadd48ee528323900bdb32","Mode":"replicated","Name":"fullmrktdept_operations-monitor","Ports":"","Replicas":"1/1"}
 {"ID":"ozuu53oczphz","Image":"contentos-storage-guard:v8-20260817T1155Z","Mode":"replicated","Name":"contentos-storage-guard_storage-guard","Ports":"","Replicas":"0/0"}
 {"ID":"p981bqe7ovzc","Image":"n8nio/n8n:2.36.7","Mode":"replicated","Name":"n8nfila_n8n_worker","Ports":"","Replicas":"1/1"}
 {"ID":"pdnz5g42cika","Image":"fullmrktdept:production-20260904-phs-r4","Mode":"replicated","Name":"fullmrktdept_review-phs-formats-readiness-20260904-r2","Ports":"","Replicas":"0/1"}
@@ -45,10 +45,10 @@
 {"ID":"qo8343bje4gx","Image":"fullmrktdept:production-20260904-phs-r3","Mode":"replicated","Name":"fullmrktdept_phs-voice-audition-20260904-r3","Ports":"","Replicas":"0/1"}
 {"ID":"qr5lz12gv3ud","Image":"fullmrktdept:production-20260902-r1","Mode":"replicated","Name":"fullmrktdept_promote_thi_20260902_p0404","Ports":"","Replicas":"0/1"}
 {"ID":"r572p6zp5ohe","Image":"contentos-gemini-tts:v8-20260818-fallback-provenance-a937085","Mode":"replicated","Name":"contentos-video-producer_gemini-tts","Ports":"*:8300-\u003e8300/tcp","Replicas":"1/1"}
-{"ID":"r86p0fcf4jef","Image":"sha256:bf0f0d331346735b47de01a2df6841f92eea9548e7a01bec0f5a97c32240e237","Mode":"replicated","Name":"fullmrktdept_daily-release-review","Ports":"","Replicas":"1/1"}
+{"ID":"r86p0fcf4jef","Image":"sha256:d3f3f8fee1dc8797521fd71dbdd1f1f84113dc008cfa699cb995c1ae77850c0f","Mode":"replicated","Name":"fullmrktdept_daily-release-review","Ports":"","Replicas":"1/1"}
 {"ID":"rn656a5k9mlz","Image":"fullmrktdept:production-20260904-r2","Mode":"replicated","Name":"fullmrktdept_malc-de-r2-dispatch-reconcile-20260904","Ports":"","Replicas":"0/0"}
 {"ID":"rpa82oxvbyvq","Image":"open-generative-ai:latest","Mode":"replicated","Name":"open-generative-ai_open-generative-ai","Ports":"","Replicas":"0/1"}
-{"ID":"rqq2tszdtdbo","Image":"sha256:7b092f07c2552aac51039ed6c511772d4960a6582dc742e7999b6bb7b137e626","Mode":"replicated","Name":"fullmrktdept_daily-editorial","Ports":"","Replicas":"1/1"}
+{"ID":"rqq2tszdtdbo","Image":"sha256:fc3ed5dd4b32fdde58a2c9030a04e65c2d27227dea75bf959df607d3cd9cbb96","Mode":"replicated","Name":"fullmrktdept_daily-editorial","Ports":"","Replicas":"1/1"}
 {"ID":"s44kmv3des8i","Image":"fullmrktdept:production-20260903-r8","Mode":"replicated job","Name":"fullmrktdept_plan-malc-de-readiness-20260903-r1","Ports":"","Replicas":"0/1 (0/1 completed)"}
 {"ID":"sd324ycfy2hg","Image":"portainer/agent:sts","Mode":"global","Name":"portainer_agent","Ports":"","Replicas":"1/1"}
 {"ID":"sfnkhqcjoqro","Image":"sha256:b68cfe101ae0954ef58f0d84eb53d9a4fe432249312e805e36b8d9882e72b98e","Mode":"replicated","Name":"fullmrktdept_telegram-operations","Ports":"","Replicas":"1/1"}
