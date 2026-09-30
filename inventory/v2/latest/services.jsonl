@@ -36,7 +36,7 @@
 {"ID":"nqi53ydl2036","Image":"fullmrktdept:production-20260904-phs-r4","Mode":"replicated","Name":"fullmrktdept_review-phs-formats-readiness-20260904-r1","Ports":"","Replicas":"0/1"}
 {"ID":"nx9lcpuxsp4l","Image":"fullmrktdept:production-20260904-r3","Mode":"replicated","Name":"fullmrktdept_malc-de-r3-dispatch-reconcile-20260904","Ports":"","Replicas":"0/1"}
 {"ID":"nyc13goibja6","Image":"fullmrktdept:production-20260904-phs-r4","Mode":"replicated","Name":"fullmrktdept_review-phs-formats-readiness-20260904-r3","Ports":"","Replicas":"0/1"}
-{"ID":"oit7xuw0eyio","Image":"sha256:2cd6fb1cf613a19184121999d9a677faeecc38f4fedadd48ee528323900bdb32","Mode":"replicated","Name":"fullmrktdept_operations-monitor","Ports":"","Replicas":"1/1"}
+{"ID":"oit7xuw0eyio","Image":"sha256:09838a38860a916671a5f3e9f50c2362c6bf2bc378b704956edf64d8870d9d09","Mode":"replicated","Name":"fullmrktdept_operations-monitor","Ports":"","Replicas":"1/1"}
 {"ID":"ozuu53oczphz","Image":"contentos-storage-guard:v8-20260817T1155Z","Mode":"replicated","Name":"contentos-storage-guard_storage-guard","Ports":"","Replicas":"0/0"}
 {"ID":"p981bqe7ovzc","Image":"n8nio/n8n:2.36.7","Mode":"replicated","Name":"n8nfila_n8n_worker","Ports":"","Replicas":"1/1"}
 {"ID":"pdnz5g42cika","Image":"fullmrktdept:production-20260904-phs-r4","Mode":"replicated","Name":"fullmrktdept_review-phs-formats-readiness-20260904-r2","Ports":"","Replicas":"0/1"}
