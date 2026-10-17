@@ -1,70 +1,23 @@
 {"ID":"19u0rd1ettsi","Image":"baserow/baserow:latest","Mode":"replicated","Name":"baserow_baserow","Ports":"","Replicas":"1/1"}
-{"ID":"1sgyo4dbzd9x","Image":"sha256:2d0c0b0c78d88a76bb5948810417d7b91322fdf93633d23204ec556cba4565a3","Mode":"replicated","Name":"fullmrktdept_daily-publications","Ports":"","Replicas":"1/1"}
 {"ID":"2i7bvf6mt1xv","Image":"sha256:fb5e1d2ce615f5e989515168f5a8957eb544697e09e02e94770502daefc36b30","Mode":"replicated","Name":"contentos-core_contentos-core","Ports":"","Replicas":"0/0"}
-{"ID":"2qv93chenk5g","Image":"fullmrktdept:production-20260904-phs-r4","Mode":"replicated","Name":"fullmrktdept_blotato-phs-readback-20260904-r1","Ports":"","Replicas":"0/1"}
 {"ID":"3az4ck8oxlik","Image":"searxng/searxng:latest","Mode":"replicated","Name":"contentos-tools_searxng","Ports":"*:8888-\u003e8080/tcp","Replicas":"1/1"}
-{"ID":"3kwfccdrx5xr","Image":"fullmrktdept:production-20260903-r6","Mode":"replicated job","Name":"fullmrktdept_malc-de-readiness-20260903","Ports":"","Replicas":"0/1 (0/1 completed)"}
-{"ID":"3xswkexq1tzf","Image":"fullmrktdept:production-20260904-phs-r6","Mode":"replicated","Name":"fullmrktdept_phs-r1-dispatch-reconcile-20260904-r2","Ports":"","Replicas":"0/1"}
 {"ID":"4d1v9ezq63or","Image":"fullmrktdept-captions:languages-20260914-r4","Mode":"replicated","Name":"contentos-video-producer_captions-api","Ports":"*:8002-\u003e8002/tcp","Replicas":"1/1"}
 {"ID":"58h9swe81iq5","Image":"contentos-health-monitor:latest","Mode":"replicated","Name":"contentos-health_health-monitor","Ports":"","Replicas":"0/0"}
-{"ID":"5aj3ags8kajd","Image":"fullmrktdept:production-20260904-phs-r5","Mode":"replicated","Name":"fullmrktdept_phs-r1-dispatch-reconcile-20260904","Ports":"","Replicas":"0/1"}
-{"ID":"5e2sj3nqsibf","Image":"fullmrktdept:production-20260903-r4","Mode":"replicated job","Name":"fullmrktdept_plan_malc_en_20260903_p0604_r3","Ports":"","Replicas":"0/1 (0/1 completed)"}
-{"ID":"5hs2fjvwphsi","Image":"fullmrktdept:production-20260902-r1","Mode":"replicated","Name":"fullmrktdept_migrate_20260902_p0404","Ports":"","Replicas":"0/1"}
-{"ID":"6ag1mg12ec31","Image":"fullmrktdept:production-20260903-r4","Mode":"replicated job","Name":"fullmrktdept_plan_malc_en_20260903_p0604","Ports":"","Replicas":"0/1 (0/1 completed)"}
-{"ID":"6fao4ctp5trj","Image":"fullmrktdept:editorial-review-20260907-r1","Mode":"replicated job","Name":"fullmrktdept_editorial-phs-review-readiness-20260907-r1","Ports":"","Replicas":"0/1 (0/1 completed)"}
-{"ID":"7krmer7snvfg","Image":"fullmrktdept:production-20260902-r1","Mode":"replicated","Name":"fullmrktdept_dispatch_thi_20260902_p0404","Ports":"","Replicas":"0/1"}
-{"ID":"7msthvmmvvr9","Image":"sha256:37de154eead711231ba40dfae0060fd4275974b4589e6a930e582d62dc8810e1","Mode":"replicated job","Name":"fullmrktdept_kern-canary-preview-35e39fc3","Ports":"","Replicas":"0/1 (0/1 completed)"}
 {"ID":"83ise3onblfa","Image":"postgres:17-alpine","Mode":"replicated","Name":"n8npg17_postgres","Ports":"","Replicas":"1/1"}
 {"ID":"b1t9atec1o90","Image":"redis:latest","Mode":"replicated","Name":"redis_redis","Ports":"","Replicas":"1/1"}
-{"ID":"bbfxvibe9u5l","Image":"fullmrktdept:production-20260902-r1","Mode":"replicated","Name":"fullmrktdept_worker","Ports":"","Replicas":"0/0"}
 {"ID":"brqqq4qozs45","Image":"contentos-remotion:v9-20260827-minio-upload","Mode":"replicated","Name":"contentos-video-producer_remotion","Ports":"*:7000-\u003e7000/tcp","Replicas":"1/1"}
 {"ID":"e6958l3a3m4j","Image":"pgvector/pgvector:pg16","Mode":"replicated","Name":"pgvector_pgvector","Ports":"","Replicas":"1/1"}
 {"ID":"ewa8byq5uvlp","Image":"traefik:v2.11","Mode":"replicated","Name":"traefik_traefik","Ports":"","Replicas":"1/1"}
-{"ID":"gzotabh7eysn","Image":"fullmrktdept:production-20260903-r4","Mode":"replicated job","Name":"fullmrktdept_plan_malc_en_20260903_p0604_r2","Ports":"","Replicas":"0/1 (0/1 completed)"}
-{"ID":"hki2pkemia56","Image":"fullmrktdept:production-20260903-r6","Mode":"replicated job","Name":"fullmrktdept_malc-de-readiness-20260903-r2","Ports":"","Replicas":"0/1 (0/1 completed)"}
-{"ID":"hy0degl49ldy","Image":"sha256:22820e6d99b466ca428864a6122dc70040438c4c5b4836203d9c83dc499f20f9","Mode":"replicated","Name":"fullmrktdept_api","Ports":"","Replicas":"1/1"}
-{"ID":"ijglfolwsxzc","Image":"sha256:298cdfaff211147991544dd835ff2d853bdf34936a5b3c5f1b597081b2d8695a","Mode":"replicated","Name":"fullmrktdept_daily-scheduler","Ports":"","Replicas":"1/1"}
 {"ID":"iyvjvb2fxedl","Image":"n8nio/n8n:2.36.7","Mode":"replicated","Name":"n8nfila_n8n_webhook","Ports":"","Replicas":"1/1"}
-{"ID":"jaq0ip6h73bb","Image":"fullmrktdept:production-20260904-phs-r5","Mode":"replicated job","Name":"fullmrktdept_plan-phs-r1-readiness-20260904","Ports":"","Replicas":"0/1 (0/1 completed)"}
-{"ID":"ki2on614sjtl","Image":"sha256:5de88dd2d1951582dc1eee51d55a3635eda713709caa265de03b51f1e682183c","Mode":"replicated","Name":"fullmrktdept_publication-analytics","Ports":"","Replicas":"1/1"}
-{"ID":"lau64c7uge0v","Image":"sha256:b6be027d61ab16773baf0bd4a1929019b56df3e26a46208f803644d774c3a0b6","Mode":"replicated job","Name":"fullmrktdept_publication-analytics-once-20260907-r9","Ports":"","Replicas":"0/1 (0/1 completed)"}
 {"ID":"lpsukdicexpz","Image":"postgres:14","Mode":"replicated","Name":"postgres_postgres","Ports":"","Replicas":"1/1"}
-{"ID":"lvl7jvyqgqmy","Image":"fullmrktdept:production-20260904-phs-r5","Mode":"replicated job","Name":"fullmrktdept_blotato-phs-readback-dispatch-20260904-r2","Ports":"","Replicas":"0/1 (0/1 completed)"}
-{"ID":"mf2320dsf7jx","Image":"fullmrktdept:production-20260902-r1","Mode":"replicated","Name":"fullmrktdept_scheduler","Ports":"","Replicas":"0/0"}
-{"ID":"mitv1m6muzjy","Image":"fullmrktdept:production-20260904-r2","Mode":"replicated job","Name":"fullmrktdept_review-malc-de-publication-r2-send-20260904","Ports":"","Replicas":"0/1 (0/1 completed)"}
 {"ID":"mpt9dxsqyf7l","Image":"crm-stripe-receiver:latest","Mode":"replicated","Name":"crm-stripe_crm_stripe_receiver","Ports":"","Replicas":"1/1"}
-{"ID":"nqi53ydl2036","Image":"fullmrktdept:production-20260904-phs-r4","Mode":"replicated","Name":"fullmrktdept_review-phs-formats-readiness-20260904-r1","Ports":"","Replicas":"0/1"}
-{"ID":"nx9lcpuxsp4l","Image":"fullmrktdept:production-20260904-r3","Mode":"replicated","Name":"fullmrktdept_malc-de-r3-dispatch-reconcile-20260904","Ports":"","Replicas":"0/1"}
-{"ID":"nyc13goibja6","Image":"fullmrktdept:production-20260904-phs-r4","Mode":"replicated","Name":"fullmrktdept_review-phs-formats-readiness-20260904-r3","Ports":"","Replicas":"0/1"}
-{"ID":"oit7xuw0eyio","Image":"sha256:09838a38860a916671a5f3e9f50c2362c6bf2bc378b704956edf64d8870d9d09","Mode":"replicated","Name":"fullmrktdept_operations-monitor","Ports":"","Replicas":"1/1"}
 {"ID":"ozuu53oczphz","Image":"contentos-storage-guard:v8-20260817T1155Z","Mode":"replicated","Name":"contentos-storage-guard_storage-guard","Ports":"","Replicas":"0/0"}
 {"ID":"p981bqe7ovzc","Image":"n8nio/n8n:2.36.7","Mode":"replicated","Name":"n8nfila_n8n_worker","Ports":"","Replicas":"1/1"}
-{"ID":"pdnz5g42cika","Image":"fullmrktdept:production-20260904-phs-r4","Mode":"replicated","Name":"fullmrktdept_review-phs-formats-readiness-20260904-r2","Ports":"","Replicas":"0/1"}
-{"ID":"phzs76m6vkrm","Image":"sha256:1d3e35d86ddf49e20d82d8158b3f6fb1ec74f209e085fdabcc8c502c6cd972ca","Mode":"replicated","Name":"fullmrktdept_telegram-listener","Ports":"","Replicas":"1/1"}
 {"ID":"powfekrhaq2v","Image":"contentos-higgsfield-bridge:v8-20260818-sync-contract","Mode":"replicated","Name":"contentos-video-producer_higgsfield-bridge","Ports":"*:8400-\u003e8400/tcp","Replicas":"0/0"}
-{"ID":"qo8343bje4gx","Image":"fullmrktdept:production-20260904-phs-r3","Mode":"replicated","Name":"fullmrktdept_phs-voice-audition-20260904-r3","Ports":"","Replicas":"0/1"}
-{"ID":"qr5lz12gv3ud","Image":"fullmrktdept:production-20260902-r1","Mode":"replicated","Name":"fullmrktdept_promote_thi_20260902_p0404","Ports":"","Replicas":"0/1"}
 {"ID":"r572p6zp5ohe","Image":"contentos-gemini-tts:v8-20260818-fallback-provenance-a937085","Mode":"replicated","Name":"contentos-video-producer_gemini-tts","Ports":"*:8300-\u003e8300/tcp","Replicas":"1/1"}
-{"ID":"r86p0fcf4jef","Image":"sha256:d3f3f8fee1dc8797521fd71dbdd1f1f84113dc008cfa699cb995c1ae77850c0f","Mode":"replicated","Name":"fullmrktdept_daily-release-review","Ports":"","Replicas":"1/1"}
-{"ID":"rn656a5k9mlz","Image":"fullmrktdept:production-20260904-r2","Mode":"replicated","Name":"fullmrktdept_malc-de-r2-dispatch-reconcile-20260904","Ports":"","Replicas":"0/0"}
 {"ID":"rpa82oxvbyvq","Image":"open-generative-ai:latest","Mode":"replicated","Name":"open-generative-ai_open-generative-ai","Ports":"","Replicas":"0/1"}
-{"ID":"rqq2tszdtdbo","Image":"sha256:feeb5feaf316e829a1f0c59f75ac7c95fa73af4c5e540a0ca394fe3edd1bac91","Mode":"replicated","Name":"fullmrktdept_daily-editorial","Ports":"","Replicas":"1/1"}
-{"ID":"s44kmv3des8i","Image":"fullmrktdept:production-20260903-r8","Mode":"replicated job","Name":"fullmrktdept_plan-malc-de-readiness-20260903-r1","Ports":"","Replicas":"0/1 (0/1 completed)"}
 {"ID":"sd324ycfy2hg","Image":"portainer/agent:sts","Mode":"global","Name":"portainer_agent","Ports":"","Replicas":"1/1"}
-{"ID":"sfnkhqcjoqro","Image":"sha256:b68cfe101ae0954ef58f0d84eb53d9a4fe432249312e805e36b8d9882e72b98e","Mode":"replicated","Name":"fullmrktdept_telegram-operations","Ports":"","Replicas":"1/1"}
-{"ID":"sqb9wkcfa7b9","Image":"fullmrktdept:production-20260904-r3","Mode":"replicated job","Name":"fullmrktdept_review-malc-de-publication-r3-send-20260904","Ports":"","Replicas":"0/1 (0/1 completed)"}
-{"ID":"sqdvczqyhy8i","Image":"fullmrktdept:production-20260902-r1","Mode":"replicated","Name":"fullmrktdept_reconcile_thi_20260902_p0405","Ports":"","Replicas":"0/1"}
-{"ID":"t2ykra7x2fzq","Image":"fullmrktdept:production-20260902-r2","Mode":"replicated job","Name":"fullmrktdept_review_malc_en_send_r2_20260902","Ports":"","Replicas":"0/1 (0/1 completed)"}
-{"ID":"tgpniyrjxkkq","Image":"fullmrktdept:production-20260904-phs-r1","Mode":"replicated","Name":"fullmrktdept_phs-voice-audition-20260904-r1","Ports":"","Replicas":"0/1"}
-{"ID":"tk4ivr01m4qv","Image":"fullmrktdept:production-20260904-phs-r2","Mode":"replicated","Name":"fullmrktdept_phs-voice-audition-20260904-r2","Ports":"","Replicas":"0/1"}
-{"ID":"tqvy0hi9s4kf","Image":"postgres:17-alpine","Mode":"replicated","Name":"fullmrktdept_postgres","Ports":"","Replicas":"1/1"}
-{"ID":"tui75f8j9843","Image":"sha256:05e4421d6648c953379947fab9cdbe970ab7cebac5dcfab99a41ae040b57270a","Mode":"replicated","Name":"fullmrktdept_outbox","Ports":"","Replicas":"1/1"}
-{"ID":"u4nh8n5xp39s","Image":"fullmrktdept:completion-runtime-20260907-r2","Mode":"replicated job","Name":"fullmrktdept_daily-editorial-readiness-20260907-r2","Ports":"","Replicas":"0/1 (0/1 completed)"}
-{"ID":"uik6t634ypvp","Image":"fullmrktdept:production-20260902-r2","Mode":"replicated job","Name":"fullmrktdept_review_malc_en_send_20260902","Ports":"","Replicas":"0/1 (0/1 completed)"}
 {"ID":"usq89aqg0qhj","Image":"n8nio/n8n:2.36.7","Mode":"replicated","Name":"n8nfila_n8n_editor","Ports":"","Replicas":"1/1"}
 {"ID":"v06owd8ty1fl","Image":"contentos-vault-api:v8-20260818-pinned-a937085","Mode":"replicated","Name":"contentos-vault_vault-api","Ports":"","Replicas":"1/1"}
-{"ID":"vdkdiv2an96p","Image":"fullmrktdept:production-20260904-r3","Mode":"replicated job","Name":"fullmrktdept_blotato-malc-de-readback-20260904-r2","Ports":"","Replicas":"0/1 (0/1 completed)"}
-{"ID":"veofc8uw0f7w","Image":"fullmrktdept:production-20260904-phs-r4","Mode":"replicated","Name":"fullmrktdept_review-phs-formats-send-20260904-r1","Ports":"","Replicas":"0/1"}
 {"ID":"vo3hd9bkdtqj","Image":"quay.io/minio/minio:latest","Mode":"replicated","Name":"minio_minio","Ports":"","Replicas":"1/1"}
-{"ID":"zn2i7kk3x90r","Image":"fullmrktdept:completion-runtime-20260907-r2","Mode":"replicated job","Name":"fullmrktdept_daily-editorial-diagnostic-20260907-r2","Ports":"","Replicas":"0/1 (0/1 completed)"}
 {"ID":"zrt7sih05pwm","Image":"portainer/portainer-ce:sts","Mode":"replicated","Name":"portainer_portainer","Ports":"","Replicas":"1/1"}
