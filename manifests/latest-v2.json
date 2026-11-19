@@ -1,6 +1,6 @@
 {
-  "backup_id": "20261118T031559Z",
-  "completed_at": "2026-11-18T03:19:28Z",
+  "backup_id": "20261119T031618Z",
+  "completed_at": "2026-11-19T03:19:53Z",
   "errors": [],
   "healthchecks": {
     "daily": {
@@ -13,9 +13,9 @@
       "slug": "vps-backup-weekly"
     }
   },
-  "inventory_sha256": "0f6f6d370c543892cccd74f4fd3e0562487a5716922a12206165be444d04a78d",
+  "inventory_sha256": "0e9b53bf1a0513474d41f22bea8787ad82306e58c96b668260a2cadf2df23076",
   "job": "daily",
-  "manifest_sha256": "3ec7158eb98ff2d0f5fcec18ffa34594a44e2a0dc5ff7598a1940e5edd762a21",
+  "manifest_sha256": "2dccbe5f4b8907da6738cc62e3f8ca2e6daf294d50748a6fb348e03e4e89d5bb",
   "ports_listening": [
     {
       "address": "0.0.0.0",
@@ -100,17 +100,17 @@
   ],
   "restic": {
     "repository_alias": "hetzner-storage-box",
-    "snapshot_id": "9ce6f82c",
+    "snapshot_id": "2843bddb",
     "stats": {
       "files_changed": 0,
       "files_new": 11,
       "files_unmodified": 0,
-      "total_bytes": 770382
+      "total_bytes": 770400
     },
     "tags": [
       "server=danlab-vps",
       "job=daily",
-      "id=20261118T031559Z"
+      "id=20261119T031618Z"
     ]
   },
   "restore_tests": {
@@ -251,7 +251,7 @@
       "replicas": "1/1"
     }
   ],
-  "started_at": "2026-11-18T03:15:59Z",
+  "started_at": "2026-11-19T03:16:18Z",
   "status": "pass",
   "version": 2,
   "volumes_backed_up": [],
